@@ -1,4 +1,4 @@
 require 'rails'
 
-class Amphtml
+module Amphtml
 end
