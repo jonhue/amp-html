@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
     gem.version     = Amphtml::VERSION
     gem.date        = "2017-03-12"
     gem.summary     = "Reliable and highly-performant Rails apps with AMP."
-    gem.description = "The AMP Project for Rails. Make your Rails app consistently fast, beautiful and high-performing across devices and distribution platforms."
+    gem.description = "IN DEVELOPMENT - The AMP Project for Rails. Make your Rails app consistently fast, beautiful and high-performing across devices and distribution platforms."
     gem.authors     = ["Jonas Hübotter"]
     gem.email       = "jonas@slooob.com"
     gem.files       = Dir['lib/**/**/**/**/*.rb']
