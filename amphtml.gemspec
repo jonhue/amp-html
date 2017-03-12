@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path(File.join('..', 'lib', 'amphtml'), __FILE__)
+require File.expand_path(File.join('..', 'lib', 'amphtml', 'version'), __FILE__)
 
 Gem::Specification.new do |gem|
     gem.name        = "amphtml"
@@ -16,6 +16,8 @@ Gem::Specification.new do |gem|
     gem.bindir = "bin"
 
     gem.required_ruby_version = '>= 2.2'
+
+    gem.add_runtime_dependency 'rails', '~> 5.0'
 
     gem.add_development_dependency 'rspec', '~> 3.5'
     gem.add_development_dependency 'rake', '~> 12.0'

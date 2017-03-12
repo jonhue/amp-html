@@ -1,7 +1,6 @@
-class Amphtml
+require 'rails'
 
-    # Gem Version
-    VERSION = "0.1.0.beta1.0"
+class Amphtml
 
     def self.hi
         puts "Hello world!"
