@@ -4,12 +4,12 @@ require "action_view/helpers/asset_url_helper"
 require "action_view/helpers/tag_helper"
 
 module ActionView
-  module Helpers
-    module AssetTagHelper
-      extend ActiveSupport::Concern
+    module Helpers
+        module AssetTagHelper
+            extend ActiveSupport::Concern
 
-      include AssetUrlHelper
-      include TagHelper
+            include AssetUrlHelper
+            include TagHelper
 
             def image_tag(source, options = {})
                 options = options.symbolize_keys
