@@ -1,0 +1,14 @@
+*.gem
+*.rbc
+.DS_Store
+.bundle
+.rvmrc
+.ruby-version
+.yardoc
+.rake_tasks~
+Gemfile.lock
+coverage/*
+doc/*
+log/*
+pkg/*
+.idea/*
