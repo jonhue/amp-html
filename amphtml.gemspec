@@ -14,6 +14,7 @@ Gem::Specification.new do |gem|
 
     gem.files         = `git ls-files`.split("\n")
     gem.require_paths = ["lib"]
+    
     gem.post_install_message = "Thanks for installing!"
 
     gem.required_ruby_version = '>= 2.2'
