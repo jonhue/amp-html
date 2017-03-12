@@ -9,18 +9,13 @@ Gem::Specification.new do |gem|
     gem.description = "IN DEVELOPMENT - The AMP Project for Rails. Make your Rails app consistently fast, beautiful and high-performing across devices and distribution platforms."
     gem.authors     = ["Jonas Hübotter"]
     gem.email       = "jonas@slooob.com"
-    gem.files       = Dir['lib/**/**/**/**/*.rb']
     gem.homepage    = "http://jonhue.me/amphtml"
     gem.license     = "MIT"
 
-    gem.bindir = "bin"
+    gem.files         = `git ls-files`.split("\n")
+    gem.require_paths = ["lib"]
+    gem.post_install_message = "Thanks for installing!"
 
     gem.required_ruby_version = '>= 2.2'
-
-    gem.add_runtime_dependency 'rails', '~> 5.0'
-
-    gem.add_development_dependency 'rspec', '~> 3.5'
-    gem.add_development_dependency 'rake', '~> 12.0'
-
-    gem.post_install_message = "Thanks for installing!"
+    gem.add_dependency 'rails', '~> 5.0'
 end
