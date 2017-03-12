@@ -1,3 +1,5 @@
 require 'amphtml'
 
-config.assets.enabled = false
+Rails.application.configure do
+	config.assets.enabled = false
+end
