@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
     gem.version     = Amphtml::VERSION
     gem.date        = "2017-03-12"
     gem.summary     = "Reliable and highly-performant Rails apps with AMP."
-    gem.description = "IN DEVELOPMENT - The AMP Project for Rails. Make your Rails app consistently fast, beautiful and high-performing across devices and distribution platforms."
+    gem.description = "IN DEVELOPMENT - Accelerated Mobile Pages for Rails. Make your Rails app consistently fast, beautiful and high-performing across devices and distribution platforms."
     gem.authors     = ["Jonas Hübotter"]
     gem.email       = "jonas@slooob.com"
     gem.homepage    = "http://jonhue.me/amphtml"
@@ -14,7 +14,7 @@ Gem::Specification.new do |gem|
 
     gem.files         = `git ls-files`.split("\n")
     gem.require_paths = ["lib"]
-    
+
     gem.post_install_message = "Thanks for installing!"
 
     gem.required_ruby_version = '>= 2.2'
