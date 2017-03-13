@@ -2,6 +2,8 @@
 
 The AMP Project for Rails. Make your Rails app consistently fast, beautiful and high-performing across devices and distribution platforms.
 
+---
+
 ## Information
 
 ### The AMP-HTML wiki
@@ -30,6 +32,8 @@ We hope that you will consider contributing to AMP-HTML. Please read this short 
 
 [https://github.com/jonhue/amphtml/wiki/Contributing](https://github.com/jonhue/amphtml/wiki/Contributing)
 
+---
+
 ## Getting started
 
 AMP-HTML works with Rails 5.0 onwards. You can add it to your `Gemfile` with:
@@ -46,20 +50,27 @@ Or install it yourself as:
 
     $ gem install amphtml
 
+---
+
 ## Usage
 
 ### Helpers
+
+---
 
 ## Configuration
 
 
 
+---
 
 ## Contributors
 
 Give the people some :heart: who are working on this project. Check them all at:
 
 [https://github.com/jonhue/amphtml/graphs/contributors](https://github.com/jonhue/amphtml/graphs/contributors)
+
+---
 
 ## License
 
