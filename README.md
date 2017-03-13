@@ -1,4 +1,4 @@
-# Amphtml - Reliable and highly-performant apps with AMP
+# AMP-HTML - Reliable and highly-performant apps with AMP and Rails
 
 The AMP Project for Rails. Make your Rails app consistently fast, beautiful and high-performing across devices and distribution platforms.
 
