@@ -54,6 +54,13 @@ Or install it yourself as:
 
 
 
+
+### Contributors
+
+Give the people some :heart: who are working on this project. Check them all at:
+
+https://github.com/jonhue/amphtml/graphs/contributors
+
 ## License
 
 MIT License
