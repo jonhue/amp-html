@@ -1,6 +1,8 @@
 ### unreleased
 
-* nothing yet
+* features
+    * Introduce Split Option for Views Generator
+    * Add validate Method
 
 ### 0.1.3 (Pre-release) - 2017-03-12
 
