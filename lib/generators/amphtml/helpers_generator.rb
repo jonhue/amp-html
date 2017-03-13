@@ -5,10 +5,20 @@ module Amphtml
 
         class HelpersGenerator < Rails::Generators::Base
 
-            source_root File.expand_path("../../templates/helpers", __FILE__)
+            desc "Generate AMP Tag Helpers. Run with --split to keep a version without AMP."
 
-            def create_views
-                template "asset_tag_helper.rb", "app/helpers/asset_tag_helper.rb"
+            class_option :split, desc: "Keep an application layout without AMP", type: :boolean, default: false, aliases: '-s'
+
+            unless options[:split]
+                source_root File.expand_path("../../templates/helpers", __FILE__)
+                def create_views
+                    template "asset_tag_helper.rb", "app/helpers/asset_tag_helper.rb"
+                end
+            else
+                source_root File.expand_path("../../templates/helpers/split", __FILE__)
+                def create_views
+                    template "asset_tag_helper.rb", "app/helpers/asset_tag_helper.rb"
+                end
             end
 
             def show_readme
