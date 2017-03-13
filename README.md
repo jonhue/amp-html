@@ -8,27 +8,27 @@ The AMP Project for Rails. Make your Rails app consistently fast, beautiful and 
 
 The AMP-HTML Wiki has lots of additional information about AMP-HTML including many "how-to" articles and answers to the most frequently asked questions. Please browse the Wiki after finishing this README:
 
-https://github.com/jonhue/amphtml/wiki
+[https://github.com/jonhue/amphtml/wiki](https://github.com/jonhue/amphtml/wiki)
 
 ### Bug reports
 
 If you discover a problem with AMP-HTML, we would like to know about it. However, we ask that you please review these guidelines before submitting a bug report:
 
-https://github.com/jonhue/amphtml/wiki/Bug-reports
+[https://github.com/jonhue/amphtml/wiki/Bug-reports](https://github.com/jonhue/amphtml/wiki/Bug-reports)
 
-If you have discovered a security related bug, please do *NOT* use the GitHub issue tracker. Send an email to [jonas@slooob.com](jonas@slooob.com).
+If you have discovered a security related bug, please do *NOT* use the GitHub issue tracker. Send an email to [jonas@slooob.com](mailto:jonas@slooob.com).
 
 ### Example applications
 
 There are a few example applications available on GitHub that demonstrate various features of AMP-HTML. You can view them here:
 
-https://github.com/jonhue/amphtml/wiki/Example-Applications
+[https://github.com/jonhue/amphtml/wiki/Example-Applications](https://github.com/jonhue/amphtml/wiki/Example-Applications)
 
 ### Contributing
 
 We hope that you will consider contributing to AMP-HTML. Please read this short overview for some information about how to get started:
 
-https://github.com/jonhue/amphtml/wiki/Contributing
+[https://github.com/jonhue/amphtml/wiki/Contributing](https://github.com/jonhue/amphtml/wiki/Contributing)
 
 ## Getting started
 
@@ -59,7 +59,7 @@ Or install it yourself as:
 
 Give the people some :heart: who are working on this project. Check them all at:
 
-https://github.com/jonhue/amphtml/graphs/contributors
+[https://github.com/jonhue/amphtml/graphs/contributors](https://github.com/jonhue/amphtml/graphs/contributors)
 
 ## License
 
