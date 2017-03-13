@@ -55,7 +55,7 @@ Or install it yourself as:
 
 
 
-### Contributors
+## Contributors
 
 Give the people some :heart: who are working on this project. Check them all at:
 
