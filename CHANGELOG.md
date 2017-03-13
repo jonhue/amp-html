@@ -1,6 +1,8 @@
 ### unreleased
 
-* nothing yet
+* enhancements
+    * allow custom CSS in views
+    * warn when a `stylesheet_link_tag` or `javascript_include_tag` is being used
 
 ### 0.1.5 (Pre-release) - 2017-03-13
 

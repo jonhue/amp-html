@@ -11,6 +11,15 @@ module ActionView
             include AssetUrlHelper
             include TagHelper
 
+            def javascript_include_tag(*sources)
+                warn "WARNING (AMP): external and internal scripts are not allowed."
+                super
+            end
+            def stylesheet_link_tag(*sources)
+                warn "WARNING (AMP): external and internal stylesheets are not allowed."
+                super
+            end
+
             def ad_tag(options = {})
                 options = options.symbolize_keys
 
