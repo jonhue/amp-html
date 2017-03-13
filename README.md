@@ -4,6 +4,24 @@ The AMP Project for Rails. Make your Rails app consistently fast, beautiful and 
 
 ---
 
+## Latest release
+
+### 0.1.5 (Pre-release) - 2017-03-13
+
+* features
+    * introduce `--split` option for `InstallGenerator`
+    * introduce `--split` option for `HelpersGenerator`
+* enhancements
+    * add `help` method to `Amphtml`
+    * add `version` method to `Amphtml`
+    * custom installation message
+    * add `Amphtml.validate` method fallback
+    * improve file reading
+* bug fixes
+    * Improve `AssetTagHelper`'s
+
+---
+
 ## Information
 
 ### The AMP-HTML wiki
