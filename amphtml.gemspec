@@ -16,7 +16,7 @@ Gem::Specification.new do |gem|
     gem.files         = `git ls-files`.split("\n")
     gem.require_paths = ["lib"]
 
-    gem.post_install_message = File.read('INSTALL.md')
+    gem.post_install_message = IO.read('INSTALL.md')
 
     gem.required_ruby_version = '>= 2.2'
     gem.add_dependency 'rails', '~> 5.0'

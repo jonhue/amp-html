@@ -1,1 +1,1 @@
-# Thank you for installing AMP-HTML!
+**Thank you for installing AMP-HTML!**

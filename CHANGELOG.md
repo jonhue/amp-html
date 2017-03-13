@@ -1,14 +1,18 @@
 ### unreleased
 
 * features
-    * Introduce `--split` option for `InstallGenerator`
-    * Custom installation message
+    * introduce `--split` option for `InstallGenerator`
+* enhancements
+    * add `help` method to `Amphtml`
+    * add `version` method to `Amphtml`
+    * custom installation message
+    * improve file reading
 
 ### 0.1.4 (Pre-release) - 2017-03-13
 
 * features
-    * Introduce `--split` option for `ViewsGenerator`
-    * Add validate method to `Amphtml`
+    * introduce `--split` option for `ViewsGenerator`
+    * add `validate` method to `Amphtml`
 
 ### 0.1.3 (Pre-release) - 2017-03-12
 
