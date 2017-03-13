@@ -1,13 +1,14 @@
 ### unreleased
 
 * features
-    * Introduce Split Option for Install Generator
+    * Introduce `--split` option for InstallGenerator
+    * Custom installation message
 
 ### 0.1.4 (Pre-release) - 2017-03-13
 
 * features
-    * Introduce Split Option for Views Generator
-    * Add validate Method
+    * Introduce `--split` option for ViewsGenerator
+    * Add validate method to `Amphtml`
 
 ### 0.1.3 (Pre-release) - 2017-03-12
 
