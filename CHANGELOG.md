@@ -6,6 +6,7 @@
     * add `help` method to `Amphtml`
     * add `version` method to `Amphtml`
     * custom installation message
+    * add `Amphtml.validate` method fallback
     * improve file reading
 
 ### 0.1.4 (Pre-release) - 2017-03-13
