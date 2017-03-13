@@ -1,6 +1,7 @@
 ### unreleased
 
-* nothing yet
+* features
+    * Introduce Split Option for Install Generator
 
 ### 0.1.4 (Pre-release) - 2017-03-13
 

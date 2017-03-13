@@ -8,7 +8,7 @@ module Amphtml
 
             desc "Updates views to ensure compatibility with AMP. Run with --split to keep a version without AMP."
 
-            class_option :split, desc: "Keep an application layout without AMP", type: :boolean, default: false
+            class_option :split, desc: "Keep an application layout without AMP", type: :boolean, default: false, aliases: '-s'
 
             unless options[:split]
                 source_root File.expand_path("../../templates/views", __FILE__)
