@@ -20,4 +20,5 @@ Gem::Specification.new do |gem|
     gem.required_ruby_version = '>= 2.2'
     gem.add_dependency 'rails', '~> 5.0'
     gem.add_dependency 'thor', '~> 0.19.4'
+    gem.add_dependency 'launchy', '~> 2.4', '>= 2.4.3'
 end
