@@ -57,7 +57,7 @@ We hope that you will consider contributing to AMP-HTML. Please read this short 
 AMP-HTML works with Rails 5.0 onwards. You can add it to your `Gemfile` with:
 
 ```ruby
-gem "amphtml"
+gem 'amphtml'
 ```
 
 And then execute:
@@ -67,6 +67,12 @@ And then execute:
 Or install it yourself as:
 
     $ gem install amphtml
+
+If you always want to be up to date fetch the latest from GitHub in your `Gemfile`:
+
+```ruby
+gem 'amphtml', :git => 'https://github.com/jonhue/amphtml.git'
+```
 
 ---
 
