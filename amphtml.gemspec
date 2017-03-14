@@ -6,11 +6,11 @@ Gem::Specification.new do |gem|
     gem.version     = Amphtml::VERSION
     gem.platform    = Gem::Platform::RUBY
     gem.date        = "2017-03-12"
-    gem.summary     = "Reliable and highly-performant Rails apps with AMP."
-    gem.description = "IN DEVELOPMENT - Accelerated Mobile Pages for Rails. Make your Rails app consistently fast, beautiful and high-performing across devices and distribution platforms."
+    gem.summary     = "Reliable and high-performant apps with AMP & Rails."
+    gem.description = "IN DEVELOPMENT - Reliable and high-performant apps across devices and distribution platforms with AMP & Rails."
     gem.authors     = ["Jonas Hübotter"]
     gem.email       = "jonas@slooob.com"
-    gem.homepage    = "http://jonhue.me/amphtml"
+    gem.homepage    = "http://github.com/jonhue/amphtml"
     gem.license     = "MIT"
 
     gem.files         = `git ls-files`.split("\n")

@@ -3,6 +3,7 @@
 * removals
     * AMP related tag helpers changed from `name_tag` to `amp_name`
 * features
+    * introduce `Amphtml::Test` module
     * introduce options for `ViewsGenerator` to include AMP specific tags
     * introduce `amp_css` helper
     * introduce Social Tag Helpers
