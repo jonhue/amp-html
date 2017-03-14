@@ -1,9 +1,9 @@
 ### unreleased
 
 * removals
-    * amp related tag helpers changed from `name_tag` to `amp_name`
+    * AMP related tag helpers changed from `name_tag` to `amp_name`
 * features
-    * introduce options for `ViewsGenerator` to include amp specific tags
+    * introduce options for `ViewsGenerator` to include AMP specific tags
     * introduce `amp_css` helper
     * introduce Social Tag Helpers
         * `twitter_tag`

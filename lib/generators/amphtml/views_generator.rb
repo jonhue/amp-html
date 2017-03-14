@@ -10,8 +10,10 @@ module Amphtml
 
             class_option :split, desc: "Keep an application layout without AMP", type: :boolean, default: false, aliases: '-s'
 
+            class_option :all, desc: "Include everything", type: :boolean, default: false, aliases: '-a'
             class_option :anim, desc: "Include amp-anim tag", type: :boolean, default: false
             class_option :iframe, desc: "Include amp-iframe tag", type: :boolean, default: false
+            class_option :analytics, desc: "Include amp-analytics tag", type: :boolean, default: false
             class_option :social, desc: "Include social amp tags", type: :boolean, default: false
 
             unless options[:split]

@@ -41,6 +41,11 @@ module ApplicationHelper
         content_tag("amp-iframe", options)
     end
 
+    def amp_analytics(vendor)
+        options[:type] = vendor
+        content_tag("amp-analytics", options)
+    end
+
     def noscript_tag
         content_tag("noscript")
     end

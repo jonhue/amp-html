@@ -10,7 +10,7 @@
 <!-- Assets -->
 
 <!-- **Note:** Uncomment the following script tag to use <amp-anim> (amp_anim helper) for animated images. Learn more: https://www.ampproject.org/docs/guides/author-develop/amp_replacements -->
-<% if options[:anim] %>
+<% if options[:anim] || options[:all] %>
 <script async custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js"></script>
 <% else %>
 <!-- <script async custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js"></script> -->
@@ -20,16 +20,23 @@
 <!-- Components -->
 
 <!-- **Note:** Uncomment the following script tag to use <amp-iframe> (amp_iframe helper). Learn more: https://www.ampproject.org/docs/guides/author-develop/iframes -->
-<% if options[:iframe] %>
+<% if options[:iframe] || options[:all] %>
 <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 <% else %>
 <!-- <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script> -->
 <% end %>
 
+<!-- **Note:** Uncomment the following script tag to use <amp-analytics> (amp_analytics helper). Learn more: https://www.ampproject.org/docs/reference/components/ads/amp-analytics -->
+<% if options[:analytics] || options[:all] %>
+<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+<% else %>
+<!-- <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script> -->
+<% end %>
+
 
 <!-- Social -->
 
-<% if options[:social] %>
+<% if options[:social] || options[:all] %>
 
 <!-- **Note:** Uncomment the following script tag to use <amp-twitter> (amp_twitter helper) for embedding Twitter Tweets. Learn more: https://www.ampproject.org/docs/guides/author-develop/third_party_components -->
 <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
