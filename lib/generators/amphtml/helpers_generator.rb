@@ -14,6 +14,7 @@ module Amphtml
                 def create_helpers
                     template "asset_tag_helper.rb", "app/helpers/asset_tag_helper.rb"
 
+                    template "amp/css_tag_helper.rb", "app/helpers/amp/css_tag_helper.rb"
                     template "amp/component_tag_helper.rb", "app/helpers/amp/component_tag_helper.rb"
                     template "amp/social_tag_helper.rb", "app/helpers/amp/social_tag_helper.rb"
                 end

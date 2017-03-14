@@ -14,6 +14,7 @@ module Amphtml
                 source_root File.expand_path("../../templates/views", __FILE__)
                 def create_views
                     template "application.html.erb", "app/views/layouts/application.html.erb"
+                    template "_amp.html", "app/views/application/_amp.html"
                 end
             else
                 source_root File.expand_path("../../templates/views/split", __FILE__)

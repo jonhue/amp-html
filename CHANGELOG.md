@@ -1,6 +1,7 @@
 ### unreleased
 
 * features
+    * introduce `amp_css` helper
     * introduce Social Tag Helpers
         * `twitter_tag`
         * `instagram_tag`
@@ -11,6 +12,7 @@
     * warn when a `stylesheet_link_tag` or `javascript_include_tag` is being used
     * improve `HelpersGenerator`
     * re-structure `application.html.erb`
+    * put amp-stuff into `_amp.html`
 * bug fixes
     * improve `TagHelper`'s
 
