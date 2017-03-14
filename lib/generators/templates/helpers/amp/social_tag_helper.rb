@@ -68,10 +68,27 @@ module ApplicationHelper
 
         options[:type] = type
         options[:width], options[:height] = extract_dimensions(options.delete(:size)) if options[:size]
-        warn "WARNING (AMP): specify width and height of amp-reddit tags." unless options[:width] && options[:height]
+        warn "WARNING (AMP): specify width and height of amp-social-share tags." unless options[:width] && options[:height]
 
         options[:layout] = "responsive" unless options[:layout] != "responsive"
-        content_tag("amp-reddit", options)
+        content_tag("amp-social-share", options)
+    end
+
+    def amp_soundcloud(track_id, options = {})
+        options = options.symbolize_keys
+
+        options[:"data-trackid"] = track_id
+
+        if options[:type].downcase == "visual"
+            options[:"data-visual"] = true
+        end
+        options.delete(:type)
+
+        options[:width], options[:height] = extract_dimensions(options.delete(:size)) if options[:size]
+        warn "WARNING (AMP): specify width and height of amp-soundcloud tags." unless options[:width] && options[:height]
+
+        options[:layout] = "responsive" unless options[:layout] != "responsive"
+        content_tag("amp-soundcloud", options)
     end
 
 end
