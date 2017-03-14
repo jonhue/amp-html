@@ -1,6 +1,7 @@
 ### unreleased
 
 * features
+    * introduce options for `ViewsGenerator` to include amp specific tags
     * introduce `amp_css` helper
     * introduce Social Tag Helpers
         * `twitter_tag`

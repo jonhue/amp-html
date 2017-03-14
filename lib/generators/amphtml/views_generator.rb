@@ -10,11 +10,15 @@ module Amphtml
 
             class_option :split, desc: "Keep an application layout without AMP", type: :boolean, default: false, aliases: '-s'
 
+            class_option :anim, desc: "Include amp-anim tag", type: :boolean, default: false
+            class_option :iframe, desc: "Include amp-iframe tag", type: :boolean, default: false
+            class_option :social, desc: "Include social amp tags", type: :boolean, default: false
+
             unless options[:split]
                 source_root File.expand_path("../../templates/views", __FILE__)
                 def create_views
                     template "application.html.erb", "app/views/layouts/application.html.erb"
-                    template "_amp.html", "app/views/application/_amp.html"
+                    template "_amp.html.erb", "app/views/application/_amp.html"
                 end
             else
                 source_root File.expand_path("../../templates/views/split", __FILE__)

@@ -10,16 +10,40 @@
 <!-- Assets -->
 
 <!-- **Note:** Uncomment the following script tag to use <amp-anim> (anim_tag || amp_anim_tag helper) for animated images. Learn more: https://www.ampproject.org/docs/guides/author-develop/amp_replacements -->
+<% if options[:anim] %>
+<script async custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js"></script>
+<% else %>
 <!-- <script async custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js"></script> -->
+<% end %>
 
 
 <!-- Components -->
 
 <!-- **Note:** Uncomment the following script tag to use <amp-iframe> (iframe_tag || amp_iframe_tag helper). Learn more: https://www.ampproject.org/docs/guides/author-develop/iframes -->
+<% if options[:iframe] %>
+<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+<% else %>
 <!-- <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script> -->
+<% end %>
 
 
 <!-- Social -->
+
+<% if options[:social] %>
+
+<!-- **Note:** Uncomment the following script tag to use <amp-twitter> (twitter_tag || amp_twitter_tag helper) for embedding Twitter Tweets. Learn more: https://www.ampproject.org/docs/guides/author-develop/third_party_components -->
+<script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
+
+<!-- **Note:** Uncomment the following script tag to use <amp-instagram> (instagram_tag || amp_instagram_tag helper) for embedding Instagrams. Learn more: https://www.ampproject.org/docs/guides/author-develop/third_party_components -->
+<script async custom-element="amp-instagram" src="https://cdn.ampproject.org/v0/amp-instagram-0.1.js"></script>
+
+<!-- **Note:** Uncomment the following script tag to use <amp-facebook> (facebook_tag || amp_facebook_tag helper) for embedding Facebook post or video. Learn more: https://www.ampproject.org/docs/guides/author-develop/third_party_components -->
+<script async custom-element="amp-facebook" src="https://cdn.ampproject.org/v0/amp-facebook-0.1.js"></script>
+
+<!-- **Note:** Uncomment the following script tag to use <amp-youtube> (youtube_tag || amp_youtube_tag helper) for embedding YouTube video. Learn more: https://www.ampproject.org/docs/guides/author-develop/third_party_components -->
+<script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+
+<% else %>
 
 <!-- **Note:** Uncomment the following script tag to use <amp-twitter> (twitter_tag || amp_twitter_tag helper) for embedding Twitter Tweets. Learn more: https://www.ampproject.org/docs/guides/author-develop/third_party_components -->
 <!-- <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script> -->
@@ -32,3 +56,5 @@
 
 <!-- **Note:** Uncomment the following script tag to use <amp-youtube> (youtube_tag || amp_youtube_tag helper) for embedding YouTube video. Learn more: https://www.ampproject.org/docs/guides/author-develop/third_party_components -->
 <!-- <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script> -->
+
+<% end %>
