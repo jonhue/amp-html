@@ -1,8 +1,10 @@
 module ApplicationHelper
 
-    def ad_tag(options = {})
+    # -> List of supported ad networks https://www.ampproject.org/docs/reference/components/ads/amp-ad#supported-ad-networks
+    def ad_tag(network, options = {})
         options = options.symbolize_keys
 
+        options[:type] = network
         options[:width], options[:height] = extract_dimensions(options.delete(:size)) if options[:size]
         warn "WARNING (AMP): specify width and height of amp-ad tags." unless options[:width] && options[:height]
 
