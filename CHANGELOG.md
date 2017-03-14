@@ -1,9 +1,16 @@
 ### unreleased
 
+* features
+    * introduce Social Tag Helpers
+        * `twitter_tag`
+        * `instagram_tag`
+        * `facebook_tag`
+        * `youtube_tag`
 * enhancements
     * allow custom CSS in views
     * warn when a `stylesheet_link_tag` or `javascript_include_tag` is being used
     * improve `HelpersGenerator`
+    * re-structure `application.html.erb`
 * bug fixes
     * improve `TagHelper`'s
 
