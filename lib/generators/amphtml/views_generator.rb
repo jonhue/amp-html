@@ -15,6 +15,7 @@ module Amphtml
             class_option :ad, desc: "Include amp-ad and amp-sticky-ad tag", type: :boolean, default: false
             class_option :iframe, desc: "Include amp-iframe tag", type: :boolean, default: false
             class_option :analytics, desc: "Include amp-analytics tag", type: :boolean, default: false
+            class_option :notifications, desc: "Include amp-user-notification tag", type: :boolean, default: false
             class_option :social, desc: "Include social amp tags", type: :boolean, default: false
 
             unless options[:split]

@@ -19,6 +19,10 @@
 
 <!-- Components -->
 
+<!-- Forms (don't touch this) -->
+<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+
+<!-- Ads -->
 <% if options[:ad] || options[:all] %>
 <!-- **Note:** Uncomment the following script tag to use <amp-ad> (amp_ad helper). Learn more: https://www.ampproject.org/docs/reference/components/ads/amp-ad -->
 <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
@@ -31,6 +35,7 @@
 <!-- <script async custom-element="amp-sticky-ad" src="https://cdn.ampproject.org/v0/amp-sticky-ad-1.0.js"></script> -->
 <% end %>
 
+<!-- iframe -->
 <!-- **Note:** Uncomment the following script tag to use <amp-iframe> (amp_iframe helper). Learn more: https://www.ampproject.org/docs/guides/author-develop/iframes -->
 <% if options[:iframe] || options[:all] %>
 <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
@@ -38,11 +43,20 @@
 <!-- <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script> -->
 <% end %>
 
+<!-- Analytics -->
 <!-- **Note:** Uncomment the following script tag to use <amp-analytics> (amp_analytics helper). Learn more: https://www.ampproject.org/docs/reference/components/ads/amp-analytics -->
-<% if options[:analytics] || options[:all] %>
+<% if options[:analytics] || options[:notifications] || options[:all] %>
 <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 <% else %>
 <!-- <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script> -->
+<% end %>
+
+<!-- Notifications -->
+<!-- **Note:** Uncomment the following script tag to use <amp-user-notification> (amp_user_notification helper). Learn more: https://www.ampproject.org/docs/reference/components/dynamic/amp-user-notification -->
+<% if options[:notifications] || options[:all] %>
+<script async custom-element="amp-user-notification" src="https://cdn.ampproject.org/v0/amp-user-notification-0.1.js"></script>
+<% else %>
+<!-- <script async custom-element="amp-user-notification" src="https://cdn.ampproject.org/v0/amp-user-notification-0.1.js"></script> -->
 <% end %>
 
 
