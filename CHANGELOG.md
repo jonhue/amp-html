@@ -1,5 +1,9 @@
 ### unreleased
 
+* nothing yet
+
+### 0.2.0 (Pre-release) - 2017-03-14
+
 * removals
     * AMP related tag helpers changed from `name_tag` to `amp_name`
 * features
