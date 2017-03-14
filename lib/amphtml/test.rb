@@ -1,16 +1,16 @@
 module Amphtml
-    module Test
+    class Test
 
-        def all
+        def self.all
         end
 
-        def markup
+        def self.markup
         end
 
-        def html
+        def self.html
         end
 
-        def css
+        def self.css
             search_file_for(Rails.root.join('app', 'views'), ["@import", "!important", "-amp-", "i-amp-"])
             case string
             when "@import"
@@ -25,24 +25,30 @@ module Amphtml
             puts source
         end
 
-        private
+        # private
 
-        def search_file_for(dir, strings: [])
-            Dir.foreach(Rails.root + dir) do |file|
-                next if file == '.' or item == '..'
-                File.open(file, "r") do |file_handle|
-                    file_handle.each_line do |line_number|
-                        strings.any? do |word|
-                            if line.includes?(word)
-                                string = word
-                                source = file + ":" + line_number
-                                break
-                            end
+        def self.search_file_for(dir, strings)
+            Dir.foreach(dir) do |file|
+                next if file == '.' or file == '..'
+                # puts file
+                if File.file?(file)
+                    line_number = 0
+                    IO.foreach(file) do |line|
+                        line_number = line_number + 1
+                        # return strings.select { |string| line.include?(string) }, file + ":" + line_number.to_s
+                        # return strings.detect { |string| line.include?(string) }, file + ":" + line_number.to_s
+                        if strings.any? { |string| line.include?(string) }
+                            string = strings.detect { |string| line.include?(string) }
+                            source = file + ":" + line_number.to_s
+                            return string, source
                         end
                     end
+                else
+                    search_file_for(file, strings)
                 end
             end
-            return string, source
+
+            return nil
         end
 
     end

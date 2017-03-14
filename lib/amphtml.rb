@@ -7,6 +7,8 @@ end
 
 module Amphtml
 
+    require 'amphtml/test'
+
     def self.version
         require 'amphtml/version'
         return VERSION
@@ -23,7 +25,7 @@ module Amphtml
         answer = cli.ask "Is your rails server running? [y/n]"
         unless answer == "y"
             warn "Please start your rails server first."
-            break
+            exit
         end
 
         require 'launchy'
@@ -31,30 +33,30 @@ module Amphtml
         if uri.present? && uri != "root"
             Launchy.open( uri + "#development=1", :debug ) do |exception|
                 warn "Attempted to open #{uri} and failed because of: #{exception}"
-                break
+                exit
             end
         else
             if Rails.env.development?
                 Launchy.open( "lvh.me:3000" + "#development=1", :debug ) do |exception|
                     warn "Attempted to open #{uri} and failed because of: #{exception}"
-                    break
+                    exit
                 end
             else
                 warn "If you are not in the development environment, you need to specify the exact uri for the site you want to validate."
-                break
+                exit
             end
         end
 
         puts "=> Open the Developer Console and check for validation errors."
 
-        break
+        exit
 
     end
     def self.validate
         puts 'Please pass the URI you attempt to validate as a parameter or pass "root" to validate your application root.'
         puts 'Example: Amphtml.validate("https://slooob.com")'
         puts '**Note:** "root" parameter is only available in development environment!'
-        break
+        exit
     end
 
 end
