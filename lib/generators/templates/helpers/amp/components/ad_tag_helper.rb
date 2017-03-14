@@ -36,42 +36,6 @@ module ApplicationHelper
         end
     end
 
-    def amp_iframe(source, options: {})
-        options = options.symbolize_keys
-
-        options[:src] = source
-        options[:width], options[:height] = extract_dimensions(options.delete(:size)) if options[:size]
-        warn "WARNING (AMP): specify width and height of amp-iframe tags." unless options[:width] && options[:height]
-
-        options[:layout] = "responsive" unless options[:layout] != "responsive"
-        content_tag("amp-iframe", options)
-    end
-
-    # List of supported analytics vendors -> https://www.ampproject.org/docs/reference/components/ads/amp-analytics
-    def amp_analytics(vendor)
-        options[:type] = vendor
-        content_tag("amp-analytics", options)
-    end
-
-    def amp_pixel(src)
-        options[:src] = src
-        content_tag("amp-pixel", options)
-    end
-
-    def amp_user_notification(id)
-        options[:id] = id
-        options[:layout] = "nodisplay"
-        content_tag("amp-user-notification", options)
-    end
-    def amp_close_user_notification_button(id)
-        options[:on] = "tap:" + id + ".dismiss"
-        content_tag("button", options)
-    end
-
-    def noscript_tag
-        content_tag("noscript")
-    end
-
     private
 
     def extract_dimensions(size)
