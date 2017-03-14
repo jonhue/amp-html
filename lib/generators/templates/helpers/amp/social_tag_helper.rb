@@ -49,4 +49,29 @@ module ApplicationHelper
         content_tag("amp-youtube", options)
     end
 
+    def amp_reddit(src, type, options = {})
+        options = options.symbolize_keys
+
+        options[:"data-embedtype"] = type
+        options[:"data-src"] = src
+        options[:width], options[:height] = extract_dimensions(options.delete(:size)) if options[:size]
+        warn "WARNING (AMP): specify width and height of amp-reddit tags." unless options[:width] && options[:height]
+
+        options[:layout] = "responsive" unless options[:layout] != "responsive"
+        content_tag("amp-reddit", options)
+    end
+
+    # `data-share-endpoint` if provider not preconfigured
+    # List of supported providers -> https://www.ampproject.org/docs/reference/components/social/amp-social-share
+    def amp_social_share(type, options = {})
+        options = options.symbolize_keys
+
+        options[:type] = type
+        options[:width], options[:height] = extract_dimensions(options.delete(:size)) if options[:size]
+        warn "WARNING (AMP): specify width and height of amp-reddit tags." unless options[:width] && options[:height]
+
+        options[:layout] = "responsive" unless options[:layout] != "responsive"
+        content_tag("amp-reddit", options)
+    end
+
 end
