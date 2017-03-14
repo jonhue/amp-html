@@ -10,6 +10,24 @@ module ApplicationHelper
 
         options[:layout] = "responsive" unless options[:layout] != "responsive"
         content_tag("amp-ad", options)
+
+        if options[:"placeholder-src"]
+            placeholder_src = options[:"placeholder-src"]
+            options.delete(:"placeholder-src")
+            content_tag("amp-ad", options) do
+                options[:src] = placeholder_src
+                amp_placeholder("amp-img", options)
+            end
+        elsif options[:"fallback-src"]
+            fallback_src = options[:"fallback-src"]
+            options.delete(:"fallback-src")
+            content_tag("amp-ad", options) do
+                options[:src] = fallback_src
+                amp_placeholder("amp-img", options)
+            end
+        else
+            content_tag("amp-ad", options)
+        end
     end
 
     def iframe_tag(source, options: {})
