@@ -19,6 +19,18 @@
 
 <!-- Components -->
 
+<% if options[:ad] || options[:all] %>
+<!-- **Note:** Uncomment the following script tag to use <amp-ad> (amp_ad helper). Learn more: https://www.ampproject.org/docs/reference/components/ads/amp-ad -->
+<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+<!-- **Note:** Uncomment the following script tag to use <amp-sticky-ad> (amp_ad(sticky: true) helper). Learn more: https://www.ampproject.org/docs/reference/components/ads/amp-sticky-ad -->
+<script async custom-element="amp-sticky-ad" src="https://cdn.ampproject.org/v0/amp-sticky-ad-1.0.js"></script>
+<% else %>
+<!-- **Note:** Uncomment the following script tag to use <amp-ad> (amp_ad helper). Learn more: https://www.ampproject.org/docs/reference/components/ads/amp-ad -->
+<!-- <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script> -->
+<!-- **Note:** Uncomment the following script tag to use <amp-sticky-ad> (amp_ad(sticky: true) helper). Learn more: https://www.ampproject.org/docs/reference/components/ads/amp-sticky-ad -->
+<!-- <script async custom-element="amp-sticky-ad" src="https://cdn.ampproject.org/v0/amp-sticky-ad-1.0.js"></script> -->
+<% end %>
+
 <!-- **Note:** Uncomment the following script tag to use <amp-iframe> (amp_iframe helper). Learn more: https://www.ampproject.org/docs/guides/author-develop/iframes -->
 <% if options[:iframe] || options[:all] %>
 <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>

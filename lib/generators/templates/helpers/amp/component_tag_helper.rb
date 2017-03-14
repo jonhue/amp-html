@@ -1,6 +1,6 @@
 module ApplicationHelper
 
-    # -> List of supported ad networks https://www.ampproject.org/docs/reference/components/ads/amp-ad#supported-ad-networks
+    # List of supported ad networks -> https://www.ampproject.org/docs/reference/components/ads/amp-ad#supported-ad-networks
     def amp_ad(network, options: {})
         options = options.symbolize_keys
 
@@ -11,7 +11,13 @@ module ApplicationHelper
         options[:layout] = "responsive" unless options[:layout] != "responsive"
         content_tag("amp-ad", options)
 
-        if options[:"placeholder-src"]
+        if options[:sticky] == true
+            options.delete(:sticky)
+            sticky[:layout] = "nodisplay"
+            content_tag("amp-sticky-ad", sticky) do
+                content_tag("amp-ad", options)
+            end
+        elsif options[:"placeholder-src"]
             placeholder_src = options[:"placeholder-src"]
             options.delete(:"placeholder-src")
             content_tag("amp-ad", options) do
@@ -41,9 +47,15 @@ module ApplicationHelper
         content_tag("amp-iframe", options)
     end
 
+    # List of supported analytics vendors -> https://www.ampproject.org/docs/reference/components/ads/amp-analytics
     def amp_analytics(vendor)
         options[:type] = vendor
         content_tag("amp-analytics", options)
+    end
+
+    def amp_pixel(src)
+        options[:src] = src
+        content_tag("amp-pixel", options)
     end
 
     def noscript_tag
