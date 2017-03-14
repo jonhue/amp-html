@@ -6,19 +6,27 @@ The AMP Project for Rails. Make your Rails app consistently fast, beautiful and 
 
 ## Latest release
 
-### 0.1.5 (Pre-release) - 2017-03-13
+### 0.2.0 (Pre-release) - 2017-03-14
 
+* removals
+    * AMP related tag helpers changed from `name_tag` to `amp_name`
 * features
-    * introduce `--split` option for `InstallGenerator`
-    * introduce `--split` option for `HelpersGenerator`
+    * introduce `Amphtml::Test` class
+    * introduce options for `ViewsGenerator` to include AMP specific tags
+    * introduce `amp_css` helper
+    * introduce Social Tag Helpers
+        * `twitter_tag`
+        * `instagram_tag`
+        * `facebook_tag`
+        * `youtube_tag`
 * enhancements
-    * add `help` method to `Amphtml`
-    * add `version` method to `Amphtml`
-    * custom installation message
-    * add `Amphtml.validate` method fallback
-    * improve file reading
+    * allow custom CSS in views
+    * warn when a `stylesheet_link_tag` or `javascript_include_tag` is being used
+    * improve `HelpersGenerator`
+    * re-structure `application.html.erb`
+    * put amp-stuff into `_amp.html`
 * bug fixes
-    * Improve `AssetTagHelper`'s
+    * improve `TagHelper`'s
 
 ---
 
