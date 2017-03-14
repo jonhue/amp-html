@@ -1,7 +1,7 @@
 module ApplicationHelper
 
     # -> List of supported ad networks https://www.ampproject.org/docs/reference/components/ads/amp-ad#supported-ad-networks
-    def ad_tag(network, options: {})
+    def amp_ad(network, options: {})
         options = options.symbolize_keys
 
         options[:type] = network
@@ -30,7 +30,7 @@ module ApplicationHelper
         end
     end
 
-    def iframe_tag(source, options: {})
+    def amp_iframe(source, options: {})
         options = options.symbolize_keys
 
         options[:src] = source

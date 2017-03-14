@@ -1,5 +1,7 @@
 ### unreleased
 
+* removals
+    * amp related tag helpers changed from `name_tag` to `amp_name`
 * features
     * introduce options for `ViewsGenerator` to include amp specific tags
     * introduce `amp_css` helper

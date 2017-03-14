@@ -40,7 +40,7 @@ module ActionView
                 end
             end
 
-            def anim_tag(source, options: {})
+            def amp_anim(source, options: {})
                 options = options.symbolize_keys
 
                 src = options[:src] = path_to_image(source, skip_pipeline: options.delete(:skip_pipeline))

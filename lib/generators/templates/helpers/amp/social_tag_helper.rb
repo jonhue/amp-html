@@ -1,6 +1,6 @@
 module ApplicationHelper
 
-    def twitter_tag(tweet_id, options = {})
+    def amp_twitter(tweet_id, options = {})
         options = options.symbolize_keys
 
         options[:"data-tweetid"] = tweet_id
@@ -11,7 +11,7 @@ module ApplicationHelper
         content_tag("amp-twitter", options)
     end
 
-    def instagram_tag(shortcode, options = {})
+    def amp_instagram(shortcode, options = {})
         options = options.symbolize_keys
 
         options[:"data-shortcode"] = shortcode
@@ -22,7 +22,7 @@ module ApplicationHelper
         content_tag("amp-instagram", options)
     end
 
-    def facebook_tag(href, options = {})
+    def amp_facebook(href, options = {})
         options = options.symbolize_keys
 
         options[:"data-href"] = href
@@ -38,7 +38,7 @@ module ApplicationHelper
         content_tag("amp-facebook", options)
     end
 
-    def youtube_tag(video_id, options = {})
+    def amp_youtube(video_id, options = {})
         options = options.symbolize_keys
 
         options[:"data-videoid"] = video_id
