@@ -21,7 +21,7 @@ module ActionView
             end
 
 
-            def image_tag(source, options = {})
+            def image_tag(source, options: {})
                 options = options.symbolize_keys
                 check_for_image_tag_errors(options)
 
@@ -40,7 +40,7 @@ module ActionView
                 end
             end
 
-            def anim_tag(source, options = {})
+            def anim_tag(source, options: {})
                 options = options.symbolize_keys
 
                 src = options[:src] = path_to_image(source, skip_pipeline: options.delete(:skip_pipeline))
@@ -51,16 +51,13 @@ module ActionView
                 options[:layout] = "responsive" unless options[:layout] != "responsive"
 
                 if options[:placeholder]
-                    placeholder_options[:src] = options[:placeholder]
                     options.delete(:placeholder)
-                end
-
-                content_tag("amp-anim", options) do
-                    if placeholder_options
+                    content_tag("amp-anim", options) do
                         options.delete(:src)
-                        options[:placeholder] = true
-                        image_tag(placeholder_options[:src], options)
+                        amp_placeholder("amp-img", options)
                     end
+                else
+                    content_tag("amp-anim", options)
                 end
             end
 
