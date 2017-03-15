@@ -37,7 +37,7 @@ module Amphtml
             end
         else
             if Rails.env.development?
-                Launchy.open( "lvh.me:3000" + "#development=1", :debug ) do |exception|
+                Launchy.open( "localhost:3000" + "#development=1", :debug ) do |exception|
                     warn "Attempted to open #{uri} and failed because of: #{exception}"
                     exit
                 end
