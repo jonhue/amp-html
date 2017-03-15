@@ -35,7 +35,7 @@ Use the powerful features of AMP to make your Rails app consistently fast, beaut
 
 #### Latest release: 0.2.1 (Pre-release)
 
-[**Grab it from Rubygems**](https://rubygems.org/gems/amphtml)
+[Grab it from Rubygems](https://rubygems.org/gems/amphtml)
 
 #### Supported versions
 
@@ -110,6 +110,8 @@ If you want to use [SplitView](https://github.com/jonhue/amphtml/wiki/SplitView)
 To add components to the generator simply include the component as an option:
 
     $ rails g amphtml:bundle --analytics --notifications
+
+[List of components](https://github.com/jonhue/amphtml/wiki/Components)
 
 You can also run the three generators independently:
 
