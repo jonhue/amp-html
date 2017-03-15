@@ -5,7 +5,6 @@ Gem::Specification.new do |gem|
     gem.name        = "amphtml"
     gem.version     = Amphtml::VERSION
     gem.platform    = Gem::Platform::RUBY
-    gem.date        = "2017-03-12"
     gem.summary     = "Reliable and high-performant apps with AMP & Rails."
     gem.description = "IN DEVELOPMENT - Reliable and high-performant apps across devices and distribution platforms with AMP & Rails."
     gem.authors     = ["Jonas Hübotter"]

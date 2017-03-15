@@ -1,6 +1,8 @@
 module Amphtml
     class Test
 
+        require 'rails'
+
         def self.all
         end
 
@@ -11,9 +13,8 @@ module Amphtml
         end
 
         def self.css
-            # Rails.root.join('app', 'views')
             strings = ["@import", "!important", "-amp-", "i-amp-"]
-            results = search_file_for(Dir.pwd, strings)
+            results = search_files_in_dir_for(Rails.root.join('app', 'views'), strings)
             if results.present?
                 results.each do |source, string|
                     case string
@@ -36,14 +37,13 @@ module Amphtml
             end
         end
 
-        # private
+        private
 
-        def self.search_file_for(dir, strings)
+        def search_files_in_dir_for(dir, strings)
             results = {}
 
             Dir.foreach(dir) do |file|
                 next if file == '.' or file == '..'
-                # puts file
                 if File.file?(file)
                     line_number = 0
                     IO.foreach(file) do |line|
@@ -55,6 +55,7 @@ module Amphtml
                         end
                     end
                 else
+                    # Search child directories
                     # search_file_for(file, strings)
                 end
             end
