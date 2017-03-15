@@ -25,6 +25,7 @@ module Amphtml
                 template "amp/components/iframe_tag_helper.rb", "app/helpers/amp/components/iframe_tag_helper.rb"
                 template "amp/components/analytics_tag_helper.rb", "app/helpers/amp/components/analytics_tag_helper.rb"
                 template "amp/components/notification_tag_helper.rb", "app/helpers/amp/components/notification_tag_helper.rb"
+                template "amp/components/fonts_tag_helper.rb", "app/helpers/amp/components/fonts_tag_helper.rb"
 
                 template "amp/social_tag_helper.rb", "app/helpers/amp/social_tag_helper.rb"
             end
