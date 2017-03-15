@@ -1,19 +1,45 @@
-# AMP-HTML - Reliable and high-:zap: apps with AMP & Rails
+# AMP-HTML - Reliable and high-:zap: apps with AMP & Rails [IN DEVELOPMENT]
 
-The AMP Project for Rails. Make your Rails app consistently fast, beautiful and high-performing across devices and distribution platforms.
+Amphtml is a universal solution to integrate your Rails app easily with the AMP Project (Acellerated Mobile Pages Project). It enables you to quickly spin-up, build and test your app with AMP, while fulfilling the app's unique requirements.
+
+Use the powerful features of AMP to make your Rails app consistently fast, beautiful and high-performing across devices and distribution platforms.
+
+[**Follow the Getting Started Guide**](https://github.com/jonhue/amphtml/wiki/Getting-started)
 
 ---
 
-## Latest release
+## Navigation
 
-### 0.2.1 (Pre-release) - 2017-03-14
-
-* bug fixes
-    * fix `Amphtml::Test` class
+* Information
+    * Quick info (Latest release, Dependencies)
+    * Wiki
+    * Bug reports
+    * Example applications
+    * Contributing
+* Concept
+* Features
+* Installation
+* Usage
+    * Helpers
+    * SplitView
+* Guides
+* Components
+* Contributors
+* License
 
 ---
 
 ## Information
+
+### Quick info
+
+#### Latest release: 0.2.1 (Pre-release)
+
+[**Grab it from Rubygems**](https://rubygems.org/gems/amphtml)
+
+#### Supported versions
+
+Rails 4, 4.1, 4.2, 5.0, 5.1
 
 ### The AMP-HTML wiki
 
@@ -41,11 +67,15 @@ We hope that you will consider contributing to AMP-HTML. Please read this short 
 
 [https://github.com/jonhue/amphtml/wiki/Contributing](https://github.com/jonhue/amphtml/wiki/Contributing)
 
----
+## Concept
 
-## Getting started
+## Features
 
-AMP-HTML works with Rails 5.0 onwards. You can add it to your `Gemfile` with:
+## Installation
+
+You can also follow the [**Getting Started Guide**](https://github.com/jonhue/amphtml/wiki/Getting-started).
+
+AMP-HTML works with Rails 4.0 onwards. You can add it to your `Gemfile` with:
 
 ```ruby
 gem 'amphtml'
@@ -65,17 +95,62 @@ If you always want to be up to date fetch the latest from GitHub in your `Gemfil
 gem 'amphtml', :git => 'https://github.com/jonhue/amphtml.git'
 ```
 
----
+### Generators
+
+Amphtml comes with three different generators. If you want to bundle them execute:
+
+    $ rails g amphtml:bundle
+
+That will generate all the files you need to create a universal AMP app (recommended).
+
+If you want to use [SplitView](https://github.com/jonhue/amphtml/wiki/SplitView) to create views with and without AMP simultaneously, execute instead:
+
+    $ rails g amphtml:bundle --split
+
+To add components to the generator simply include the component as an option:
+
+    $ rails g amphtml:bundle --analytics --notifications
+
+You can also run the three generators independently:
+
+    $ rails g amphtml:install
+    $ rails g amphtml:helpers
+    $ rails g amphtml:views
+
+*Each* of them supports the `--split || -s` option to use **both** regular views and AMP views.
+To add components, you need to pass them as option to the `helpers` and `views` generators.
+
+### Test and validate AMP
+
+Amphtml allows you to test and validate your views out of the box:
+
+    $ amphtml test all
+
+Pass `--split` as an option if you are using SplitView:
+
+    $ amphtml test all --split
+
+`Test.all` runs multiple tests to check if your code is valid. You can also run each test specifically.
+
+To get a list of all tests and learn how to run them, go to [How to test and validate](https://github.com/jonhue/amphtml/wiki/How-to-test-and-validate)
+
+To all tests (even `test all`) you can pass the option `--fix || -f` and Amphtml will suggest changes you could make. You can accept or reject them.
+If you want to automatically fix the code, pass `--autofix || -af` as option. Be careful, you will not be asked to approve changes to the documents!
+
+AMP has a validator built in. To validate:
+
+    $ amphtml validate root # validates "http://localhost:300"
+    $ amphtml validate "https://slooob.com" # validates "https://slooob.com"
+
+**Note:** `root` is only available as a parameter in development environment..
 
 ## Usage
 
 ### Helpers
 
----
+### SplitView
 
 ## Configuration
-
-
 
 ---
 
@@ -84,8 +159,6 @@ gem 'amphtml', :git => 'https://github.com/jonhue/amphtml.git'
 Give the people some :heart: who are working on this project. Check them all at:
 
 [https://github.com/jonhue/amphtml/graphs/contributors](https://github.com/jonhue/amphtml/graphs/contributors)
-
----
 
 ## License
 
