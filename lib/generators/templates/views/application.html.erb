@@ -1,38 +1,56 @@
 <!doctype html>
 <html amp>
-  <head>
+    <head>
 
-    <meta charset="utf-8">
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
+        <!-- Keep the two following tags at the top of the head section!  -->
+        <meta charset="utf-8">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
 
-    <title><%= Rails.application.class.parent %></title>
+        <!-- Use <%= content_for :title do %>App Name<% end %> to add a title to your view -->
+        <title><%% if content_for? :title %><%%= yield :title %><%% else %><%%= Rails.application.class.parent %><%% end %></title>
 
-    <link rel="canonical" href="<%= request.original_url %>" />
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <% if options[:split] %>
+        <!-- Overwrite the passed parameter to specify a specific canonical url -->
+        <%%= canonical_link(url_for(format: :html, only_path: false)) %>
+        <% else %>
+        <%%= canonical_link(request.original_url) %>
+        <% end %>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
-    <%= csrf_meta_tags %>
-
-
-    <!-- AMP Resources -->
-    <!-- Go to "app/views/application/_amp.html" to customize AMP and add tags like `twitter_tag` or `iframe_tag`! -->
-    <%= render "amp" %>
-
-
-    <!-- AMP Custom styles -->
-    <!-- Use <% amp_css do %> div { color: black } ... <% end %> to add specific styles to your view -->
-
-    <!-- DO NOT use any other external stylesheets or style tags! -->
-    <!-- Learn more about format restrictions in CSS: https://www.ampproject.org/docs/guides/author-develop/responsive/style_pages -->
-
-    <style amp-custom><%= yield :css %>
-        /* Global styles */
-    </style>
+        <%%= csrf_meta_tags %>
 
 
-  </head>
+        <!-- AMP Resources -->
+        <!-- Go to "app/views/application/_amp.html" to customize AMP and add tags like `twitter_tag` or `iframe_tag`! -->
+        <%%= render "amp" %>
 
-  <body>
-    <%= yield %>
-  </body>
+
+        <!-- AMP Custom styles -->
+        <!-- Use <%= amp_css do %> div { color: black } ... <% end %> to add specific styles to your view -->
+
+        <!-- If you want to embed external styles, use stylesheets under "app/assets/stylesheets/amp" directory -->
+        <!-- DO NOT include any external CSS via a link tag -->
+        <!-- Learn more about format restrictions in CSS: https://www.ampproject.org/docs/guides/author-develop/responsive/style_pages -->
+
+        <!-- Add your global CSS in the block below -->
+        <%%= amp_global_css do %>
+        <%% end %>
+
+
+        <!-- AMP Custom javascript -->
+        <!-- Use <%= amp_js do %> function test() { ... } <% end %> to add specific javascript to your view -->
+
+        <!-- If you want to embed external javascript, use files under "app/assets/javascripts/amp" directory -->
+        <!-- DO NOT include any external JS via a link tag -->
+        <!-- Add your global JS in the block below -->
+        <%%= amp_global_js do %>
+        <%% end %>
+
+
+    </head>
+
+    <body>
+        <%%= yield %>
+    </body>
 
 </html>

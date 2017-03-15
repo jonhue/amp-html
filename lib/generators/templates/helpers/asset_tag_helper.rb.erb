@@ -11,7 +11,19 @@ module ActionView
             include AssetUrlHelper
             include TagHelper
 
-            def amp_image_tag(source, options: {})
+            <% unless options[:split] %>
+            def javascript_include_tag(*sources)
+                warn "WARNING (AMP): external and internal scripts are not allowed."
+                super
+            end
+            def stylesheet_link_tag(*sources)
+                warn "WARNING (AMP): external and internal stylesheets are not allowed."
+                super
+            end
+            <% end %>
+
+
+            def amp_image(source, options: {})
                 options = options.symbolize_keys
                 check_for_image_tag_errors(options)
 
@@ -29,6 +41,11 @@ module ActionView
                     noscript_tag
                 end
             end
+            <% unless options[:split] %>
+            def image_tag(source, options: {})
+                amp_image(source, options)
+            end
+            <% end %>
 
             def amp_anim(source, options: {})
                 options = options.symbolize_keys
@@ -51,7 +68,7 @@ module ActionView
                 end
             end
 
-            def amp_video_tag(*sources, fallback: "Your browser doesn’t support HTML5 video")
+            def amp_video(*sources, fallback: "Your browser doesn’t support HTML5 video")
                 options = sources.extract_options!.symbolize_keys
                 public_poster_folder = options.delete(:poster_skip_pipeline)
                 sources << options
@@ -62,10 +79,20 @@ module ActionView
                     tag_options[:layout] = "responsive" unless tag_options[:layout] != "responsive"
                 end
             end
+            <% unless options[:split] %>
+            def video_tag(*sources, fallback: "Your browser doesn’t support HTML5 video")
+                amp_video(*sources, fallback: "Your browser doesn’t support HTML5 video")
+            end
+            <% end %>
 
-            def amp_audio_tag(*sources, fallback: "Your browser doesn’t support HTML5 audio")
+            def amp_audio(*sources, fallback: "Your browser doesn’t support HTML5 audio")
                 multiple_sources_tag_builder("amp-audio", sources, fallback)
             end
+            <% unless options[:split] %>
+            def audio_tag(*sources, fallback: "Your browser doesn’t support HTML5 audio")
+                amp_audio(*sources, fallback: "Your browser doesn’t support HTML5 audio")
+            end
+            <% end %>
 
             private
 

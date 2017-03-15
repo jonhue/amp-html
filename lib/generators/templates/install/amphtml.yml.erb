@@ -1,0 +1,23 @@
+# ------------
+# VIEWS FORMAT
+# ------------
+
+<% if options[:split] %>
+# ## Change the default format used for views.
+# ## Defaults to `amp`
+# format: html
+<% else %>
+## Change the default format used for views.
+## Defaults to `amp`
+format: html
+<% end %>
+
+<% if options[:split] %>
+# ## Formats used to find a view if the default format does not exist.
+# ## Default is ``
+fallback_format: html xhtml
+<% else %>
+## Formats used to find a view if the default format does not exist.
+## Default is ``
+fallback_format: amp xhtml
+<% end %>
