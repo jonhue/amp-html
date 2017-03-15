@@ -10,22 +10,24 @@ Use the powerful features of AMP to make your Rails app consistently fast, beaut
 
 ## Navigation
 
-* Information
-    * Quick info (Latest release, Dependencies)
-    * Wiki
-    * Bug reports
-    * Example applications
-    * Contributing
-* Concept
-* Features
-* Installation
-* Usage
-    * Helpers
-    * SplitView
-* Guides
-* Components
-* Contributors
-* License
+* [Information](https://github.com/jonhue/amphtml#information)
+    * [Quick info (Latest release, Dependencies)](https://github.com/jonhue/amphtml#quick-info)
+    * [The AMP-HTML wiki](https://github.com/jonhue/amphtml#the-amp-html-wiki)
+    * [Bug reports](https://github.com/jonhue/amphtml#bug-reports)
+    * [Example applications](https://github.com/jonhue/amphtml#example-applications)
+    * [Contributing](https://github.com/jonhue/amphtml#contributing)
+* [Concept](https://github.com/jonhue/amphtml#concept)
+* [Features](https://github.com/jonhue/amphtml#features)
+* [Installation](https://github.com/jonhue/amphtml#installation)
+    * [Generators](https://github.com/jonhue/amphtml#generators)
+    * [Test and validate AMP](https://github.com/jonhue/amphtml#test-and-validate-amp)
+* [Usage](https://github.com/jonhue/amphtml#usage)
+    * [Helpers](https://github.com/jonhue/amphtml#helpers)
+    * [SplitView](https://github.com/jonhue/amphtml#splitview)
+* [Guides](https://github.com/jonhue/amphtml#guides)
+* [Components](https://github.com/jonhue/amphtml#components)
+* [Contributors](https://github.com/jonhue/amphtml#contributors)
+* [License](https://github.com/jonhue/amphtml#license)
 
 ---
 
@@ -107,11 +109,9 @@ If you want to use [SplitView](https://github.com/jonhue/amphtml/wiki/SplitView)
 
     $ rails g amphtml:bundle --split
 
-To add components to the generator simply include the component as an option:
+To add components ([List of components](https://github.com/jonhue/amphtml/wiki/Components)) to the generator simply include the component as an option:
 
     $ rails g amphtml:bundle --analytics --notifications
-
-[List of components](https://github.com/jonhue/amphtml/wiki/Components)
 
 You can also run the three generators independently:
 
@@ -152,7 +152,9 @@ AMP has a validator built in. To validate:
 
 ### SplitView
 
-## Configuration
+## Guides
+
+## Components
 
 ---
 
