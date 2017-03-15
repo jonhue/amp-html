@@ -132,7 +132,7 @@ Pass `--split` as an option if you are using SplitView:
 
     $ amphtml test all --split
 
-`Test.all` runs multiple tests to check if your code is valid. You can also run each test specifically.
+`test all` runs multiple tests to check if your code is valid. You can also run each test specifically.
 
 To get a list of all tests and learn how to run them, go to [How to test and validate](https://github.com/jonhue/amphtml/wiki/How-to-test-and-validate)
 

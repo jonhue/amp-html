@@ -5,26 +5,19 @@ module Amphtml
 
         class InstallGenerator < Rails::Generators::Base
 
+            source_root File.expand_path("../../templates/install", __FILE__)
             desc "Install AMP-HTML. Run with --split to keep a version without AMP."
+
 
             class_option :split, desc: "Keep an application layout without AMP", type: :boolean, default: false, aliases: '-s'
 
-            unless options[:split]
-                source_root File.expand_path("../../templates/install", __FILE__)
-                def create_initializer
-                    template "amphtml.rb", "config/initializers/amphtml.rb"
-                end
-                def create_configuration
-                    template "amphtml.yml", "config/amphtml.yml"
-                end
-            else
-                source_root File.expand_path("../../templates/install/split", __FILE__)
-                def create_initializer
-                    template "amphtml.rb", "config/initializers/amphtml.rb"
-                end
-                def create_configuration
-                    template "amphtml.yml", "config/amphtml.yml"
-                end
+
+
+            def create_initializer
+                template "amphtml.rb.erb", "config/initializers/amphtml.rb"
+            end
+            def create_configuration
+                template "amphtml.yml.erb", "config/amphtml.yml"
             end
 
             def show_readme

@@ -4,14 +4,15 @@ require 'thor'
 module Amphtml
     module Generators
 
-        class ViewsGenerator < Rails::Generators::Base
+        class BundleGenerator < Rails::Generators::Base
 
-            source_root File.expand_path("../../templates/views", __FILE__)
-            desc "Updates views to ensure compatibility with AMP. Run with --split to keep a version without AMP."
+            desc "Bundle all amphtml generators."
 
 
             class_option :split, desc: "Keep an application layout without AMP", type: :boolean, default: false, aliases: '-s'
 
+            class_option :stylesheets, desc: "Generate stylesheet assets", type: :boolean, default: false, aliases: '-s'
+            class_option :javascripts, desc: "Generate javascript assets", type: :boolean, default: false, aliases: '-j'
 
             # COMPONENTS
             class_option :all, desc: "Include everything", type: :boolean, default: false, aliases: '-a'
@@ -25,25 +26,11 @@ module Amphtml
 
 
 
-
-            def create_views
-                template "_amp.html.erb", "app/views/application/_amp.html"
-                if options[:split]
-                    template "application.html.erb", "app/views/layouts/application.app.erb"
-                else
-                    template "application.html.erb", "app/views/layouts/application.html.erb"
-                end
-            end
-
-            def add_mime_types
-                open("config/mime_types.rb", "a") do |f|
-                    f << "# AMP-HTML - Setting the format for AMP Views\n"
-                    f << "Mime::Type.register_alias 'text/html', Amphtml.format\n"
-                end
-            end
-
-            def show_readme
-                readme "README"
+            def run_generators
+                generate "amphtml:install"
+                generate "amphtml:helpers"
+                generate "amphtml:views"
+                generate "amphtml:assets"
             end
 
         end
