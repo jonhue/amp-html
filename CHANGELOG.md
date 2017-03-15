@@ -2,10 +2,23 @@
 
 * nothing yet
 
+### 0.3.0 (Pre-release) - 2017-03-15
+
+* features
+    * add SplitView
+    * yml configuration file
+    * add fonts helpers
+    * add AMP links helpers
+* enhancements
+    * improve generators
+    * improve generator templates
+    * improve `Amphtml::Test` class
+    * drop Rails dependency to 4.0
+
 ### 0.2.1 (Pre-release) - 2017-03-14
 
-* bug fixes
-    * fix `Amphtml::Test` class
+    * bug fixes
+        * fix `Amphtml::Test` class
 
 ### 0.2.0 (Pre-release) - 2017-03-14
 
