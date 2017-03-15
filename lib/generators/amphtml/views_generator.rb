@@ -31,6 +31,12 @@ module Amphtml
                 end
             end
 
+            def add_mime_types
+                open("config/mime_types.rb", "a") do |f|
+                    f.puts "Mime::Type.register_alias 'text/html', Amphtml.format"
+                end
+            end
+
             def show_readme
                 readme "README"
             end
