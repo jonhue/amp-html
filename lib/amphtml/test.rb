@@ -13,6 +13,8 @@ module Amphtml
         end
 
         def self.css
+            require 'highline'
+
             strings = ["@import", "!important", "-amp-", "i-amp-"]
             results = search_files_in_dir_for(Rails.root.join('app', 'views'), strings)
             if results.present?
@@ -21,6 +23,11 @@ module Amphtml
                     when "@import"
                         warn "ERROR (AMP): CSS cannot contain `@import`"
                         puts source
+                        cli = HighLine.new
+                        answer = cli.ask "Delete line? [y/n]"
+                        if answer == "y"
+                            # do something ...
+                        end
                     when "!important"
                         warn "ERROR (AMP): Usage of the `!important` qualifier is not allowed"
                         puts source
