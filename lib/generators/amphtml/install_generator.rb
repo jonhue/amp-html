@@ -11,13 +11,19 @@ module Amphtml
 
             unless options[:split]
                 source_root File.expand_path("../../templates/install", __FILE__)
-                def copy_initializer
+                def create_initializer
                     template "amphtml.rb", "config/initializers/amphtml.rb"
+                end
+                def create_configuration
+                    template "amphtml.yml", "config/amphtml.yml"
                 end
             else
                 source_root File.expand_path("../../templates/install/split", __FILE__)
-                def copy_initializer
+                def create_initializer
                     template "amphtml.rb", "config/initializers/amphtml.rb"
+                end
+                def create_configuration
+                    template "amphtml.yml", "config/amphtml.yml"
                 end
             end
 
