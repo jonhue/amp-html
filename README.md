@@ -37,7 +37,7 @@ Use the powerful features of AMP to make your Rails app consistently fast, beaut
 
 #### Latest release: 0.2.1 (Pre-release)
 
-[Grab it from Rubygems](https://rubygems.org/gems/amphtml)
+[**Changelog**](https://github.com/jonhue/amphtml/blob/master/CHANGELOG.md), [Grab it from Rubygems](https://rubygems.org/gems/amphtml)
 
 #### Supported versions
 
@@ -67,7 +67,7 @@ There are a few example applications available on GitHub that demonstrate variou
 
 We hope that you will consider contributing to AMP-HTML. Please read this short overview for some information about how to get started:
 
-[https://github.com/jonhue/amphtml/wiki/Contributing](https://github.com/jonhue/amphtml/wiki/Contributing)
+[https://github.com/jonhue/amphtml/wiki/Contributing](https://github.com/jonhue/amphtml/wiki/Contributing), [Code of conduct](https://github.com/jonhue/amphtml/blob/master/CODE_OF_CONDUCT.md)
 
 ## Concept
 
