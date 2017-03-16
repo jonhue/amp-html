@@ -29,7 +29,7 @@ class Amphtml::Cli < Thor
 
 
     desc "components", "Learn more about AMP-HTML installable components"
-    map %w[-c --components] => :components
+    map %w[--components] => :components
 
     def components
         puts ::Amphtml::Components::Help.all
@@ -37,7 +37,7 @@ class Amphtml::Cli < Thor
 
 
     desc "component NAME", "Get infomration about a specific AMP-HTML installable component"
-    map %w[-c --component] => :component
+    map %w[--component] => :component
 
     def component(name)
         puts ::Amphtml::Components::Help.component(name)
@@ -49,14 +49,6 @@ class Amphtml::Cli < Thor
 
     def bundle
         puts ::Amphtml::Components::Install.bundle
-    end
-
-
-    desc "install COMPONENT", "Install a specific AMP-HTML component"
-    map %w[-i --install] => :install
-
-    def install(component)
-        puts ::Amphtml::Components::Install.component(component)
     end
 
 
