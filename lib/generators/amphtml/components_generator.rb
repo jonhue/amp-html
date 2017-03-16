@@ -42,7 +42,8 @@ module Amphtml
             end
 
             def show_readme
-                readme "README"
+                source_root File.expand_path("../../templates/views/components", __FILE__)
+                readme "README.md"
             end
 
         end

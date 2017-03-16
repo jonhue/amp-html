@@ -34,7 +34,7 @@ module Amphtml
             end
 
             def show_readme
-                readme "README"
+                readme "README.md"
             end
 
         end
