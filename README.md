@@ -35,13 +35,13 @@ Use the powerful features of AMP to make your Rails app consistently fast, beaut
 
 ### Quick info
 
-#### Latest release: 0.3.0 (Pre-release)
+#### Latest release: 0.3.1 (Pre-release)
 
 [**Changelog**](https://github.com/jonhue/amphtml/blob/master/CHANGELOG.md), [Grab it from Rubygems](https://rubygems.org/gems/amphtml)
 
 #### Supported versions
 
-Rails 4, 4.1, 4.2, 5.0, 5.1
+Rails 4.0, 4.1, 4.2, 5.0, 5.1
 
 ### The AMP-HTML wiki
 
