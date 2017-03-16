@@ -17,7 +17,8 @@ module Amphtml
             def create_stylesheet_assets
                 if options.size < 0 || options[:stylesheets]
                     template "stylesheets/application.scss", "app/assets/stylesheets/amp/application.scss"
-                elsif options.size < 0 || options[:javascripts]
+                end
+                if options.size < 0 || options[:javascripts]
                     template "javascripts/application.js", "app/assets/javascripts/amp/application.js"
                 end
             end
