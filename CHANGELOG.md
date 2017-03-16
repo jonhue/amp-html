@@ -4,14 +4,15 @@
 
 ### 0.4.0 (Pre-release) - 2017-03-16
 
-* nothing yet
-
-### 0.3.1 (Pre-release) - 2017-03-16
-
 * features
     * add command line executables
 * bug fixes
     * fix Generators
+
+### 0.3.1 (Pre-release) - 2017-03-16
+
+* bug fixes
+    * fix Rails dependency
 
 ### 0.3.0 (Pre-release) - 2017-03-15
 
