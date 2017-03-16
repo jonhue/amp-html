@@ -27,10 +27,11 @@ module Amphtml
 
 
             def create_views
-                template "_amp.html.erb", "app/views/application/_amp.html"
                 if options[:split]
-                    template "application.html.erb", "app/views/layouts/application.app.erb"
+                    template "_amp.html.erb", "app/views/application/_amp.amp"
+                    template "application.html.erb", "app/views/layouts/application.amp.erb"
                 else
+                    template "_amp.html.erb", "app/views/application/_amp.html"
                     template "application.html.erb", "app/views/layouts/application.html.erb"
                 end
             end
