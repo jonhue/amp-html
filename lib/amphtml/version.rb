@@ -4,7 +4,7 @@ module Amphtml
     class Version
 
         def self.current
-            return "amphtml" + VERSION
+            return "amphtml " + VERSION
         end
 
     end
