@@ -1,5 +1,10 @@
 module ApplicationHelper
 
+    def amp_html_doctype
+        tag("!doctype", {"html"})
+        content_tag("html", {"amp"})
+    end
+
     def amp_css
         content_for :css
     end
