@@ -4,6 +4,7 @@ module ApplicationHelper
         tag("!doctype", {"html"})
         content_tag("html", {"amp"})
     end
+    
 
     def amp_css
         content_for :css
@@ -19,6 +20,7 @@ module ApplicationHelper
         content_for :global_js
     end
 
+
     def amp_placeholder(name, options: {})
         options[:placeholder] = true
         content_tag(name, options)
@@ -28,6 +30,7 @@ module ApplicationHelper
         options[:fallback] = true
         content_tag(name, options)
     end
+
 
     def amp_link(href)
         options = {}

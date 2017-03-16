@@ -60,27 +60,6 @@ module ActionView
             # end
             <% end %>
 
-            def amp_anim(source, options: {})
-                options = options.symbolize_keys
-
-                src = options[:src] = path_to_image(source, skip_pipeline: options.delete(:skip_pipeline))
-
-                options[:width], options[:height] = extract_dimensions(options.delete(:size)) if options[:size]
-                warn "WARNING (AMP): specify width and height of amp-anim tags." unless options[:width] && options[:height]
-
-                options[:layout] = "responsive" unless options[:layout] != "responsive"
-
-                if options[:placeholder]
-                    options.delete(:placeholder)
-                    content_tag("amp-anim", options) do
-                        options.delete(:src)
-                        amp_placeholder("amp-img", options)
-                    end
-                else
-                    content_tag("amp-anim", options)
-                end
-            end
-
             def amp_video(*sources, fallback: "Your browser doesn’t support HTML5 video")
                 options = sources.extract_options!.symbolize_keys
                 public_poster_folder = options.delete(:poster_skip_pipeline)
