@@ -3,12 +3,12 @@ module Amphtml
         class Help
 
             def self.all
-                puts IO.read("lib/amphtml/components/docs/README.md")
+                puts IO.read("docs/README.md")
             end
 
             def self.component(name)
                 begin
-                    puts IO.read("lib/amphtml/components/docs/#{name}.md")
+                    puts IO.read("docs/#{name}.md")
                 rescue Exception => e
                     warn "Component is not available"
                 end
