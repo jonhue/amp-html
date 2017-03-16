@@ -141,8 +141,8 @@ If you want to automatically fix the code, pass `--autofix || -af` as option. Be
 
 AMP has a validator built in. To validate:
 
-    $ amphtml validate root # validates "http://localhost:300"
-    $ amphtml validate "https://slooob.com" # validates "https://slooob.com"
+    $ amphtml validate root # validates "http://localhost:3000"
+    $ amphtml validate https://slooob.com # validates "https://slooob.com"
 
 **Note:** `root` is only available as a parameter in development environment..
 

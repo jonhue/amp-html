@@ -7,7 +7,7 @@
 * features
     * add command line executables
 * bug fixes
-    * fix Generators
+    * fix generators
 
 ### 0.3.1 (Pre-release) - 2017-03-16
 
