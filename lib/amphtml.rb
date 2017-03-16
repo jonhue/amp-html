@@ -1,21 +1,22 @@
 begin
     require 'rails'
-    require 'thor'
 rescue Exception => e
-    warn "Ensure you are in a Ruby on Rails environment."
+    warn "Ensure you are in a Ruby on Rails environment"
 end
 
 module Amphtml
 
+    require 'amphtml/cli'
+    require 'amphtml/version'
+
     require 'amphtml/test'
+    require 'amphtml/validate'
 
-    def self.version
-        require 'amphtml/version'
-        return VERSION
-    end
+    require 'amphtml/components/install'
 
-    def self.help
-        puts IO.read("lib/amphtml/help/README")
-    end
+    require 'amphtml/helpers/help'
+    require 'amphtml/components/help'
+    require 'amphtml/test/help'
+    require 'amphtml/validate/help'
 
 end
