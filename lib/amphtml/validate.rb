@@ -4,24 +4,29 @@ module Amphtml
         require 'highline'
         require 'launchy'
 
-        def self.validate(url)
+        def self.validate(url, server_running)
 
-            cli = HighLine.new
-            answer = cli.ask "Is your rails server running? [y/n]"
-            unless answer == "y"
-                warn "Please start your rails server first."
-                exit
+            unless server_running
+                cli = HighLine.new
+                answer = cli.ask "Is your rails server running? [y/n]"
+                unless answer == "y"
+                    warn "Please start your rails server first."
+                    exit
+                end
             end
 
+            validation_url = url + "#development=1"
+            root_validation_url = "http://localhost:3000" + "#development=1"
+
             if url.present? && url != "root"
-                Launchy.open( url + "#development=1", :debug ) do |exception|
-                    warn "Attempted to open #{url} and failed because of: #{exception}"
+                Launchy.open( validation_url ) do |exception|
+                    warn "Attempted to open #{url} and failed because of: #{exception}. Open #{validation_url} in your browser instead."
                     exit
                 end
             else
                 if Rails.env.development?
-                    Launchy.open( "localhost:3000" + "#development=1", :debug ) do |exception|
-                        warn "Attempted to open #{url} and failed because of: #{exception}"
+                    Launchy.open( root_validation_url ) do |exception|
+                        warn "Attempted to open #{url} and failed because of: #{exception}. Open #{root_validation_url} in your browser instead."
                         exit
                     end
                 else
@@ -34,13 +39,6 @@ module Amphtml
 
             exit
 
-        end
-
-        def self.validate
-            puts 'Please pass the URL you attempt to validate as a parameter or pass "root" to validate your application root.'
-            puts 'Example: Amphtml.validate("https://slooob.com")'
-            puts '**Note:** "root" parameter is only available in development environment!'
-            exit
         end
 
     end

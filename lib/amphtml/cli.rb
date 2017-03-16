@@ -60,10 +60,10 @@ class Amphtml::Cli < Thor
 
     def validate(url)
         unless options[:help]
-            if url
-                puts ::Amphtml::Validate.validate(url)
+            if options[:server_running]
+                puts ::Amphtml::Validate.validate(url, true)
             else
-                puts ::Amphtml::Validate.validate
+                puts ::Amphtml::Validate.validate(url, false)
             end
         else
             puts ::Amphtml::Validate::Help.all
