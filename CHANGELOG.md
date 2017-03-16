@@ -2,6 +2,16 @@
 
 * nothing yet
 
+### 0.4.1 (Pre-release) - 2017-03-16
+
+* features
+    * add `ComponentsGenerator`
+* enhancements
+    * improve `CLI`
+    * add docs for components and helpers
+* bug fixes
+    * fix `amphtml validate`
+
 ### 0.4.0 (Pre-release) - 2017-03-16
 
 * features
