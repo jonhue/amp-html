@@ -14,12 +14,10 @@ module Amphtml
 
 
 
-            if options.size < 0 || options[:stylesheets]
-                def create_stylesheet_assets
+            def create_stylesheet_assets
+                if options.size < 0 || options[:stylesheets]
                     template "stylesheets/application.scss", "app/assets/stylesheets/amp/application.scss"
-                end
-            elsif options.size < 0 || options[:javascripts]
-                def create_javascript_assets
+                elsif options.size < 0 || options[:javascripts]
                     template "javascripts/application.js", "app/assets/javascripts/amp/application.js"
                 end
             end

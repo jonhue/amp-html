@@ -1,4 +1,5 @@
 require 'rails/generators/base'
+require 'thor'
 
 module Amphtml
     module Generators

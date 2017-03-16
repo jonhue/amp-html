@@ -1,4 +1,5 @@
 require 'rails/generators/base'
+require 'thor'
 
 module Amphtml
     module Generators
@@ -13,11 +14,12 @@ module Amphtml
 
 
 
-            def create_initializer
-                template "amphtml.rb.erb", "config/initializers/amphtml.rb"
-            end
             def create_configuration
                 template "amphtml.yml.erb", "config/amphtml.yml"
+            end
+            
+            def create_initializer
+                template "amphtml.rb.erb", "config/initializers/amphtml.rb"
             end
 
             def show_readme
