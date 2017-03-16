@@ -20,6 +20,15 @@ module ActionView
                 warn "WARNING (AMP): external and internal stylesheets are not allowed."
                 super
             end
+            <% else %>
+            # def javascript_include_tag(*sources)
+            #     warn "WARNING (AMP): external and internal scripts are not allowed."
+            #     super
+            # end
+            # def stylesheet_link_tag(*sources)
+            #     warn "WARNING (AMP): external and internal stylesheets are not allowed."
+            #     super
+            # end
             <% end %>
 
 
@@ -45,6 +54,10 @@ module ActionView
             def image_tag(source, options: {})
                 amp_image(source, options)
             end
+            <% else %>
+            # def image_tag(source, options: {})
+            #     amp_image(source, options)
+            # end
             <% end %>
 
             def amp_anim(source, options: {})
@@ -83,6 +96,10 @@ module ActionView
             def video_tag(*sources, fallback: "Your browser doesn’t support HTML5 video")
                 amp_video(*sources, fallback: "Your browser doesn’t support HTML5 video")
             end
+            <% else %>
+            # def video_tag(*sources, fallback: "Your browser doesn’t support HTML5 video")
+            #     amp_video(*sources, fallback: "Your browser doesn’t support HTML5 video")
+            # end
             <% end %>
 
             def amp_audio(*sources, fallback: "Your browser doesn’t support HTML5 audio")
@@ -92,6 +109,10 @@ module ActionView
             def audio_tag(*sources, fallback: "Your browser doesn’t support HTML5 audio")
                 amp_audio(*sources, fallback: "Your browser doesn’t support HTML5 audio")
             end
+            <% else %>
+            # def audio_tag(*sources, fallback: "Your browser doesn’t support HTML5 audio")
+            #     amp_audio(*sources, fallback: "Your browser doesn’t support HTML5 audio")
+            # end
             <% end %>
 
             private
