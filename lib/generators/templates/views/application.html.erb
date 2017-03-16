@@ -1,11 +1,13 @@
 <%%= amp_html_doctype do %>
+
     <head>
+
 
         <!-- Keep the two following tags at the top of the head section!  -->
         <meta charset="utf-8">
         <script async src="https://cdn.ampproject.org/v0.js"></script>
 
-        <!-- Use <%= content_for :title do %>App Name<% end %> to add a title to your view -->
+        <!-- Use <%%#= content_for :title do %>App Name<%%# end %> to add a title to your view -->
         <title><%% if content_for? :title %><%%= yield :title %><%% else %><%%= Rails.application.class.parent %><%% end %></title>
 
         <% if options[:split] %>
@@ -25,7 +27,7 @@
 
 
         <!-- AMP Custom styles -->
-        <!-- Use <%= amp_css do %> div { color: black } ... <% end %> to add specific styles to your view -->
+        <!-- Use <%%#= amp_css do %> div { color: black } ... <%%# end %> to add specific styles to your view -->
 
         <!-- If you want to embed external styles, use stylesheets under "app/assets/stylesheets/amp" directory -->
         <!-- DO NOT include any external CSS via a link tag -->
@@ -37,7 +39,7 @@
 
 
         <!-- AMP Custom javascript -->
-        <!-- Use <%= amp_js do %> function test() { ... } <% end %> to add specific javascript to your view -->
+        <!-- Use <%%#= amp_js do %> function test() { ... } <%%# end %> to add specific javascript to your view -->
 
         <!-- If you want to embed external javascript, use files under "app/assets/javascripts/amp" directory -->
         <!-- DO NOT include any external JS via a link tag -->
