@@ -80,7 +80,7 @@ class Amphtml::Cli < Thor
 
 
     desc "test NAME", "Test AMP-HTML components. Run test all to bundle tests."
-    map %w[-i --test] => :test
+    map %w[-t --test] => :test
 
     option :split, desc: "Use this option if you are using SplitView", type: :boolean, default: false, aliases: "-s"
     option :fix, desc: "Suggest ways to fix errors along the way", type: :boolean, default: false, aliases: "-f"
