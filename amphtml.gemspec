@@ -9,11 +9,14 @@ Gem::Specification.new do |gem|
     gem.description = "IN DEVELOPMENT - Reliable and high-performant apps across devices and distribution platforms with AMP & Rails."
     gem.authors     = ["Jonas Hübotter"]
     gem.email       = "jonas@slooob.com"
-    gem.homepage    = "http://github.com/jonhue/amphtml"
+    gem.homepage    = "https://github.com/jonhue/amphtml"
+    gem.metadata    = { "issue_tracker" => "https://github.com/jonhue/amphtml/issues" }
     gem.license     = "MIT"
 
     gem.files         = `git ls-files`.split("\n")
     gem.require_paths = ["lib"]
+    gem.bindir = "bin"
+    gem.executables = ["amphtml"]
 
     gem.post_install_message = IO.read('INSTALL.md')
 
