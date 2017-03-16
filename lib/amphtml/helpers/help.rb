@@ -7,7 +7,11 @@ module Amphtml
             end
 
             def self.helper(name)
-                puts IO.read("lib/amphtml/components/docs/#{name}.md") || "Helper is not available"
+                begin
+                    puts IO.read("lib/amphtml/components/docs/#{name}.md")
+                rescue Exception => e
+                    warn "Helper is not available"
+                end
             end
 
         end

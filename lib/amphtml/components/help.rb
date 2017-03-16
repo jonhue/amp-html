@@ -7,7 +7,11 @@ module Amphtml
             end
 
             def self.component(name)
-                puts IO.read("lib/amphtml/components/docs/#{name}.md") || "Component is not available"
+                begin
+                    puts IO.read("lib/amphtml/components/docs/#{name}.md")
+                rescue Exception => e
+                    warn "Component is not available"
+                end
             end
 
         end
