@@ -4,13 +4,12 @@ require 'thor'
 module Amphtml
     module Generators
 
-        class InstallGenerator < Rails::Generators::Base
+        class ComponentsGenerator < Rails::Generators::Base
 
-            source_root File.expand_path("../../templates/install", __FILE__)
-            desc "Install AMP-HTML. Run with --split to keep a version without AMP."
+            source_root File.expand_path("../../templates/views/components", __FILE__)
+            desc "Bundle components."
 
 
-            class_option :split, desc: "Keep an application layout without AMP", type: :boolean, default: false, aliases: '-s'
             class_option :format, desc: "Set the views format. Defaults to `amp`", type: :string, default: "amp", aliases: '-f'
 
 
@@ -26,12 +25,9 @@ module Amphtml
 
 
 
-            def create_configuration
-                template "amphtml.yml.erb", "config/amphtml.yml"
-            end
 
-            def create_initializer
-                template "amphtml.rb.erb", "config/initializers/amphtml.rb"
+            def create_views
+                template "_components.html.erb", "app/views/application/amp/_components.#{options[:format]}"
             end
 
             def show_readme

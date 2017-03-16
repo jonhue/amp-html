@@ -9,6 +9,8 @@ module Amphtml
             source_root File.expand_path("../../templates/assets", __FILE__)
             desc "Generate assets to allow for use of the asset pipeline."
 
+
+            # ASSETS
             class_option :stylesheets, desc: "Generate stylesheet assets", type: :boolean, default: false, aliases: '-s'
             class_option :javascripts, desc: "Generate javascript assets", type: :boolean, default: false, aliases: '-j'
 

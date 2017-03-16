@@ -10,9 +10,13 @@ module Amphtml
 
 
             class_option :split, desc: "Keep an application layout without AMP", type: :boolean, default: false, aliases: '-s'
+            class_option :format, desc: "Set the views format. Defaults to `amp`", type: :string, default: "amp", aliases: '-f'
 
+
+            # ASSETS
             class_option :stylesheets, desc: "Generate stylesheet assets", type: :boolean, default: false, aliases: '-s'
             class_option :javascripts, desc: "Generate javascript assets", type: :boolean, default: false, aliases: '-j'
+
 
             # COMPONENTS
             class_option :all, desc: "Include everything", type: :boolean, default: false, aliases: '-a'
