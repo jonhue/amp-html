@@ -5,12 +5,12 @@
 # Learn more about amphtml components: https://github.com/jonhue/amphtml/wiki/Components
 # Run `amphtml bundle` after adding or removing components!
 components:
-    # analytics
-    # iframe
-    # notifications
-    # anim
-    # ad
-    # social
+    <% if options[:all] || options[:analytics] %>analytics<% else %># analytics<% end %>
+    <% if options[:all] || options[:iframe] %>iframe<% else %># iframe<% end %>
+    <% if options[:all] || options[:notifications] %>notifications<% else %># notifications<% end %>
+    <% if options[:all] || options[:anim] %>anim<% else %># anim<% end %>
+    <% if options[:all] || options[:ad] %>ad<% else %># ad<% end %>
+    <% if options[:all] || options[:social] %>social<% else %># social<% end %>
 
 
 
@@ -21,11 +21,11 @@ components:
 <% if options[:split] %>
 # ## Change the default format used for views.
 # ## Defaults to `amp`
-# format: html
+<% unless options[:format] == "amp" %>format: <%= options[:format] %><% else %># format: html<% end %>
 <% else %>
 ## Change the default format used for views.
 ## Defaults to `amp`
-format: html
+<% unless options[:format] == "amp" %>format: <%= options[:format] %><% else %># format: html<% end %>
 <% end %>
 
 <% if options[:split] %>
