@@ -14,28 +14,15 @@ module Amphtml
             class_option :format, desc: "Set the views format. Defaults to `amp`", type: :string, default: "amp", aliases: '-f'
 
 
-            # COMPONENTS
-            class_option :all, desc: "Include everything", type: :boolean, default: false, aliases: '-a'
-
-            class_option :analytics, desc: "Include amp-analytics tag", type: :boolean, default: false
-            class_option :iframe, desc: "Include amp-iframe tag", type: :boolean, default: false
-            class_option :notifications, desc: "Include amp-user-notification tag", type: :boolean, default: false
-            class_option :anim, desc: "Include amp-anim tag", type: :boolean, default: false
-            class_option :ad, desc: "Include amp-ad and amp-sticky-ad tag", type: :boolean, default: false
-            class_option :social, desc: "Include social amp tags", type: :boolean, default: false
-
-
 
 
             def create_views
                 if options[:split]
                     template "_resources.html.erb", "app/views/application/amp/_resources.#{options[:format]}"
                     template "application.html.erb", "app/views/layouts/application.#{options[:format]}.erb"
-                    generate "amphtml:components --split"
                 else
                     template "_resources.html.erb", "app/views/application/amp/_resources.#{options[:format]}"
                     template "application.html.erb", "app/views/layouts/application.#{options[:format]}.erb"
-                    generate "amphtml:components"
                 end
             end
 

@@ -35,6 +35,7 @@ module Amphtml
                 generate "amphtml:helpers"
                 generate "amphtml:views"
                 generate "amphtml:assets"
+                generate "amphtml:components"
             end
 
         end
