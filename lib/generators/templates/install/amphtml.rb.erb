@@ -1,5 +1,8 @@
 require 'amphtml'
 
+CONFIG_PATH = "#{Rails.root}/config/amphtml.yml"
+AMP_HTML = YAML.load_file(CONFIG_PATH)[Rails.env]
+
 Rails.application.configure do
 	config.assets.precompile = ['*.js', '*.scss']
 end

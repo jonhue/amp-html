@@ -3,7 +3,7 @@ module Amphtml
         class Install
 
             def self.bundle
-                generate "amphtml:components #{'-f' if Amphtml.format} #{'--analytics' if Amphtml.components.include?('analytics')} #{'--iframe' if Amphtml.components.include?('iframe')} #{'--notifications' if Amphtml.components.include?('notifications')} #{'--anim' if Amphtml.components.include?('anim')} #{'--ad' if Amphtml.components.include?('ad')} #{'--social' if Amphtml.components.include?('social')}"
+                generate "amphtml:components #{ '-f' if AMP_HTML[:format] } #{ '--analytics' if AMP_HTML[:components].include?('analytics') } #{ '--iframe' if AMP_HTML[:components].include?('iframe') } #{'--notifications' if AMP_HTML[:components].include?('notifications') } #{ '--anim' if AMP_HTML[:components].include?('anim') } #{ '--ad' if AMP_HTML[:components].include?('ad') } #{ '--social' if AMP_HTML[:components].include?('social') }"
             end
 
         end

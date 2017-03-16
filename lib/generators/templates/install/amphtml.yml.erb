@@ -1,39 +1,60 @@
-# ------------
-# COMPONENTS
-# ------------
-
-# Learn more about amphtml components: https://github.com/jonhue/amphtml/wiki/Components
-# Run `amphtml bundle` after adding or removing components!
-components:
-    <% if options[:all] || options[:analytics] %>analytics<% else %># analytics<% end %>
-    <% if options[:all] || options[:iframe] %>iframe<% else %># iframe<% end %>
-    <% if options[:all] || options[:notifications] %>notifications<% else %># notifications<% end %>
-    <% if options[:all] || options[:anim] %>anim<% else %># anim<% end %>
-    <% if options[:all] || options[:ad] %>ad<% else %># ad<% end %>
-    <% if options[:all] || options[:social] %>social<% else %># social<% end %>
+default: &default
 
 
 
-# ------------
-# VIEWS FORMAT
-# ------------
+    # ------------
+    # COMPONENTS
+    # ------------
 
-<% if options[:split] %>
-# ## Change the default format used for views.
-# ## Defaults to `amp`
-<% unless options[:format] == "amp" %>format: <%= options[:format] %><% else %># format: html<% end %>
-<% else %>
-## Change the default format used for views.
-## Defaults to `amp`
-<% unless options[:format] == "amp" %>format: <%= options[:format] %><% else %># format: html<% end %>
-<% end %>
+    # Learn more about amphtml components: https://github.com/jonhue/amphtml/wiki/Components
+    # Run `amphtml bundle` after adding or removing components!
+    components:
+        <% if options[:all] || options[:analytics] %>analytics<% else %># analytics<% end %>
+        <% if options[:all] || options[:iframe] %>iframe<% else %># iframe<% end %>
+        <% if options[:all] || options[:notifications] %>notifications<% else %># notifications<% end %>
+        <% if options[:all] || options[:anim] %>anim<% else %># anim<% end %>
+        <% if options[:all] || options[:ad] %>ad<% else %># ad<% end %>
+        <% if options[:all] || options[:social] %>social<% else %># social<% end %>
 
-<% if options[:split] %>
-# ## Formats used to find a view if the default format does not exist.
-# ## Default is ``
-fallback_format: html xhtml
-<% else %>
-## Formats used to find a view if the default format does not exist.
-## Default is ``
-fallback_format: amp xhtml
-<% end %>
+
+
+    # ------------
+    # VIEWS FORMAT
+    # ------------
+
+    <% if options[:split] %>
+    # ## Change the default format used for views.
+    # ## Defaults to `amp`
+    <% unless options[:format] == "amp" %>format: <%= options[:format] %><% else %># format: html<% end %>
+    <% else %>
+    ## Change the default format used for views.
+    ## Defaults to `amp`
+    <% unless options[:format] == "amp" %>format: <%= options[:format] %><% else %># format: html<% end %>
+    <% end %>
+
+    <% if options[:split] %>
+    # ## Formats used to find a view if the default format does not exist.
+    # ## Default is ``
+    fallback_format: html xhtml
+    <% else %>
+    ## Formats used to find a view if the default format does not exist.
+    ## Default is ``
+    fallback_format: amp xhtml
+    <% end %>
+
+
+
+
+# -----------------------------------
+# ENVIRONMENT SENSITIVE CONFIGURATION
+# -----------------------------------
+
+
+production:
+    <<: *default
+
+development:
+    <<: *default
+
+test:
+    <<: *default
