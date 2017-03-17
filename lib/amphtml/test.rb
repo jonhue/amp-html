@@ -9,7 +9,7 @@ module Amphtml
         def self.html
             strings = ["<base>", "<img>", "<video>", "<audio>", "<iframe>", "<frame>", "<frameset>", "<object>", "<param>", "<applet>", "<embed>", "<input type='image'>", "<input type='button'>", "<input type='password'>", "<input type='file'>", "http-equiv", "onclick", "onmouseover"]
 
-            results = search_files_in_dir_for(File.join('app', 'views'), strings)
+            puts results = search_files_in_dir_for(File.join('app', 'views'), strings)
             test1 = html_test(results)
 
             puts "AMP-HTML TEST: HTML tests executed without exceptions" if test1
@@ -18,10 +18,10 @@ module Amphtml
         def self.css
             strings = ["@import", "!important", "-amp-", "i-amp-", "behavior", "-moz-binding", "filter", "overflow: auto", "overflow: scroll", "overflow-x: auto", "overflow-x: scroll", "overflow-y: auto", "overflow-y: scroll"]
 
-            results = search_files_in_dir_for(File.join('app', 'views'), strings)
+            puts results = search_files_in_dir_for(File.join('app', 'views'), strings)
             test1 = css_test(results)
 
-            results = search_files_in_dir_for(File.join('app', 'assets', 'stylesheets', 'amp'), strings)
+            puts results = search_files_in_dir_for(File.join('app', 'assets', 'stylesheets', 'amp'), strings)
             test2 = css_test(results)
 
             puts "AMP-HTML TEST: CSS tests executed without exceptions" if test1 && test2
@@ -31,10 +31,12 @@ module Amphtml
 
         def self.search_files_in_dir_for(dir, strings)
             results = {}
-
+            puts "Initializing test ..."
             Dir.foreach(dir) do |file|
                 next if file == '.' or file == '..'
+                puts 'AMP-HTML TEST: Testing dir "' + dir + "/" + file + '"'
                 if File.file?(file)
+                    puts 'AMP-HTML TEST: Testing "' + dir + "/" + file + '"'
                     line_number = 0
                     IO.foreach(file) do |line|
                         line_number = line_number + 1
@@ -44,9 +46,9 @@ module Amphtml
                             results[source] = string
                         end
                     end
-                else
+                elsif File.directory?(file)
                     # Search child directories
-                    # search_file_for(file, strings)
+                    search_files_in_dir_for(File.join(dir, file), strings)
                 end
             end
 
