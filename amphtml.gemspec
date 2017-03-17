@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
     gem.description           = "IN DEVELOPMENT - Reliable and high-performant apps across devices and distribution platforms with AMP & Rails."
     gem.authors               = ["Jonas Hübotter"]
     gem.email                 = "jonas@slooob.com"
-    gem.homepage              = "https://github.com/jonhue/amphtml"
+    gem.homepage              = "https://railsamp.com"
     gem.metadata              = { "issue_tracker" => "https://github.com/jonhue/amphtml/issues" }
     gem.license               = "MIT"
 
