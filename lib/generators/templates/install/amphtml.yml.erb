@@ -76,6 +76,24 @@ default: &default
 
 
 
+    <% if options[:all] || options[:social] %>
+    # -------------------
+    # SOCIAL COMPONENT
+    # -------------------
+
+    ## Set up the AMP Social Component
+    social:
+        share:
+            # ## Specifies the default provider for all amp_social_share tags. You can always override this default by passing a different provider
+            # ## List of all supported providers: https://www.ampproject.org/docs/reference/components/social/amp-social-share
+            # default_provider: twitter
+
+            # ## You can define an unsupported provider as your default but then you need to set the data-share-endpoint
+            # default_data_share_endpoint: whatsapp://send
+    <% end %>
+
+
+
 
 # -----------------------------------
 # ENVIRONMENT SENSITIVE CONFIGURATION

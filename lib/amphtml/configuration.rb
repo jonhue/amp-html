@@ -58,6 +58,24 @@ module Amphtml
     end
 
 
+    def self.social_share_default_provider
+        config = get_config
+        if config.key(:social) && config[:social].key(:share) && config[:social][:share].key(:default_provider)
+            config[:social][:share][:default_provider]
+        else
+            nil
+        end
+    end
+    def self.social_share_default_data_share_endpoint
+        config = get_config
+        if config.key(:social) && config[:social].key(:share) && config[:social][:share].key(:default_data_share_endpoint)
+            config[:social][:share][:default_data_share_endpoint]
+        else
+            nil
+        end
+    end
+
+
     private
 
 
