@@ -2,6 +2,11 @@
 
 * nothing yet
 
+### 0.4.3 (Pre-release) - 2017-03-17
+
+* bug fixes
+    * fix `--format` option in generators
+
 ### 0.4.2 (Pre-release) - 2017-03-17
 
 * features
