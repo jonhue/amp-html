@@ -48,4 +48,11 @@ module ApplicationHelper
         tag("link", options)
     end
 
+
+    def amp_head(options: {})
+        options = options.symbolize_keys
+
+        render "application/amp/head", options: options
+    end
+
 end

@@ -24,7 +24,7 @@ module Amphtml
 
             def create_views
                 template "application/_resources.html.erb", "app/views/application/amp/_resources.#{pick_format}"
-                template "application/_meta.html.erb", "app/views/application/_meta.#{pick_format}.erb"
+                template "application/_head.html.erb", "app/views/application/amp/_head.#{pick_format}.erb"
                 template "application.html.erb", "app/views/layouts/application.#{pick_format}.erb"
             end
 

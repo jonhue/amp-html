@@ -1,6 +1,7 @@
 ### unreleased
 
-* nothing yet
+* removals
+    * `meta_tag` renamed to `amp_head`
 
 ### 0.4.4 (Pre-release) - 2017-03-17
 
