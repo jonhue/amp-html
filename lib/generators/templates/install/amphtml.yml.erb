@@ -25,11 +25,11 @@ default: &default
     <% if options[:split] %>
     # ## Change the default format used for views.
     # ## Defaults to `amp`
-    <% unless options[:format] == "amp" %>format: <%= options[:format] %><% else %># format: html<% end %>
+    <% unless options[:format] == "amp" %>default_format: <%= options[:format] %><% else %># default_format: html<% end %>
     <% else %>
     ## Change the default format used for views.
     ## Defaults to `amp`
-    <% unless options[:format] == "amp" %>format: <%= options[:format] %><% else %># format: html<% end %>
+    <% unless options[:format] == "amp" %>default_format: <%= options[:format] %><% else %># default_format: html<% end %>
     <% end %>
 
     <% if options[:split] %>
