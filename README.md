@@ -44,6 +44,7 @@ Use the powerful features of AMP to make your Rails app consistently fast, beaut
 #### Supported versions
 
 Rails 4.0, 4.1, 4.2, 5.0, 5.1
+Ruby >= 2.0
 
 ### The AMP-HTML wiki
 
