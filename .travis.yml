@@ -1,6 +1,4 @@
 language: ruby
 rvm:
-    - 2.0
+    - 2.3.3
     - jruby
-env:
-  - "rack=1.6.5"
