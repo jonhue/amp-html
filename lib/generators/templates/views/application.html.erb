@@ -21,12 +21,12 @@
         <%%= csrf_meta_tags %>
 
 
-        <!-- AMP Resources -->
+        <!-- AMP resources -->
         <%%= render "application/amp/resources" %>
         <%%= render "application/amp/components" %>
 
 
-        <!-- AMP Custom styles -->
+        <!-- AMP custom styles -->
         <!-- Use <%%#= amp_css do %> div { color: black } ... <%%# end %> to add specific styles to your view -->
 
         <!-- If you want to embed external styles, use stylesheets under "app/assets/stylesheets/amp" directory -->
@@ -38,7 +38,7 @@
         <%% end %>
 
 
-        <!-- AMP Custom javascript -->
+        <!-- AMP custom javascript -->
         <!-- Use <%%#= amp_js do %> function test() { ... } <%%# end %> to add specific javascript to your view -->
 
         <!-- If you want to embed external javascript, use files under "app/assets/javascripts/amp" directory -->
@@ -51,7 +51,22 @@
     </head>
 
     <body>
+
+
+        <!-- AMP Analytics Component -->
+        <!-- You need to install the analytics component in order to use the following tag helpers! -->
+
+        <!-- <%%#= amp_analytics(vendor) %> -->
+
+        <!-- IMPORTANT: To be able to use the amp_google_analytics tag helper, configure your Google Analytics account in "config/amphtml.yml"! -->
+        <!-- <%%#= amp_google_analytics %> -->
+
+        <!-- Guide: https://github.com/jonhue/amphtml/wiki/Guides:-Analytics -->
+
+
         <%%= yield %>
+
+
     </body>
 
 <%% end %>

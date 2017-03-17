@@ -1,0 +1,23 @@
+<script type="application/json">
+{
+    "vars": {
+        "account": <%%= Amphtml.google_analytics_account %>
+    },
+    "triggers": {
+        "trackPageview": {
+            "on": "visible",
+            "request": "pageview",
+        }<%% if triggers %>,<%% triggers.each do |trigger| %>
+        <%%= trigger.name %>: {
+            "on": <%%= trigger.on %>,
+            "request": <%%= trigger.request %><%% if trigger.vars %>,
+            "vars": {<%% trigger.vars.each do |variable| %><%% if variable.event_category %>
+                "eventCategory": <%%= variable.event_category %>,<%% end %><%% if variable.event_action %>
+                "eventAction": <%%= variable.event_action %><%% end %><%% if variable.title %>
+                "title": <%%= variable.title %>,<%% end %><%% if variable.document_location %>
+                "documentLocation": <%%= variable.document_location %><%% end %>
+            }<%% end %>
+        }<%% unless trigger == triggers.last %>,<%% end %><%% end %><%% end %>
+    }
+}
+</script>
