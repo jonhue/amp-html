@@ -1,5 +1,7 @@
 # AMP-HTML - Reliable and high-:zap: apps with AMP & Rails [IN DEVELOPMENT]
 
+<img src="https://travis-ci.org/jonhue/amphtml.svg?branch=master" />
+
 Amphtml is a universal solution to integrate your Rails app easily with the AMP Project (Acellerated Mobile Pages Project). It enables you to quickly spin-up, build and test your app with AMP, while fulfilling the app's unique requirements.
 
 Use the powerful features of AMP to make your Rails app consistently fast, beautiful and high-performing across devices and distribution platforms.
