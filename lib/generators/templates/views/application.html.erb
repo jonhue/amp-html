@@ -27,7 +27,12 @@
 
 
         <!-- schema.org definition (not required) -->
-        <%%= schema_tag(headline: ( (yield :title) if content_for? ) %>
+        <%%= schema_tag(headline: ( (yield :title) if content_for? )) %>
+
+
+        <!-- AMP-HTML meta tags (not required) -> "app/views/application/_meta.html.erb" -->
+        <!-- Learn more about allowed parameters by running `amphtml helper meta_tag` -->
+        <!-- <%%#= meta_tag(description: "Description", favicon: "favicon.ico", language: I18n.locale, keywords: ["keyword1", "keyword2"]) %> -->
 
 
         <!-- AMP custom styles -->

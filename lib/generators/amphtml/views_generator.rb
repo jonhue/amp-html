@@ -23,13 +23,9 @@ module Amphtml
 
 
             def create_views
-                if options[:split]
-                    template "application/_resources.html.erb", "app/views/application/amp/_resources.#{pick_format}"
-                    template "application.html.erb", "app/views/layouts/application.#{pick_format}.erb"
-                else
-                    template "application/_resources.html.erb", "app/views/application/amp/_resources.#{pick_format}"
-                    template "application.html.erb", "app/views/layouts/application.#{pick_format}.erb"
-                end
+                template "application/_resources.html.erb", "app/views/application/amp/_resources.#{pick_format}"
+                template "application/_meta.html.erb", "app/views/application/_meta.#{pick_format}.erb"
+                template "application.html.erb", "app/views/layouts/application.#{pick_format}.erb"
             end
 
             def add_mime_types
