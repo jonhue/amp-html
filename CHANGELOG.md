@@ -2,6 +2,16 @@
 
 * nothing yet
 
+### 0.4.4 (Pre-release) - 2017-03-17
+
+* features
+    * add `schema_tag` helper
+    * add `meta_tag` helper
+* enhancements
+    * dynamically assign format for generators
+* bug fixes
+    * [#21](https://github.com/jonhue/amphtml/issues/21) - File open issues
+
 ### 0.4.3 (Pre-release) - 2017-03-17
 
 * bug fixes

@@ -1,6 +1,6 @@
 module Amphtml
 
-    VERSION = "0.4.3"
+    VERSION = "0.4.4"
 
     class Version
 
@@ -9,5 +9,5 @@ module Amphtml
         end
 
     end
-    
+
 end
