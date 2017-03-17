@@ -24,7 +24,6 @@ Gem::Specification.new do |gem|
 
 
     gem.add_dependency 'rails', '>= 4.0.0'
-    gem.add_dependency 'rack', '~> 1.6', '>= 1.6.5'
     gem.add_dependency 'thor', '~> 0.19.4'
     gem.add_dependency 'launchy', '~> 2.4', '>= 2.4.3'
     gem.add_dependency 'highline', '~> 1.7', '>= 1.7.8'
