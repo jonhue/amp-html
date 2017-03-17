@@ -9,6 +9,8 @@ module Amphtml
     require 'amphtml/cli'
     require 'amphtml/version'
 
+    require 'amphtml/configuration'
+
     require 'amphtml/test'
     require 'amphtml/validate'
 
