@@ -51,6 +51,13 @@ class Amphtml::Cli < Thor
         puts ::Amphtml::Components::Install.bundle
     end
 
+    desc "install COMPONENT", "Install a specific AMP-HTML component"
+    map %w[-b --bundle] => :install
+
+    def install(component)
+        puts ::Amphtml::Components::Install.install(component)
+    end
+
 
     desc "validate URL", "Validate a specific AMP-HTML view"
     map %w[--validate] => :validate
@@ -75,8 +82,8 @@ class Amphtml::Cli < Thor
     map %w[-t --test] => :test
 
     option :split, desc: "Use this option if you are using SplitView", type: :boolean, default: false, aliases: "-s"
-    option :fix, desc: "Suggest ways to fix errors along the way", type: :boolean, default: false, aliases: "-f"
-    option :autofix, desc: "Attempt to automatically fix errors (not recommended)", type: :boolean, default: false, aliases: "-af"
+    # option :fix, desc: "Suggest ways to fix errors along the way", type: :boolean, default: false, aliases: "-f"
+    # option :autofix, desc: "Attempt to automatically fix errors (not recommended)", type: :boolean, default: false, aliases: "-af"
     option :help, desc: "Additional help information", type: :boolean, default: false, aliases: "-h"
 
     def test(name)
