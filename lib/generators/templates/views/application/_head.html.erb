@@ -31,10 +31,7 @@
 
 <% if options[:keywords] %><meta name="keywords" content="<%= options[:keywords].join(',') %>"><% end %>
 
-<% if options[:language] %>
-    <meta name="DC.Language" content="<%= options[:language] %>">
-    <meta content="<%= options[:language] %>" http-equiv="content-language">
-<% end %>
+<% if options[:language] %><meta name="DC.Language" content="<%= options[:language] %>"><% end %>
 
 <% if options[:robots] %><meta name="robots" content="<%= options[:robots] %>"><% end %>
 
