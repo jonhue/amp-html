@@ -29,6 +29,16 @@ module Amphtml
     end
 
 
+    def self.split_view
+        config = get_config
+        if config.key(:split_view)
+            config[:split_view]
+        else
+            false
+        end
+    end
+
+
     def self.analytics_default_vendor
         config = get_config
         if config.key(:analytics) && config[:analytics].key(:default_vendor)

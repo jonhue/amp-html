@@ -11,7 +11,7 @@ module Amphtml
 
 
             class_option :split, desc: "Keep an application layout without AMP", type: :boolean, default: false, aliases: '-s'
-            class_option :format, desc: "Set the views format. Defaults to `amp`", type: :string, default: "amp", aliases: '-f'
+            class_option :format, desc: "Set the views format. Defaults to `html`", type: :string, aliases: '-f'
 
 
             # COMPONENTS

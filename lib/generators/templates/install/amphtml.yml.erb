@@ -19,6 +19,20 @@ default: &default
 
 
     # ------------
+    # SPLIT VIEW
+    # ------------
+
+    <% if options[:split] %>
+    ## Defaults to `false`
+    split_view: true
+    <% else %>
+    # ## Defaults to `false`
+    # split_view: true
+    <% end %>
+
+
+
+    # ------------
     # VIEWS FORMAT
     # ------------
 
@@ -28,8 +42,8 @@ default: &default
     <% unless options[:format] == "amp" %>default_format: <%= options[:format] %><% else %># default_format: html<% end %>
     <% else %>
     ## Change the default format used for views.
-    ## Defaults to `amp`
-    <% unless options[:format] == "amp" %>default_format: <%= options[:format] %><% else %># default_format: html<% end %>
+    ## Defaults to `html`
+    <% unless options[:format] == "html" %>default_format: <%= options[:format] %><% else %># default_format: amp<% end %>
     <% end %>
 
     <% if options[:split] %>

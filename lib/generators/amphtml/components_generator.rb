@@ -10,7 +10,8 @@ module Amphtml
             desc "Install AMP-HTML components."
 
 
-            class_option :format, desc: "Set the views format. Defaults to `amp`", type: :string, default: "amp", aliases: '-f'
+            class_option :split, desc: "Keep an application layout without AMP", type: :boolean, default: false, aliases: '-s'
+            class_option :format, desc: "Set the views format. Defaults to `html`", type: :string, aliases: '-f'
 
 
             # COMPONENTS
@@ -27,10 +28,10 @@ module Amphtml
 
 
             def create_views
-                template "views/_components.html.erb", "app/views/application/amp/_components.#{options[:format]}"
+                template "views/_components.html.erb", "app/views/application/amp/_components.#{pick_format}"
 
                 FileUtils.rm_rf('app/views/application/amp/components')
-                template "views/_google_analytics.html.erb", "app/views/application/amp/components/_google_analytics.#{options[:format]}.erb" if options[:all] || options[:analytics]
+                template "views/_google_analytics.html.erb", "app/views/application/amp/components/_google_analytics.#{pick_format}.erb" if options[:all] || options[:analytics]
             end
 
             def create_helpers
@@ -45,6 +46,22 @@ module Amphtml
 
             def show_readme
                 readme "README.md"
+            end
+
+
+            private
+
+
+            def pick_format
+                if options[:format]
+                    options[:format]
+                else
+                    if options[:split]
+                        "amp"
+                    else
+                        "html"
+                    end
+                end
             end
 
         end

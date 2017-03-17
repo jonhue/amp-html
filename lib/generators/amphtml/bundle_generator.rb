@@ -10,7 +10,7 @@ module Amphtml
 
 
             class_option :split, desc: "Keep an application layout without AMP", type: :boolean, default: false, aliases: '-s'
-            class_option :format, desc: "Set the views format. Defaults to `amp`", type: :string, default: "amp", aliases: '-f'
+            class_option :format, desc: "Set the views format. Defaults to `html`", type: :string, aliases: '-f'
 
 
             # ASSETS
@@ -35,7 +35,7 @@ module Amphtml
                 generate "amphtml:helpers#{ ' -s' if options[:split] }"
                 generate "amphtml:views#{ ' -s' if options[:split] }#{ ' -f ' + options[:format] if options[:format] }#{ ' -a' if options[:all] }#{ ' --analytics' if options[:analytics] }"
                 generate "amphtml:assets#{ ' -st' if options[:stylesheets] }#{ ' -j' if options[:javascripts] }"
-                generate "amphtml:components#{ ' -f ' + options[:format] if options[:format] }#{ ' -a' if options[:all] }#{ ' --anim' if options[:anim] }#{ ' --ad' if options[:ad] }#{ ' --iframe' if options[:iframe] }#{ ' --analytics' if options[:analytics] }#{ ' --notifications' if options[:notifications] }#{ ' --social' if options[:social] }"
+                generate "amphtml:components#{ ' -s' if options[:split] }#{ ' -f ' + options[:format] if options[:format] }#{ ' -a' if options[:all] }#{ ' --anim' if options[:anim] }#{ ' --ad' if options[:ad] }#{ ' --iframe' if options[:iframe] }#{ ' --analytics' if options[:analytics] }#{ ' --notifications' if options[:notifications] }#{ ' --social' if options[:social] }"
             end
 
         end

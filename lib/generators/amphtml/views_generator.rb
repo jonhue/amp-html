@@ -11,7 +11,7 @@ module Amphtml
 
 
             class_option :split, desc: "Keep an application layout without AMP", type: :boolean, default: false, aliases: '-s'
-            class_option :format, desc: "Set the views format. Defaults to `amp`", type: :string, default: "amp", aliases: '-f'
+            class_option :format, desc: "Set the views format. Defaults to `html`", type: :string, aliases: '-f'
 
 
             # DEEB INTEGRATION COMPONENTS
@@ -24,11 +24,11 @@ module Amphtml
 
             def create_views
                 if options[:split]
-                    template "application/_resources.html.erb", "app/views/application/amp/_resources.#{options[:format]}"
-                    template "application.html.erb", "app/views/layouts/application.#{options[:format]}.erb"
+                    template "application/_resources.html.erb", "app/views/application/amp/_resources.#{pick_format}"
+                    template "application.html.erb", "app/views/layouts/application.#{pick_format}.erb"
                 else
-                    template "application/_resources.html.erb", "app/views/application/amp/_resources.#{options[:format]}"
-                    template "application.html.erb", "app/views/layouts/application.#{options[:format]}.erb"
+                    template "application/_resources.html.erb", "app/views/application/amp/_resources.#{pick_format}"
+                    template "application.html.erb", "app/views/layouts/application.#{pick_format}.erb"
                 end
             end
 
@@ -38,6 +38,22 @@ module Amphtml
 
             def show_readme
                 readme "README.md"
+            end
+
+
+            private
+
+
+            def pick_format
+                if options[:format]
+                    options[:format]
+                else
+                    if options[:split]
+                        "amp"
+                    else
+                        "html"
+                    end
+                end
             end
 
         end
