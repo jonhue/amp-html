@@ -35,7 +35,7 @@ module Amphtml
                 generate "amphtml:helpers#{ ' -s' if options[:split] }"
                 generate "amphtml:views#{ ' -s' if options[:split] }#{ ' -f' + options[:format] if options[:format] }"
                 generate "amphtml:assets#{ ' -st' if options[:stylesheets] }#{ ' -j' if options[:javascripts] }"
-                generate "amphtml:components#{ ' -s' if options[:split] }#{ ' -f' + options[:format] if options[:format] }#{ ' -a' if options[:all] }#{ ' --anim' if options[:anim] }#{ ' --ad' if options[:ad] }#{ ' --iframe' if options[:iframe] }#{ ' --analytics' if options[:analytics] }#{ ' --notifications' if options[:notifications] }#{ ' --social' if options[:social] }"
+                generate "amphtml:components#{ ' -f' + options[:format] if options[:format] }#{ ' -a' if options[:all] }#{ ' --anim' if options[:anim] }#{ ' --ad' if options[:ad] }#{ ' --iframe' if options[:iframe] }#{ ' --analytics' if options[:analytics] }#{ ' --notifications' if options[:notifications] }#{ ' --social' if options[:social] }"
             end
 
         end
