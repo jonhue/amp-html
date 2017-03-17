@@ -3,7 +3,12 @@ module Amphtml
         class Install
 
             def self.bundle
-                generate "amphtml:components #{ '-f' if AMP_HTML[:format] } #{ '--analytics' if AMP_HTML[:components].include?('analytics') } #{ '--iframe' if AMP_HTML[:components].include?('iframe') } #{'--notifications' if AMP_HTML[:components].include?('notifications') } #{ '--anim' if AMP_HTML[:components].include?('anim') } #{ '--ad' if AMP_HTML[:components].include?('ad') } #{ '--social' if AMP_HTML[:components].include?('social') }"
+                success = system "rails g amphtml:components #{ '-f' if Amphtml.raw_format } #{ '--analytics' if Amphtml.components && Amphtml.components.include?('analytics') } #{ '--iframe' if Amphtml.components && Amphtml.components.include?('iframe') } #{'--notifications' if Amphtml.components && Amphtml.components.include?('notifications') } #{ '--anim' if Amphtml.components && Amphtml.components.include?('anim') } #{ '--ad' if Amphtml.components && Amphtml.components.include?('ad') } #{ '--social' if Amphtml.components && Amphtml.components.include?('social') }"
+                if success
+                    puts IO.read("templates/README.md")
+                else
+                    puts IO.read("templates/ERROR.md")
+                end
             end
 
         end
