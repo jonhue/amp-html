@@ -23,9 +23,11 @@ default: &default
     # ------------
 
     <% if options[:split] %>
+    ## To remove SplitView run `rails g amphtml:bundle`
     ## Defaults to `false`
     split_view: true
     <% else %>
+    # ## To enable SplitView run `rails g amphtml:bundle -s`
     # ## Defaults to `false`
     # split_view: true
     <% end %>
@@ -60,11 +62,11 @@ default: &default
     <% if options[:split] %>
     # ## Change the default format used for views.
     # ## Defaults to `amp`
-    <% unless options[:format] == "amp" %>default_format: <%= options[:format] %><% else %># default_format: html<% end %>
+    <% unless options[:format] == nil || options[:format] != "amp" %>default_format: <%= options[:format] %><% else %># default_format: html<% end %>
     <% else %>
     ## Change the default format used for views.
     ## Defaults to `html`
-    <% unless options[:format] == "html" %>default_format: <%= options[:format] %><% else %># default_format: amp<% end %>
+    <% unless options[:format] == nil || options[:format] != "html" %>default_format: <%= options[:format] %><% else %># default_format: amp<% end %>
     <% end %>
 
     <% if options[:split] %>
@@ -76,10 +78,10 @@ default: &default
     ## Default is ``
     fallback_format: amp xhtml
     <% end %>
-
-
-
     <% if options[:all] || options[:analytics] %>
+
+
+
     # -------------------
     # ANALYTICS COMPONENT
     # -------------------
@@ -94,10 +96,10 @@ default: &default
             # ### Set your Google Analytics account to enable the amp_google_analytics tag helper
             # account: UA-*****-*
     <% end %>
-
-
-
     <% if options[:all] || options[:ad] %>
+
+
+
     # -------------------
     # AD COMPONENT
     # -------------------
@@ -108,10 +110,10 @@ default: &default
         # ### List of all supported networks: https://www.ampproject.org/docs/reference/components/ads/amp-ad#supported-ad-networks
         # default_network: mywidget
     <% end %>
-
-
-
     <% if options[:all] || options[:social] %>
+
+
+
     # -------------------
     # SOCIAL COMPONENT
     # -------------------
