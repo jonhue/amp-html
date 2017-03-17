@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    amphtml (0.4.3)
+    amphtml (0.4.4)
       highline (~> 1.7, >= 1.7.8)
       launchy (~> 2.4, >= 2.4.3)
       rails (>= 4.0.0)
