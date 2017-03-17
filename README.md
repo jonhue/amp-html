@@ -105,11 +105,11 @@ Amphtml comes with three different generators. If you want to bundle them execut
 
 That will generate all the files you need to create a universal AMP app (recommended).
 
-If you want to use [SplitView](https://github.com/jonhue/amphtml/wiki/SplitView) to create views with and without AMP simultaneously, execute instead:
+If you want to use [SplitView](https://github.com/jonhue/amphtml/wiki/Docs:-SplitView) to create views with and without AMP simultaneously, execute instead:
 
     $ rails g amphtml:bundle --split
 
-To add components ([List of components](https://github.com/jonhue/amphtml/wiki/Components)) to the generator simply include the component as an option:
+To add components ([List of components](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/README.md)) to the generator simply include the component as an option:
 
     $ rails g amphtml:bundle --analytics --notifications
 
@@ -134,7 +134,7 @@ Pass `--split` as an option if you are using SplitView:
 
 `test all` runs multiple tests to check if your code is valid. You can also run each test specifically.
 
-To get a list of all tests and learn how to run them, go to [How to test and validate](https://github.com/jonhue/amphtml/wiki/How-to-test-and-validate)
+To get a list of all tests and learn how to run them, go to [how to test and validate](https://github.com/jonhue/amphtml/wiki/Guides:-Test-and-validate)
 
 To all tests (even `test all`) you can pass the option `--fix || -f` and Amphtml will suggest changes you could make. You can accept or reject them.
 If you want to automatically fix the code, pass `--autofix || -af` as option. Be careful, you will not be asked to approve changes to the documents!
