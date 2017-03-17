@@ -6,8 +6,10 @@ end
 
 module Amphtml
 
-    require 'amphtml/cli'
+    require 'amphtml/root'
     require 'amphtml/version'
+
+    require 'amphtml/cli'
 
     require 'amphtml/configuration'
 
