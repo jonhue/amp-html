@@ -6,7 +6,6 @@
 .ruby-version
 .yardoc
 .rake_tasks~
-Gemfile.lock
 coverage/*
 doc/*
 log/*
