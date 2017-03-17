@@ -35,6 +35,10 @@ module ApplicationHelper
         end
     end
 
+    def amp_embed(network: Amphtml.ad_default_network, options: {})
+        amp_ad(network, options)
+    end
+
     private
 
     def extract_dimensions(size)
