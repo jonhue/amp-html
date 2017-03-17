@@ -1,7 +1,6 @@
 module ApplicationHelper
 
-    # List of supported ad networks -> https://www.ampproject.org/docs/reference/components/ads/amp-ad#supported-ad-networks
-    def amp_ad(network, options: {})
+    def amp_ad(network: Amphtml.ad_default_network, options: {})
         options = options.symbolize_keys
 
         options[:type] = network
