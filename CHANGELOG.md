@@ -2,6 +2,18 @@
 
 * nothing yet
 
+### 0.4.2 (Pre-release) - 2017-03-17
+
+* features
+    * add analytics component DeepIntegration
+    * add ad component DeepIntegration
+    * add social component DeepIntegration
+* enhancements
+    * improve generators
+* bug fixes
+    * fix `amphtml bundle`
+    * fix `BundleGenerator`
+
 ### 0.4.1 (Pre-release) - 2017-03-16
 
 * features
