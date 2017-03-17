@@ -8,7 +8,7 @@
         <script async src="https://cdn.ampproject.org/v0.js"></script>
 
         <!-- Use <%%#= content_for :title do %>App Name<%%# end %> to add a title to your view -->
-        <title><%% if content_for? :title %><%%= yield :title %><%% else %><%%= Rails.application.class.parent %><%% end %></title>
+        <title><%% if content_for? :title %><%%= yield :title %><%% else %><%%= Amphtml.application.name %><%% end %></title>
 
         <% if options[:split] %>
         <!-- Overwrite the passed parameter to specify a specific canonical url -->
@@ -24,6 +24,10 @@
         <!-- AMP resources -->
         <%%= render "application/amp/resources" %>
         <%%= render "application/amp/components" %>
+
+
+        <!-- schema.org definition (not required) -->
+        <%%= schema_tag(headline: ( (yield :title) if content_for? ) %>
 
 
         <!-- AMP custom styles -->

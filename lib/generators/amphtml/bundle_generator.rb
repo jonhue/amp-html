@@ -13,6 +13,10 @@ module Amphtml
             class_option :format, desc: "Set the views format. Defaults to `html`", type: :string, aliases: '-f'
 
 
+            # CONFIGURATION
+            class_option :name, desc: "Set the name of your app", type: :string, default: "MyApp", aliases: '-n'
+
+
             # ASSETS
             class_option :stylesheets, desc: "Generate stylesheet assets", type: :boolean, default: false, aliases: '-st'
             class_option :javascripts, desc: "Generate javascript assets", type: :boolean, default: false, aliases: '-j'
@@ -31,7 +35,7 @@ module Amphtml
 
 
             def run_generators
-                generate "amphtml:install#{ ' -s' if options[:split] }#{ ' -f ' + options[:format] if options[:format] }#{ ' -a' if options[:all] }#{ ' --anim' if options[:anim] }#{ ' --ad' if options[:ad] }#{ ' --iframe' if options[:iframe] }#{ ' --analytics' if options[:analytics] }#{ ' --notifications' if options[:notifications] }#{ ' --social' if options[:social] }"
+                generate "amphtml:install#{ ' -s' if options[:split] }#{ ' -f ' + options[:format] if options[:format] }#{ ' -n ' + options[:name] if options[:name] }#{ ' -a' if options[:all] }#{ ' --anim' if options[:anim] }#{ ' --ad' if options[:ad] }#{ ' --iframe' if options[:iframe] }#{ ' --analytics' if options[:analytics] }#{ ' --notifications' if options[:notifications] }#{ ' --social' if options[:social] }"
                 generate "amphtml:helpers#{ ' -s' if options[:split] }"
                 generate "amphtml:views#{ ' -s' if options[:split] }#{ ' -f ' + options[:format] if options[:format] }#{ ' -a' if options[:all] }#{ ' --analytics' if options[:analytics] }"
                 generate "amphtml:assets#{ ' -st' if options[:stylesheets] }#{ ' -j' if options[:javascripts] }"

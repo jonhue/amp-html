@@ -1,7 +1,6 @@
 module ApplicationHelper
 
     def amp_font(href)
-
         options = {}
 
         options[:href] = href

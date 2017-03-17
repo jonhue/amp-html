@@ -14,6 +14,10 @@ module Amphtml
             class_option :format, desc: "Set the views format. Defaults to `html`", type: :string, aliases: '-f'
 
 
+            # CONFIGURATION
+            class_option :name, desc: "Set the name of your app", type: :string, default: "MyApp", aliases: '-n'
+
+
             # COMPONENTS
             class_option :all, desc: "Include everything", type: :boolean, default: false, aliases: '-a'
 

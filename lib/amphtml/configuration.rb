@@ -39,6 +39,41 @@ module Amphtml
     end
 
 
+    def self.application
+        config = get_config
+        if config.key(:application)
+            def self.name
+                if config[:application].key(:name)
+                    config[:application][:name]
+                else
+                    Rails.application.class.parent
+                end
+            end
+            def self.type
+                if config[:application].key(:type)
+                    config[:application][:type]
+                else
+                    nil
+                end
+            end
+            def self.date_published
+                if config[:application].key(:date_published)
+                    config[:application][:date_published]
+                else
+                    DateTime.now
+                end
+            end
+            def self.image
+                if config[:application].key(:image)
+                    config[:application][:image]
+                else
+                    nil
+                end
+            end
+        end
+    end
+
+
     def self.analytics_default_vendor
         config = get_config
         if config.key(:analytics) && config[:analytics].key(:default_vendor)
