@@ -6,7 +6,7 @@ default: &default
     # COMPONENTS
     # ----------
 
-    # Learn more about amphtml components: https://github.com/jonhue/amphtml/wiki/Components
+    # Learn more about amphtml components: https://github.com/jonhue/amphtml/wiki/Docs
     # Run `amphtml bundle` after adding or removing components!
     components:
         <% if options[:all] || options[:analytics] %>analytics<% else %># analytics<% end %>
@@ -43,7 +43,7 @@ default: &default
         ### Set the name of your app. This value is being used to set the default title of your views as well as populating meta information
         name: <%= options[:name] %>
 
-        # ### Specify the type of your site. Some example values are "Organization", "NewsArticle". You can name it whatever feels appropriate
+        # ### Specify the type of your site. Some example values are "Organization", "NewsArticle", "BlogPosting". You can name it whatever feels appropriate
         # type: News
 
         # ### Specify the date you published your site. This is being used for the schema_tag and can be overridden by passing a different datetime
