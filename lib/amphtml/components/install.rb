@@ -23,7 +23,7 @@ module Amphtml
                     else
                         puts IO.read(File.join Amphtml.root, "amphtml", "components", "templates", "ERROR.md")
                     end
-                    puts "Successfully installed '#{component}' component!"
+                    puts 'Successfully installed "#{component}" component!'
                 end
             end
 
