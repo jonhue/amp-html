@@ -1,7 +1,14 @@
 ### unreleased
 
+* nothing yet
+
+### 0.4.5 (Pre-release) - 2017-03-17
+
 * removals
     * `meta_tag` renamed to `amp_head`
+* bug fixes
+    * fix `ViewsGenerator`
+    * fix `config/amphtml.yml` template
 
 ### 0.4.4 (Pre-release) - 2017-03-17
 
