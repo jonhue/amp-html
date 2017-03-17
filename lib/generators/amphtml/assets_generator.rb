@@ -11,7 +11,7 @@ module Amphtml
 
 
             # ASSETS
-            class_option :stylesheets, desc: "Generate stylesheet assets", type: :boolean, default: false, aliases: '-s'
+            class_option :stylesheets, desc: "Generate stylesheet assets", type: :boolean, default: false, aliases: '-st'
             class_option :javascripts, desc: "Generate javascript assets", type: :boolean, default: false, aliases: '-j'
 
 

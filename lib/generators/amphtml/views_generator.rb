@@ -18,19 +18,16 @@ module Amphtml
 
             def create_views
                 if options[:split]
-                    template "_resources.html.erb", "app/views/application/amp/_resources.#{options[:format]}"
+                    template "application/_resources.html.erb", "app/views/application/amp/_resources.#{options[:format]}"
                     template "application.html.erb", "app/views/layouts/application.#{options[:format]}.erb"
                 else
-                    template "_resources.html.erb", "app/views/application/amp/_resources.#{options[:format]}"
+                    template "application/_resources.html.erb", "app/views/application/amp/_resources.#{options[:format]}"
                     template "application.html.erb", "app/views/layouts/application.#{options[:format]}.erb"
                 end
             end
 
             def add_mime_types
-                open("config/mime_types.rb", "a") do |f|
-                    f << "# AMP-HTML - Setting the format for AMP Views\n"
-                    f << "Mime::Type.register_alias 'text/html', Amphtml.format\n"
-                end
+                template "config/mime_types.rb", "config/mime_types.rb"
             end
 
             def show_readme

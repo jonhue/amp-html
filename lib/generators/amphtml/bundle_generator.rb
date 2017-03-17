@@ -14,7 +14,7 @@ module Amphtml
 
 
             # ASSETS
-            class_option :stylesheets, desc: "Generate stylesheet assets", type: :boolean, default: false, aliases: '-s'
+            class_option :stylesheets, desc: "Generate stylesheet assets", type: :boolean, default: false, aliases: '-st'
             class_option :javascripts, desc: "Generate javascript assets", type: :boolean, default: false, aliases: '-j'
 
 
@@ -31,11 +31,11 @@ module Amphtml
 
 
             def run_generators
-                generate "amphtml:install"
-                generate "amphtml:helpers"
-                generate "amphtml:views"
-                generate "amphtml:assets"
-                generate "amphtml:components"
+                generate "amphtml:install #{ '-s ' + options[:split] if options[:split] } #{ '-f ' + options[:format] if options[:format] } #{ '-a ' + options[:all] if options[:all] } #{ '--anim ' + options[:anim] if options[:anim] } #{ '--ad ' + options[:ad] if options[:ad] } #{ '--iframe ' + options[:iframe] if options[:iframe] } #{ '--analytics ' + options[:analytics] if options[:analytics] } #{ '--notifications ' + options[:notifications] if options[:notifications] } #{ '--social ' + options[:social] if options[:social] }"
+                generate "amphtml:helpers #{ '-s ' + options[:split] if options[:split] }"
+                generate "amphtml:views #{ '-s ' + options[:split] if options[:split] } #{ '-f ' + options[:format] if options[:format] }"
+                generate "amphtml:assets #{ '-st ' + options[:stylesheets] if options[:stylesheets] } #{ '-j ' + options[:javascripts] if options[:javascripts] }"
+                generate "amphtml:components #{ '-s ' + options[:split] if options[:split] } #{ '-f ' + options[:format] if options[:format] } #{ '-a ' + options[:all] if options[:all] } #{ '--anim ' + options[:anim] if options[:anim] } #{ '--ad ' + options[:ad] if options[:ad] } #{ '--iframe ' + options[:iframe] if options[:iframe] } #{ '--analytics ' + options[:analytics] if options[:analytics] } #{ '--notifications ' + options[:notifications] if options[:notifications] } #{ '--social ' + options[:social] if options[:social] }"
             end
 
         end
