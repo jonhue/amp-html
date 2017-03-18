@@ -2,7 +2,7 @@ module ApplicationHelper
 
     def amp_html_doctype
         tag("!doctype", {"html"})
-        content_tag("html", {"amp"})
+        content_tag("html", {"⚡"})
     end
 
 
@@ -53,6 +53,12 @@ module ApplicationHelper
         options = options.symbolize_keys
 
         render "application/amp/head", options: options
+    end
+
+
+    def amp_resources
+        render "application/amp/resources"
+        render "application/amp/components"
     end
 
 end

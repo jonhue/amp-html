@@ -3,9 +3,12 @@
     <head>
 
 
-        <!-- Keep the two following tags at the top of the head section!  -->
-        <meta charset="utf-8">
-        <script async src="https://cdn.ampproject.org/v0.js"></script>
+        <!-- AMP-HTML head tags -->
+        <!-- IMPORTANT: Keep this at the top of the head section!  -->
+        <!-- Learn more about allowed parameters by running `amphtml helper amp_head` -->
+        <!-- Example: <%%#= amp_head(description: "Description", favicon: "favicon.ico", language: I18n.locale, keywords: ["keyword1", "keyword2"]) %> -->
+        <%%= amp_head %>
+
 
         <!-- Use <%%#= content_for :title do %>App Name<%%# end %> to add a title to your view -->
         <title><%% if content_for? :title %><%%= yield :title %><%% else %><%%= Amphtml.application.name %><%% end %></title>
@@ -16,23 +19,18 @@
         <% else %>
         <%%= canonical_link(request.original_url) %>
         <% end %>
+        <!-- IMPORTANT: The `meta[name="viewport"]` tag is required by AMP! -->
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
         <%%= csrf_meta_tags %>
 
 
-        <!-- AMP resources -->
-        <%%= render "application/amp/resources" %>
-        <%%= render "application/amp/components" %>
+        <!-- AMP resources (required) -->
+        <%%= amp_resources %>
 
 
         <!-- schema.org definition (not required) -->
         <%%= schema_tag(headline: ( (yield :title) if content_for? )) %>
-
-
-        <!-- AMP-HTML head tags (not required) -->
-        <!-- Learn more about allowed parameters by running `amphtml helper meta_tag` -->
-        <!-- <%%#= amp_head(description: "Description", favicon: "favicon.ico", language: I18n.locale, keywords: ["keyword1", "keyword2"]) %> -->
 
 
         <!-- AMP custom styles -->
