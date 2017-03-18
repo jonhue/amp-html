@@ -1,7 +1,16 @@
 module ApplicationHelper
     module Amp::FontTagHelper
 
-        def amp_font(href)
+        def amp_font(family, timeout, options: {})
+            options = options.symbolize_keys
+
+            options[:"font-family"] = family
+            options[:timeout] = timeout
+
+            content_tag("amp-font", options)
+        end
+
+        def amp_font_link(href)
             options = {}
 
             options[:href] = href
