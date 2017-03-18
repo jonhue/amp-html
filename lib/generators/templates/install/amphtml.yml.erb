@@ -8,6 +8,7 @@ default: &default
 
     # Learn more about amphtml components: https://github.com/jonhue/amphtml/wiki/Docs
     # Run `amphtml bundle` after adding or removing components!
+    # Run `amphtml install COMPONENT` to install a specific component from the command line
     components:
         <% if options[:all] || options[:analytics] %>analytics<% else %># analytics<% end %>
         <% if options[:all] || options[:iframe] %>iframe<% else %># iframe<% end %>
@@ -41,7 +42,7 @@ default: &default
     ## Customize your application's information
     application:
         ### Set the name of your app. This value is being used to set the default title of your views as well as populating meta information
-        name: <%= options[:name] %>
+        name: "<%= options[:name] %>"
 
         # ### Specify the type of your site. Some example values are "Organization", "NewsArticle", "BlogPosting". You can name it whatever feels appropriate
         # type: Organization
