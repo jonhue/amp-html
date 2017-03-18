@@ -10,8 +10,9 @@ module Amphtml
                 cli = HighLine.new
                 answer = cli.ask "Is your rails server running? [y/n]"
                 unless answer == "y"
-                    warn "Please start your rails server first."
-                    exit
+                    warn "Rerun `amphtml validate URL` while your server is running"
+                    puts "Starting your rails server ..."
+                    exec "rails s"
                 end
             end
 
