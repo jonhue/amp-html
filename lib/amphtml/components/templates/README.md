@@ -1,6 +1,7 @@
+
 **Your installation of AMP-HTML components completed successfully!**
 
-You can now use the components specified in "config/amphtml.yml".
+You can now use the components specified in `config/amphtml.yml`.
 
 ---
 
