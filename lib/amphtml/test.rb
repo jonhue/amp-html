@@ -138,6 +138,11 @@ module Amphtml
                     when "overflow: auto" || "overflow: scroll" || "overflow-x: auto" || "overflow-x: scroll" || "overflow-y: auto" || "overflow-y: scroll"
                         puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "css", "overflow.md")
                         puts source
+                    when "-amp-"
+                        unless source.include?("application/amp/_resources.html")
+                            puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "css", "#{string}.md")
+                            puts source
+                        end
                     else
                         puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "css", "#{string}.md")
                         puts source
