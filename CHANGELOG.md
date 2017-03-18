@@ -2,6 +2,17 @@
 
 * nothing yet
 
+### 0.5.2 (Pre-release) - 2017-03-18
+
+* features
+    * add `amp_font_link` helper
+* enhancements
+    * improve html test
+* bug fixes
+    * fix `config/mime_types.rb` template
+    * fix helper templates
+    * fix `BundleGenerator`
+
 ### 0.5.1 (Pre-release) - 2017-03-18
 
 * enhancements
