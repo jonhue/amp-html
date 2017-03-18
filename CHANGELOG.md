@@ -2,6 +2,17 @@
 
 * nothing yet
 
+### 0.5.3 (Pre-release) - 2017-03-18
+
+* enhancements
+    * add component docs
+    * improve add templates
+    * improve `config/amphtml.yml` template
+* bug fixes
+    * fix test class
+    * fix test help
+    * fix validate help
+
 ### 0.5.2 (Pre-release) - 2017-03-18
 
 * features
