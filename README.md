@@ -1,4 +1,4 @@
-# AMP-HTML - Reliable and high-:zap: apps with AMP & Rails [IN DEVELOPMENT]
+# [BETA] AMP-HTML - Reliable and high-:zap: apps with AMP & Rails
 
 <img src="https://travis-ci.org/jonhue/amphtml.svg?branch=master" />
 
