@@ -3,7 +3,7 @@ module Amphtml
         class Help
 
             def self.all
-                puts IO.read("lib/amphtml/validate/templates/README")
+                puts IO.read(File.join Amphtml.root, "amphtml", "validate", "templates", "README.md")
             end
 
         end
