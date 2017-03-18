@@ -2,8 +2,8 @@ module ApplicationHelper
     module Amp::AmpTagHelper
 
         def amp_html_doctype
-            tag("!doctype", {"html"})
-            content_tag("html", {"⚡"})
+            tag("!doctype", "html")
+            content_tag("html", "⚡")
         end
 
 
