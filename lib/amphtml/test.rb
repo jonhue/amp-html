@@ -6,10 +6,19 @@ module Amphtml
             css
         end
 
+        def self.markup
+            strings = ["<base>", "<img>", "<video>", "<audio>", "<iframe>", "<frame>", "<frameset>", "<object>", "<param>", "<applet>", "<embed>", "<input type='image'>", "<input type='button'>", "<input type='password'>", "<input type='file'>", "http-equiv", "onclick", "onmouseover"]
+
+            results = search_files_in_dir_for(File.join('app', 'views'), strings)
+            test1 = html_test(results)
+
+            puts "AMP-HTML TEST: HTML tests executed without exceptions" if test1
+        end
+
         def self.html
             strings = ["<base>", "<img>", "<video>", "<audio>", "<iframe>", "<frame>", "<frameset>", "<object>", "<param>", "<applet>", "<embed>", "<input type='image'>", "<input type='button'>", "<input type='password'>", "<input type='file'>", "http-equiv", "onclick", "onmouseover"]
 
-            puts results = search_files_in_dir_for(File.join('app', 'views'), strings)
+            results = search_files_in_dir_for(File.join('app', 'views'), strings)
             test1 = html_test(results)
 
             puts "AMP-HTML TEST: HTML tests executed without exceptions" if test1
@@ -18,10 +27,10 @@ module Amphtml
         def self.css
             strings = ["@import", "!important", "-amp-", "i-amp-", "behavior", "-moz-binding", "filter", "overflow: auto", "overflow: scroll", "overflow-x: auto", "overflow-x: scroll", "overflow-y: auto", "overflow-y: scroll"]
 
-            puts results = search_files_in_dir_for(File.join('app', 'views'), strings)
+            results = search_files_in_dir_for(File.join('app', 'views'), strings)
             test1 = css_test(results)
 
-            puts results = search_files_in_dir_for(File.join('app', 'assets', 'stylesheets', 'amp'), strings)
+            results = search_files_in_dir_for(File.join('app', 'assets', 'stylesheets', 'amp'), strings)
             test2 = css_test(results)
 
             puts "AMP-HTML TEST: CSS tests executed without exceptions" if test1 && test2
@@ -30,33 +39,54 @@ module Amphtml
         private
 
         def self.search_files_in_dir_for(dir, strings)
-            results = {}
-            puts "Initializing test ..."
-            Dir.foreach(dir) do |file|
-                next if file == '.' or file == '..'
-                puts 'AMP-HTML TEST: Testing dir "' + dir + "/" + file + '"'
-                if File.file?(file)
-                    puts 'AMP-HTML TEST: Testing "' + dir + "/" + file + '"'
-                    line_number = 0
-                    IO.foreach(file) do |line|
-                        line_number = line_number + 1
-                        if strings.any? { |string| line.include?(string) }
-                            string = strings.detect { |string| line.include?(string) }
-                            source = file + ":" + line_number.to_s
-                            results[source] = string
-                        end
+
+            # ## OLD SOLUTION
+            #
+            # @results = {}
+            # Dir.foreach(dir) do |file|
+            #     complete_path = File.join(dir, file)
+            #     next if file == '.' or file == '..'
+            #     if File.file?(complete_path)
+            #         puts "AMP-HTML TEST: Testing '#{complete_path}'"
+            #         line_number = 0
+            #         IO.foreach(complete_path) do |line|
+            #             line_number = line_number + 1
+            #             if strings.any? { |string| line.include?(string) }
+            #                 string = strings.detect { |string| line.include?(string) }
+            #                 source = complete_path + ":" + line_number.to_s
+            #                 @results[source] = string
+            #             end
+            #         end
+            #     else
+            #         # Search child directories
+            #         search_files_in_dir_for(complete_path, strings)
+            #     end
+            # end
+
+            require 'pathname'
+            @results = {}
+
+            files, dirs = Pathname.glob(File.join(dir, '**/**/**/**/**/**/*')).partition(&:file?)
+
+            files.each do |file|
+                puts "AMP-HTML TEST: Testing '#{file}'"
+                line_number = 0
+                IO.foreach(file) do |line|
+                    line_number = line_number + 1
+                    if strings.any? { |string| line.include?(string) }
+                        string = strings.detect { |string| line.include?(string) }
+                        source = file + ":" + line_number.to_s
+                        @results[source] = string
                     end
-                elsif File.directory?(file)
-                    # Search child directories
-                    search_files_in_dir_for(File.join(dir, file), strings)
                 end
             end
 
-            if results.present?
-                return results
+            if @results.present?
+                return @results
             else
                 return nil
             end
+
         end
 
 
@@ -75,6 +105,8 @@ module Amphtml
             else
                 return true
             end
+
+            return nil
         end
 
 
@@ -96,6 +128,8 @@ module Amphtml
             else
                 return true
             end
+
+            return nil
         end
 
     end
