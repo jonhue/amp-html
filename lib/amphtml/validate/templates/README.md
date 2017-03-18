@@ -21,6 +21,7 @@ Validate your views using the AMP validator and a browser.
 
 ### root
 Validates the app root.
+
 **Note:** This argument is only available in development environment
 
     amphtml validate root
