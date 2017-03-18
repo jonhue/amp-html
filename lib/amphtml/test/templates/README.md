@@ -1,7 +1,7 @@
 
 ---
 
-# amphtml test
+# AMP-HTML Tests
 
 ---
 
