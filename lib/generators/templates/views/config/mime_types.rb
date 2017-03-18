@@ -5,4 +5,4 @@
 
 
 # AMP-HTML - Setting the format for AMP-HTML Views
-Mime::Type.register_alias 'text/html', Amphtml.format
+Mime::Type.register_alias 'text/html', Amphtml.default_format
