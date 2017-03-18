@@ -1,9 +1,13 @@
 
----
-
 # AMP-HTML Tests
 
----
+Test the integration of AMP in your application.
+
+
+## Usage
+
+    amphtml test NAME
+
 
 ## Options
 

@@ -1,9 +1,6 @@
 
----
-
 # AMP-HTML Components
 
----
 
 ## All Components
 

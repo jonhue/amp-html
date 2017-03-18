@@ -1,9 +1,6 @@
 
----
-
 # Components / Advertisements BETA
 
----
 
 ## Information
 
