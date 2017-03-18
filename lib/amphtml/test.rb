@@ -8,21 +8,29 @@ module Amphtml
         end
 
         def self.markup
-            strings = ["amp_html_doctype", "<head>", "<body>", "canonical_link", "amp_head", '<meta name="viewport" content="width=device-width,minimum-scale=1', "amp_resources"]
+            strings = ["amp_html_doctype", "<head", "<body", "canonical_link", "amp_head", '<meta name="viewport" content="width=device-width,minimum-scale=1', "amp_resources"]
 
             results = search_files_in_dir_for(File.join('app', 'views'), strings)
             test1 = markup_test(results)
 
-            puts "AMP-HTML TEST: MARKUP tests executed without exceptions" if test1
+            if test1
+                puts "AMP-HTML TEST: MARKUP tests executed without exceptions"
+            else
+                puts "AMP-HTML TEST: MARKUP tests have failed. Learn more about the required markup of AMP pages: https://github.com/ampproject/amphtml/blob/master/spec/amp-html-format.md#required-markup"
+            end
         end
 
         def self.html
-            strings = ["javascript_include_tag", "stylesheet_link_tag", "<base>", "<img>", "<video>", "<audio>", "<iframe>", "<frame>", "<frameset>", "<object>", "<param>", "<applet>", "<embed>", "<input type='image'>", "<input type='button'>", "<input type='password'>", "<input type='file'>", "http-equiv", "onclick", "onmouseover"]
+            strings = ["<!doctype", "<html", "javascript_include_tag", "stylesheet_link_tag", "<base", "<img", "<video", "<audio", "<iframe", "<frame", "<frameset", "<object", "<param", "<applet", "<embed", "<input type='image'", "<input type='button'", "<input type='password'", "<input type='file'", "http-equiv", "onclick", "onmouseover"]
 
             results = search_files_in_dir_for(File.join('app', 'views'), strings)
             test1 = html_test(results)
 
-            puts "AMP-HTML TEST: HTML tests executed without exceptions" if test1
+            if test1
+                puts "AMP-HTML TEST: HTML tests executed without exceptions"
+            else
+                puts "AMP-HTML TEST: HTML tests have failed. Learn more about AMP format restrictions in HTML: https://github.com/ampproject/amphtml/blob/master/spec/amp-html-format.md#html-tags"
+            end
         end
 
         def self.css
@@ -34,7 +42,11 @@ module Amphtml
             results = search_files_in_dir_for(File.join('app', 'assets', 'stylesheets', 'amp'), strings)
             test2 = css_test(results)
 
-            puts "AMP-HTML TEST: CSS tests executed without exceptions" if test1 && test2
+            if test1 && test2
+                puts "AMP-HTML TEST: CSS tests executed without exceptions"
+            else
+                puts "AMP-HTML TEST: CSS tests have failed. Learn more about AMP format restrictions in CSS: https://github.com/ampproject/amphtml/blob/master/spec/amp-html-format.md#stylesheets"
+            end
         end
 
         private
@@ -94,13 +106,13 @@ module Amphtml
         def self.markup_test(results)
             if results.present?
                 puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "markup", "meta_viewport.md") unless results.has_value?('<meta name="viewport" content="width=device-width,minimum-scale=1')
-                puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "markup", "head_body.md") unless results.has_value?("<head>") && results.include?("<body>")
+                puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "markup", "head_body.md") unless results.has_value?("<head") && results.include?("<body")
                 puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "markup", "amp_html_doctype.md") unless results.has_value?("amp_html_doctype")
                 puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "markup", "canonical_link.md") unless results.has_value?("canonical_link")
                 puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "markup", "amp_head.md") unless results.has_value?("amp_head")
                 puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "markup", "amp_resources.md") unless results.has_value?("amp_resources")
             end
-            unless results.has_value?('<meta name="viewport" content="width=device-width,minimum-scale=1') || results.has_value?("<head>") || results.include?("<body>") || results.has_value?("amp_html_doctype") || results.has_value?("canonical_link") || results.has_value?("amp_head") || results.has_value?("amp_resources")
+            unless results.has_value?('<meta name="viewport" content="width=device-width,minimum-scale=1') || results.has_value?("<head") || results.include?("<body") || results.has_value?("amp_html_doctype") || results.has_value?("canonical_link") || results.has_value?("amp_head") || results.has_value?("amp_resources")
                 return true
             end
 
@@ -112,10 +124,10 @@ module Amphtml
             if results.present?
                 results.each do |source, string|
                     case string
-                    when "<input type='image'>" || "<input type='button'>" || "<input type='password'>" || "<input type='file'>"
+                    when "<input type='image'" || "<input type='button'" || "<input type='password'" || "<input type='file'"
                         puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "html", "input.md")
                         puts source
-                    when "<base>" || "<img>" || "<video>" || "<audio>" || "<iframe>" || "<frame>" || "<frameset>" || "<object>" || "<param>" || "<applet>" || "<embed>"
+                    when "<!doctype" || "<html" || "<base" || "<img" || "<video" || "<audio" || "<iframe" || "<frame" || "<frameset" || "<object" || "<param" || "<applet" || "<embed"
                         puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "html", "#{string.tr('<>', '')}.md")
                         puts source
                     else

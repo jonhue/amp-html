@@ -1,1 +1,1 @@
-ERROR (AMP): `<frameset>` is prohibited
+AMP-HTML TEST: HTML ERROR (AMP): `<frameset>` is prohibited by AMP
