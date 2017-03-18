@@ -148,6 +148,7 @@ module Amphtml
                         puts source
                     end
                 end
+                return true if results.keys.size == 1 && results[results.keys.first] == "-amp-" && results.keys.first.include?("application/amp/_resources.html")
             else
                 return true
             end
