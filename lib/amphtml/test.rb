@@ -54,7 +54,7 @@ module Amphtml
             #             line_number = line_number + 1
             #             if strings.any? { |string| line.include?(string) }
             #                 string = strings.detect { |string| line.include?(string) }
-            #                 source = complete_path + ":" + line_number.to_s
+            #                 source = "=> " + complete_path + ":" + line_number.to_s
             #                 @results[source] = string
             #             end
             #         end
@@ -76,7 +76,7 @@ module Amphtml
                     line_number = line_number + 1
                     if strings.any? { |string| line.include?(string) }
                         string = strings.detect { |string| line.include?(string) }
-                        source = file + ":" + line_number.to_s
+                        source = "=> " + file.to_s + ":" + line_number.to_s
                         @results[source] = string
                     end
                 end
