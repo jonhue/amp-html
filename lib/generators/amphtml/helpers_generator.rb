@@ -17,10 +17,7 @@ module Amphtml
             def create_helpers
                 template "asset_tag_helper.rb.erb", "app/helpers/asset_tag_helper.rb"
 
-                template "amp/amp_tag_helper.rb", "app/helpers/amp/amp_tag_helper.rb"
-                template "amp/noscript_tag_helper.rb", "app/helpers/amp/noscript_tag_helper.rb"
-                template "amp/schema_tag_helper.rb", "app/helpers/amp/schema_tag_helper.rb"
-                template "amp/fonts_tag_helper.rb", "app/helpers/amp/fonts_tag_helper.rb"
+                directory 'amp', 'app/helpers/amp'
             end
 
             def show_readme
