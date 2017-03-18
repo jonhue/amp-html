@@ -2,17 +2,18 @@ module Amphtml
     class Test
 
         def self.all
+            markup
             html
             css
         end
 
         def self.markup
-            strings = ["<base>", "<img>", "<video>", "<audio>", "<iframe>", "<frame>", "<frameset>", "<object>", "<param>", "<applet>", "<embed>", "<input type='image'>", "<input type='button'>", "<input type='password'>", "<input type='file'>", "http-equiv", "onclick", "onmouseover"]
+            strings = ["amp_html_doctype", "<head>", "<body>", "canonical_link", "amp_head", '<meta name="viewport" content="width=device-width,minimum-scale=1', "amp_resources"]
 
             results = search_files_in_dir_for(File.join('app', 'views'), strings)
-            test1 = html_test(results)
+            test1 = markup_test(results)
 
-            puts "AMP-HTML TEST: HTML tests executed without exceptions" if test1
+            puts "AMP-HTML TEST: MARKUP tests executed without exceptions" if test1
         end
 
         def self.html
@@ -66,7 +67,7 @@ module Amphtml
             require 'pathname'
             @results = {}
 
-            files, dirs = Pathname.glob(File.join(dir, '**/**/**/**/**/**/*')).partition(&:file?)
+            files, dirs = Pathname.glob(File.join(dir, '**/*')).partition(&:file?)
 
             files.each do |file|
                 puts "AMP-HTML TEST: Testing '#{file}'"
@@ -90,19 +91,16 @@ module Amphtml
         end
 
 
-        def self.css_test(results)
+        def self.markup_test(results)
             if results.present?
-                results.each do |source, string|
-                    case string
-                    when "overflow: auto" || "overflow: scroll" || "overflow-x: auto" || "overflow-x: scroll" || "overflow-y: auto" || "overflow-y: scroll"
-                        puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "css", "overflow.md")
-                        puts source
-                    else
-                        puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "css", "#{string}.md")
-                        puts source
-                    end
-                end
-            else
+                puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "markup", "meta_viewport.md") unless results.has_value?('<meta name="viewport" content="width=device-width,minimum-scale=1')
+                puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "markup", "head_body.md") unless results.has_value?("<head>") && results.include?("<body>")
+                puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "markup", "amp_html_doctype.md") unless results.has_value?("amp_html_doctype")
+                puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "markup", "canonical_link.md") unless results.has_value?("canonical_link")
+                puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "markup", "amp_head.md") unless results.has_value?("amp_head")
+                puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "markup", "amp_resources.md") unless results.has_value?("amp_resources")
+            end
+            unless results.has_value?('<meta name="viewport" content="width=device-width,minimum-scale=1') || results.has_value?("<head>") || results.include?("<body>") || results.has_value?("amp_html_doctype") || results.has_value?("canonical_link") || results.has_value?("amp_head") || results.has_value?("amp_resources")
                 return true
             end
 
@@ -122,6 +120,26 @@ module Amphtml
                         puts source
                     else
                         puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "html", "#{string}.md")
+                        puts source
+                    end
+                end
+            else
+                return true
+            end
+
+            return nil
+        end
+
+
+        def self.css_test(results)
+            if results.present?
+                results.each do |source, string|
+                    case string
+                    when "overflow: auto" || "overflow: scroll" || "overflow-x: auto" || "overflow-x: scroll" || "overflow-y: auto" || "overflow-y: scroll"
+                        puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "css", "overflow.md")
+                        puts source
+                    else
+                        puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "css", "#{string}.md")
                         puts source
                     end
                 end
