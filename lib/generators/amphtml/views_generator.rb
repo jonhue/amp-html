@@ -28,7 +28,7 @@ module Amphtml
                 template "application.html.erb", "app/views/layouts/application.#{pick_format}.erb"
             end
 
-            def add_mime_types
+            def create_mime_types
                 template "config/mime_types.rb", "config/mime_types.rb"
             end
 
