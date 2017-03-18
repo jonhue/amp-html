@@ -2,6 +2,22 @@
 
 * nothing yet
 
+### 0.5.0 (Pre-release) - 2017-03-18
+
+* features
+    * add `amp_embed` helper
+    * add `amp_resources` helper
+    * introduce `amphtml install COMPONENT`
+    * introduce `amphtml test NAME` on
+        * `markup`
+        * `html`
+        * `css`
+* enhancements
+    * improve `config/amphtml.yml` template
+    * improve `app/views/layouts/application.html.erb` template
+* bug fixes
+    * fix AMP issue in `amp_head` helper
+
 ### 0.4.5 (Pre-release) - 2017-03-17
 
 * removals
