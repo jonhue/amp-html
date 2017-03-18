@@ -2,6 +2,15 @@
 
 * nothing yet
 
+### 0.5.1 (Pre-release) - 2017-03-18
+
+* enhancements
+    * improve `config/amphtml.yml` template
+* bug fixes
+    * fix `-amp-` in CSS test
+    * fix `HelpersGenerator`
+    * fix `ViewsGenerator`
+
 ### 0.5.0 (Pre-release) - 2017-03-18
 
 * features
