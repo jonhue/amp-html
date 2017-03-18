@@ -8,7 +8,7 @@ module Amphtml
         end
 
         def self.markup
-            strings = ["amp_html_doctype", "<head", "<body", "canonical_link", "amp_head", '<meta name="viewport" content="width=device-width,minimum-scale=1', "amp_resources"]
+            strings = ["<!doctype", "<html", "amp_html_doctype", "<head", "<body", "canonical_link", "amp_head", '<meta name="viewport" content="width=device-width,minimum-scale=1', "amp_resources"]
 
             results = search_files_in_dir_for(File.join('app', 'views'), strings)
             test1 = markup_test(results)
@@ -21,7 +21,7 @@ module Amphtml
         end
 
         def self.html
-            strings = ["<!doctype", "<html", "javascript_include_tag", "stylesheet_link_tag", "<base", "<img", "<video", "<audio", "<iframe", "<frame", "<frameset", "<object", "<param", "<applet", "<embed", "<input type='image'", "<input type='button'", "<input type='password'", "<input type='file'", "http-equiv", "onclick", "onmouseover"]
+            strings = ["javascript_include_tag", "stylesheet_link_tag", "<base", "<img", "<video", "<audio", "<iframe", "<frame", "<frameset", "<object", "<param", "<applet", "<embed", "<input type='image'", "<input type='button'", "<input type='password'", "<input type='file'", "http-equiv", "onclick", "onmouseover"]
 
             results = search_files_in_dir_for(File.join('app', 'views'), strings)
             test1 = html_test(results)
@@ -127,11 +127,8 @@ module Amphtml
                     when "<input type='image'" || "<input type='button'" || "<input type='password'" || "<input type='file'"
                         puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "html", "input.md")
                         puts source
-                    when "<!doctype" || "<html" || "<base" || "<img" || "<video" || "<audio" || "<iframe" || "<frame" || "<frameset" || "<object" || "<param" || "<applet" || "<embed"
-                        puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "html", "#{string.tr('<>', '')}.md")
-                        puts source
                     else
-                        puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "html", "#{string}.md")
+                        puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "html", "#{string.gsub('<', '')}.md")
                         puts source
                     end
                 end
