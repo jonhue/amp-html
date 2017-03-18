@@ -76,7 +76,7 @@ module Amphtml
                     line_number = line_number + 1
                     if strings.any? { |string| line.include?(string) }
                         string = strings.detect { |string| line.include?(string) }
-                        source = "=> " + file.to_s + ":" + line_number.to_s
+                        source = "=> " + [file, line_number].join(':')
                         @results[source] = string
                     end
                 end
