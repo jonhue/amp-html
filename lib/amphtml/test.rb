@@ -48,7 +48,7 @@ module Amphtml
             #     complete_path = File.join(dir, file)
             #     next if file == '.' or file == '..'
             #     if File.file?(complete_path)
-            #         puts "AMP-HTML TEST: Testing '#{complete_path}'"
+            #         # puts "AMP-HTML TEST: Testing '#{complete_path}'"
             #         line_number = 0
             #         IO.foreach(complete_path) do |line|
             #             line_number = line_number + 1
@@ -70,7 +70,7 @@ module Amphtml
             files, dirs = Pathname.glob(File.join(dir, '**/*')).partition(&:file?)
 
             files.each do |file|
-                puts "AMP-HTML TEST: Testing '#{file}'"
+                # puts "AMP-HTML TEST: Testing '#{file}'"
                 line_number = 0
                 IO.foreach(file) do |line|
                     line_number = line_number + 1

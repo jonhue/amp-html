@@ -14,7 +14,7 @@ module Amphtml
             class_option :format, desc: "Set the views format. Defaults to `html`", type: :string, aliases: '-f'
 
 
-            # DEEB INTEGRATION COMPONENTS
+            # DEEP INTEGRATION COMPONENTS
             class_option :all, desc: "Include everything", type: :boolean, default: false, aliases: '-a'
 
             class_option :analytics, desc: "Include amp-analytics tag", type: :boolean, default: false
