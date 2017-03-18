@@ -17,7 +17,7 @@ module Amphtml
         end
 
         def self.html
-            strings = ["<base>", "<img>", "<video>", "<audio>", "<iframe>", "<frame>", "<frameset>", "<object>", "<param>", "<applet>", "<embed>", "<input type='image'>", "<input type='button'>", "<input type='password'>", "<input type='file'>", "http-equiv", "onclick", "onmouseover"]
+            strings = ["javascript_include_tag", "stylesheet_link_tag", "<base>", "<img>", "<video>", "<audio>", "<iframe>", "<frame>", "<frameset>", "<object>", "<param>", "<applet>", "<embed>", "<input type='image'>", "<input type='button'>", "<input type='password'>", "<input type='file'>", "http-equiv", "onclick", "onmouseover"]
 
             results = search_files_in_dir_for(File.join('app', 'views'), strings)
             test1 = html_test(results)
