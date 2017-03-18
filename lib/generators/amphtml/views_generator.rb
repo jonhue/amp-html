@@ -29,7 +29,7 @@ module Amphtml
             end
 
             def create_mime_types
-                template "config/mime_types.rb", "config/mime_types.rb"
+                template "config/mime_types.rb", "config/initializers/mime_types.rb"
             end
 
             def show_readme
