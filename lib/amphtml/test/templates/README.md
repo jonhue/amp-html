@@ -3,6 +3,12 @@
 # amphtml test
 ---
 
+## Options
+
+`--split` or `-s`: Run tests with `split` if you are using SplitView.
+`--help` or `-h`: Run tests with `help` to get additional information on AMP-HTML tests.
+
+
 ## all
 Running all tests available.
 
