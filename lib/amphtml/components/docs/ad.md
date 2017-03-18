@@ -15,11 +15,15 @@ The AMP-HTML Advertisement Component allows to easily embed ads with AMP, not hu
 
 [**Changelog 0.4.2**](https://github.com/jonhue/amphtml/blob/master/CHANGELOG.md#042-pre-release---2017-03-17)
 
-#### Requirements: The Advertisement Component does not depend on any other components.
+#### Requirements
 
-#### Dependents: No other components depend on the Advertisement Component.
+The Advertisement Component does not depend on any other components.
 
-#### DeepIntegration: true
+#### Dependents
+
+No other components depend on the Advertisement Component.
+
+#### DeepIntegration: Enabled
 
 
 ## Installation
