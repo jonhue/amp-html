@@ -3,7 +3,7 @@ module ApplicationHelper
 
         def amp_analytics(vendor: Amphtml.analytics_default_vendor)
             options = {}
-            options[:type] = vendor
+            options[:type] = vendor if vendor
             content_tag("amp-analytics", options)
         end
         def amp_google_analytics(options: {})

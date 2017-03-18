@@ -7,8 +7,8 @@
         "trackPageview": {
             "on": "visible",
             "request": "pageview",
-        }<%% if triggers %>,<%% triggers.each do |trigger| %>
-        <%%= trigger.name %>: {
+        }<%% if triggers %>,<%% triggers.each do |name, trigger| %>
+        <%%= name %>: {
             "on": <%%= trigger.on %>,
             "request": <%%= trigger.request %><%% if trigger.vars %>,
             "vars": {<%% trigger.vars.each do |variable| %><%% if variable.event_category %>
