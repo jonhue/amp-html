@@ -62,7 +62,7 @@ In your views you can add an advertisement as follows:
 
 Learn more about the `amp_ad` helper in the dedicated reference linked below.
 
----
+### Auto Ads
 
 To dynamically inject ads via a remotely-served configuration file use:
 

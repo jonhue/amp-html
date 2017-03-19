@@ -52,7 +52,7 @@ You can always override this vendor default by passing a different vendor to you
 
 A list of all by AMP supported analytics vendors: https://www.ampproject.org/docs/reference/components/ads/amp-analytics#analytics-vendors
 
----
+### Google Analytics
 
 With DeepIntegration you can also easily setup your **Google Analytics** account.
 
@@ -100,7 +100,7 @@ To learn how to setup analytics for a specific vendor, reference the AMP documen
 
 Learn more about the `amp_analytics` helper in the dedicated reference linked below.
 
----
+### Google Analytics
 
 To setup Google Analytics, you need to first set your account in the AMP-HTML configuration. Then add to your view:
 
@@ -112,7 +112,7 @@ By default the component just listens for pageviews. You can also set complex tr
 
 Learn more about creating triggers for Google Analytics: https://developers.google.com/analytics/devguides/collection/amp-analytics/
 
----
+### AMP Pixel
 
 You can use the `amp_pixel` helper to track user behavior on your site:
 
