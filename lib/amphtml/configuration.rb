@@ -47,39 +47,28 @@ module Amphtml
             Rails.application.class.parent
         end
     end
-
-
-    def self.application
+    def self.application_type
         config = get_config
-        if config.key(:application)
-            def self.name
-                if config[:application].key(:name)
-                    config[:application][:name]
-                else
-                    Rails.application.class.parent
-                end
-            end
-            def self.type
-                if config[:application].key(:type)
-                    config[:application][:type]
-                else
-                    nil
-                end
-            end
-            def self.date_published
-                if config[:application].key(:date_published)
-                    config[:application][:date_published]
-                else
-                    DateTime.now
-                end
-            end
-            def self.image
-                if config[:application].key(:image)
-                    config[:application][:image]
-                else
-                    nil
-                end
-            end
+        if config.key(:application) && config[:application].key(:type)
+            config[:application][:type]
+        else
+            nil
+        end
+    end
+    def self.application_date_published
+        config = get_config
+        if config.key(:application) && config[:application].key(:date_published)
+            config[:application][:date_published]
+        else
+            DateTime.now
+        end
+    end
+    def self.application_image
+        config = get_config
+        if config.key(:application) && config[:application].key(:image)
+            config[:application][:image]
+        else
+            nil
         end
     end
 
