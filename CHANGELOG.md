@@ -2,6 +2,21 @@
 
 * nothing yet
 
+### 0.5.4 (Pre-release) - 2017-03-19
+
+* features
+    * add `amp_auto_ads` helper
+* enhancements
+    * `validate`: start server if not already running
+    * add analytics component docs
+    * add validate docs
+* bug fixes
+    * fix configuration
+    * fix `schema_tag` helper
+    * fix `amp_tag` helpers
+    * fix `BundleGenerator`
+    * fix view templates
+
 ### 0.5.3 (Pre-release) - 2017-03-18
 
 * enhancements
