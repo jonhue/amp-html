@@ -46,11 +46,12 @@ default: &default
         name: "<%= options[:name] %>"
 
         # ### Specify the type of your site. Some example values are "Organization", "NewsArticle", "BlogPosting". You can name it whatever feels appropriate
-        # type: Organization
+        # ### This is being used for the schema_tag and can be overridden by passing a different type
+        # type: "Organization"
 
         # ### Specify the date you published your site. This is being used for the schema_tag and can be overridden by passing a different datetime
         # ### Defaults to `DateTime.now`
-        # date_published: <%= DateTime.now %>
+        # date_published: "<%= DateTime.now %>"
 
         # ### Specify the image used as logo for the schema_tag
         # image: ["my/image/path"]
