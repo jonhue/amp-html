@@ -60,6 +60,13 @@ In your views you can add an advertisement as follows:
 
 Learn more about the `amp_ad` helper in the dedicated reference linked below.
 
+---
+
+To dynamically inject ads via a remotely-served configuration file use:
+
+    <%= amp_auto_ads(type) %>
+    <%= amp_auto_ads("adsense", data: { ad: { client: "ca-pub-5439573510495356" } }) %>
+
 
 ### Helpers
 
@@ -67,3 +74,4 @@ The following helpers are usable with the Advertisement Component of AMP-HTML
 
 * [`amp_ad`](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_ad.md)
 * [`amp_embed`](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_embed.md)
+* [`amp_auto_ads`](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_auto_ads.md)

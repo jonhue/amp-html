@@ -112,7 +112,7 @@ Learn more about creating triggers for Google Analytics: https://developers.goog
 
 ---
 
-You can use `amp_pixel` to track user behavior on your site:
+You can use the `amp_pixel` helper to track user behavior on your site:
 
     <%= amp_pixel("https://foo.com/pixel?RANDOM") %>
 
