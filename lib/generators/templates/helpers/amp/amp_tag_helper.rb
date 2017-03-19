@@ -1,9 +1,13 @@
 module ApplicationHelper
     module Amp::AmpTagHelper
 
-        def amp_html_doctype
-            tag("!doctype", "html")
-            content_tag("html", "⚡")
+        def amp_html_doctype(&block)
+            tag("!doctype", html: "")
+            if block_given?
+                content_tag("html", capture(&block), ⚡: "")
+            else
+                content_tag("html", nil, ⚡: "")
+            end
         end
 
 
