@@ -37,6 +37,12 @@ module ApplicationHelper
             options = options.symbolize_keys
 
             options[:"data-href"] = href
+
+            if options[:type]
+                options[:"data-embed-as"] = options[:type]
+                options.delete(:type)
+            end
+            
             options[:width], options[:height] = extract_dimensions(options.delete(:size)) if options[:size]
             warn "WARNING (AMP): specify width and height of amp-facebook tags." unless options[:width] && options[:height]
 
