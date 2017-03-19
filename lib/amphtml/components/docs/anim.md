@@ -8,9 +8,9 @@ The AMP-HTML Animated Images Component allows to use runtime-managed animated im
 
 ### Quick info
 
-#### Latest component release: 0.4.1 (Pre-release) - 2017-03-16
+#### Latest component release: 0.6.1 (Pre-release) - 2017-03-19
 
-[**Changelog for version 0.4.1**](https://github.com/jonhue/amphtml/blob/master/CHANGELOG.md#041-pre-release---2017-03-16)
+[**Changelog for version 0.6.1**](https://github.com/jonhue/amphtml/blob/master/CHANGELOG.md#061-pre-release---2017-03-19)
 
 #### Requirements
 

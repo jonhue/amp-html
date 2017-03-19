@@ -8,9 +8,9 @@ The AMP-HTML Social Component allows to embed content of various social-platform
 
 ### Quick info
 
-#### Latest component release: 0.4.2 (Pre-release) - 2017-03-17
+#### Latest component release: 0.6.1 (Pre-release) - 2017-03-19
 
-[**Changelog for version 0.4.2**](https://github.com/jonhue/amphtml/blob/master/CHANGELOG.md#042-pre-release---2017-03-17)
+[**Changelog for version 0.6.1**](https://github.com/jonhue/amphtml/blob/master/CHANGELOG.md#061-pre-release---2017-03-19)
 
 #### Requirements
 

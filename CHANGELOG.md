@@ -2,6 +2,20 @@
 
 * nothing yet
 
+### 0.6.1 (Pre-release) - 2017-03-19
+
+* removals
+    * deprecate `amp_global_css` helper - will be removed in 2.0
+* enhancements
+    * improve `amp_anim` helper
+    * improve `amp_ad` helper
+    * improve social helpers
+    * improve AMP helpers
+    * update component docs
+    * update helper docs
+* bug fixes
+    * fix `noscript_tag` helper
+
 ### 0.6.0 (Pre-release) - 2017-03-19
 
 * features
