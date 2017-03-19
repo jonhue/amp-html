@@ -39,6 +39,16 @@ module Amphtml
     end
 
 
+    def self.application_name
+        config = get_config
+        if config.key(:application) && config[:application].key(:name)
+            config[:application][:name]
+        else
+            Rails.application.class.parent
+        end
+    end
+
+
     def self.application
         config = get_config
         if config.key(:application)

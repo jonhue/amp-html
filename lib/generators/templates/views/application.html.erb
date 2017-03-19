@@ -11,7 +11,7 @@
 
 
         <!-- Use <%%#= content_for :title do %>App Name<%%# end %> to add a title to your view -->
-        <title><%% if content_for? :title %><%%= yield :title %><%% else %><%%= Amphtml.application.name %><%% end %></title>
+        <title><%% if content_for? :title %><%%= yield :title %><%% else %><%%= Amphtml.application_name %><%% end %></title>
 
         <% if options[:split] %>
         <!-- Overwrite the passed parameter to specify a specific canonical url -->
