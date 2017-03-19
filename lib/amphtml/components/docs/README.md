@@ -57,17 +57,17 @@ DeepIntegration components are usually larger, more complex components, that int
 
 Take a look at the newest additions of components to AMP-HTML.
 
-* [Notifications BETA (`notifications`)](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/notifications.md)
-* [Social BETA (`social`)](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/social.md)
+* [Notifications BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/notifications.md)
+* [Social BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/social.md)
 
 
 ## Components in BETA
 
 Take a look at the newest additions of components to AMP-HTML.
 
-* [Advertisements BETA (`ad`)](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/ad.md)
-* [Analytics BETA (`analytics`)](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/analytics.md)
-* [Animated Images BETA (`anim`)](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/anim.md)
-* [Iframe BETA (`iframe`)](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/iframe.md)
-* [Notifications BETA (`notifications`)](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/notifications.md)
-* [Social BETA (`social`)](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/social.md)
+* [Advertisements BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/ad.md)
+* [Analytics BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/analytics.md)
+* [Animated Images BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/anim.md)
+* [Iframe BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/iframe.md)
+* [Notifications BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/notifications.md)
+* [Social BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/social.md)
