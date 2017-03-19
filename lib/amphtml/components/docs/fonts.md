@@ -6,6 +6,8 @@
 
 The AMP-HTML Fonts Component allows to include stylesheets for custom fonts without using `@font-face`.
 
+---
+
 ### Quick info
 
 #### Latest component release: 0.6.1 (Pre-release) - 2017-03-19
@@ -24,6 +26,7 @@ No other components depend on the Fonts Component.
 
 #### [Availability](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/components/docs#availability-of-components): Build-in
 
+---
 
 ## Usage
 

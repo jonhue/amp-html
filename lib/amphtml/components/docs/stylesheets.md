@@ -6,6 +6,8 @@
 
 The AMP-HTML Stylesheets Component allows the use of stylesheets in AMP documents.
 
+---
+
 ### Quick info
 
 #### Latest component release: 0.6.1 (Pre-release) - 2017-03-19
@@ -24,6 +26,7 @@ No other components depend on the Stylesheets Component.
 
 #### [Availability](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/components/docs#availability-of-components): Build-in
 
+---
 
 ## Usage
 

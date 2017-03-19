@@ -6,6 +6,8 @@
 
 `amp_analytics` allows to integrate with venders to measure activity on AMP documents.
 
+---
+
 ### Quick info
 
 #### Latest update: 0.4.2 (Pre-release) - 2017-03-17
@@ -17,6 +19,8 @@
 #### [Availability](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/helpers/docs#availability-of-helpers): Installable with the [Analytics Component](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/components/docs/analytics.md)
 
 #### [Takes a block?](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/helpers/docs#takes-a-block): Yes
+
+---
 
 ## General
 

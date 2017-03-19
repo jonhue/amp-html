@@ -6,6 +6,8 @@
 
 `amp_auto_ads` allows to autmatically embed ads by a provider.
 
+---
+
 ### Quick info
 
 #### Latest update: 0.5.4 (Pre-release) - 2017-03-19
@@ -17,6 +19,8 @@
 #### [Availability](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/helpers/docs#availability-of-helpers): Installable with the [Advertisements Component](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/components/docs/ad.md)
 
 #### [Takes a block?](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/helpers/docs#takes-a-block): No
+
+---
 
 ## General
 

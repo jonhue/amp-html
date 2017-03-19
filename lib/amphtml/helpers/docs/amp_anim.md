@@ -6,6 +6,8 @@
 
 `amp_anim` allows to use runtime-managed animated images, typically GIF's, in AMP documents.
 
+---
+
 ### Quick info
 
 #### Latest update: 0.6.1 (Pre-release) - 2017-03-19
@@ -17,6 +19,8 @@
 #### [Availability](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/helpers/docs#availability-of-helpers): Installable with the [Animated Images Component](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/components/docs/anim.md)
 
 #### [Takes a block?](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/helpers/docs#takes-a-block): Yes
+
+---
 
 ## General
 

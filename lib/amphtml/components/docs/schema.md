@@ -6,6 +6,8 @@
 
 The AMP-HTML Schema.org Component allows to easily include a Schema.org definition to get your content distributed in certain places, like the Google News Carousel.
 
+---
+
 ### Quick info
 
 #### Latest component release: 0.5.4 (Pre-release) - 2017-03-19
@@ -24,6 +26,7 @@ No other components depend on the Schema.org Component.
 
 #### [Availability](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/components/docs#availability-of-components): Build-in
 
+---
 
 ## Configuration
 

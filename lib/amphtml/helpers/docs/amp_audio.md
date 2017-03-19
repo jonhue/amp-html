@@ -6,6 +6,8 @@
 
 `amp_audio` allows to directly embed audio files with HTML5.
 
+---
+
 ### Quick info
 
 #### Latest update: 0.1.5 (Pre-release) - 2017-03-13
@@ -17,6 +19,8 @@
 #### [Availability](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/helpers/docs#availability-of-helpers): Build-in
 
 #### [Takes a block?](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/helpers/docs#takes-a-block): No
+
+---
 
 ## General
 

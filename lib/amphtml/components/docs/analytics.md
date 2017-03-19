@@ -6,6 +6,8 @@
 
 The AMP-HTML Analytics Component allows to integrate with venders to measure activity on AMP documents.
 
+---
+
 ### Quick info
 
 #### Latest component release: 0.4.2 (Pre-release) - 2017-03-17
@@ -24,6 +26,7 @@ No other components depend on the Analytics Component.
 
 #### [Availability](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/components/docs#availability-of-components): Installable
 
+---
 
 ## Installation
 

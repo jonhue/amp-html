@@ -6,6 +6,8 @@
 
 The AMP-HTML Animated Images Component allows to use runtime-managed animated images, typically GIF's, in AMP documents.
 
+---
+
 ### Quick info
 
 #### Latest component release: 0.6.1 (Pre-release) - 2017-03-19
@@ -24,6 +26,7 @@ No other components depend on the Animated Images Component.
 
 #### [Availability](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/components/docs#availability-of-components): Installable
 
+---
 
 ## Installation
 

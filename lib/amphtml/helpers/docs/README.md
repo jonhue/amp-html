@@ -22,6 +22,7 @@ DeepIntegration helpers are parts of a [DeepIntegration component](https://githu
 
 The availability of helpers summarizes whether a helper is included in the vanilla version of AMP-HTML or if it needs to be installed as a part of a [component](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/components/docs) in order to get used.
 
+---
 
 ## Helpers Reference
 

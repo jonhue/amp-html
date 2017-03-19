@@ -6,6 +6,8 @@
 
 The AMP-HTML Iframe Component allows to use iframes similar to the HTML `<iframe>` tag in AMP documents.
 
+---
+
 ### Quick info
 
 #### Latest component release: 0.4.1 (Pre-release) - 2017-03-16
@@ -24,6 +26,7 @@ The [AMP-HTML Javascript Component](https://github.com/jonhue/amphtml/tree/maste
 
 #### [Availability](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/components/docs#availability-of-components): Installable
 
+---
 
 ## Installation
 

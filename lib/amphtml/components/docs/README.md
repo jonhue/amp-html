@@ -65,6 +65,7 @@ DeepIntegration components are usually larger, more complex components, that int
 
 The availability of components summarizes whether a component is included in the vanilla version of AMP-HTML or if it needs to be installed in order to get used.
 
+---
 
 ## New Components
 
