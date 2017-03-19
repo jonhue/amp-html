@@ -2,27 +2,36 @@ module ApplicationHelper
     module Amp::AmpTagHelper
 
         def amp_html_doctype(&block)
-            tag("!doctype", html: "")
+            doctype = render html: "<!doctype html>".html_safe
             if block_given?
-                content_tag("html", capture(&block), ⚡: "")
+                html = content_tag("html", capture(&block), ⚡: "")
             else
-                content_tag("html", nil, ⚡: "")
+                html = content_tag("html", nil, ⚡: "")
+            end
+            doctype + html
+        end
+
+
+        def amp_css(&block)
+            if block_given?
+                content_for :css, capture(&block)
+            end
+        end
+        def amp_global_css(&block)
+            if block_given?
+                content_for :global_css, capture(&block)
             end
         end
 
-
-        def amp_css
-            content_for :css
+        def amp_js(&block)
+            if block_given?
+                content_for :js, capture(&block)
+            end
         end
-        def amp_global_css
-            content_for :global_css
-        end
-
-        def amp_js
-            content_for :js
-        end
-        def amp_global_js
-            content_for :global_js
+        def amp_global_js(&block)
+            if block_given?
+                content_for :global_js, capture(&block)
+            end
         end
 
 
@@ -62,8 +71,9 @@ module ApplicationHelper
 
 
         def amp_resources
-            render "application/amp/resources"
-            render "application/amp/components"
+            resources = render "application/amp/resources"
+            components = render "application/amp/components"
+            resources + components
         end
 
     end
