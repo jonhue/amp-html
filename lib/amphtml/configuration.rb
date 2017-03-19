@@ -39,6 +39,20 @@ module Amphtml
     end
 
 
+    def self.assets_only_amp
+        config = get_config
+        if config.key(:assets) && config[:assets].key(:only_amp)
+            config[:assets][:only_amp]
+        else
+            if Amphtml.split_view
+                false
+            else
+                true
+            end
+        end
+    end
+
+
     def self.application_name
         config = get_config
         if config.key(:application) && config[:application].key(:name)

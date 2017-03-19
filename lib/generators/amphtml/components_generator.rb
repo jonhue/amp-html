@@ -17,12 +17,13 @@ module Amphtml
             # COMPONENTS
             class_option :all, desc: "Install all AMP-HTML components", type: :boolean, default: false, aliases: '-a'
 
-            class_option :analytics, desc: "Install amp-analytics tag", type: :boolean, default: false
-            class_option :iframe, desc: "Install amp-iframe tag", type: :boolean, default: false
-            class_option :notifications, desc: "Install amp-user-notification tag", type: :boolean, default: false
-            class_option :anim, desc: "Install amp-anim tag", type: :boolean, default: false
-            class_option :ad, desc: "Install amp-ad and amp-sticky-ad tag", type: :boolean, default: false
-            class_option :social, desc: "Install social amp tags", type: :boolean, default: false
+            class_option :analytics, desc: "Install the AMP-HTML Analytics Component", type: :boolean, default: false
+            class_option :iframe, desc: "Install the AMP-HTML Iframe Component", type: :boolean, default: false
+            class_option :notifications, desc: "Install the AMP-HTML Notifications Component", type: :boolean, default: false
+            class_option :anim, desc: "Install the AMP-HTML Animated Images Component", type: :boolean, default: false
+            class_option :ad, desc: "Install the AMP-HTML Advertisements Component", type: :boolean, default: false
+            class_option :social, desc: "Install the AMP-HTML Social Component", type: :boolean, default: false
+            class_option :javascript, desc: "Install the AMP-HTML Javascript Component", type: :boolean, default: false
 
 
 
@@ -37,11 +38,16 @@ module Amphtml
             def create_helpers
                 FileUtils.rm_rf('app/helpers/amp/components')
                 template "helpers/analytics_tag_helper.rb", "app/helpers/amp/components/analytics_tag_helper.rb" if options[:all] || options[:analytics]
-                template "helpers/iframe_tag_helper.rb", "app/helpers/amp/components/iframe_tag_helper.rb" if options[:all] || options[:iframe]
+                template "helpers/iframe_tag_helper.rb", "app/helpers/amp/components/iframe_tag_helper.rb" if options[:all] || options[:iframe] || options[:javascript]
                 template "helpers/notification_tag_helper.rb", "app/helpers/amp/components/notification_tag_helper.rb" if options[:all] || options[:notifications]
                 template "helpers/anim_tag_helper.rb", "app/helpers/amp/components/anim_tag_helper.rb" if options[:all] || options[:anim]
                 template "helpers/ad_tag_helper.rb", "app/helpers/amp/components/ad_tag_helper.rb" if options[:all] || options[:ad]
                 template "helpers/social_tag_helper.rb", "app/helpers/amp/components/social_tag_helper.rb" if options[:all] || options[:social]
+                template "helpers/javascript_tag_helper.rb", "app/helpers/amp/components/javascript_tag_helper.rb" if options[:all] || options[:javascript]
+            end
+
+            def create_assets
+                template "assets/javascripts/application.js", "app/assets/javascripts/amp/application.js" if options[:all] || options[:javascript]
             end
 
             def show_readme

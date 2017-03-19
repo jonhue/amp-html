@@ -12,6 +12,7 @@ All currently supported components for AMP-HTML. New are added continuously.
 * [Iframe BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/iframe.md)
 * [Notifications BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/notifications.md)
 * [Social BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/social.md)
+* [Javascript BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/javascript.md)
 
 
 ## Installing Components
@@ -57,6 +58,7 @@ DeepIntegration components are usually larger, more complex components, that int
 
 Take a look at the newest additions of components to AMP-HTML.
 
+* [Javascript BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/javascript.md)
 * [Notifications BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/notifications.md)
 * [Social BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/social.md)
 
@@ -71,3 +73,4 @@ Take a look at the newest additions of components to AMP-HTML.
 * [Iframe BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/iframe.md)
 * [Notifications BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/notifications.md)
 * [Social BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/social.md)
+* [Javascript BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/javascript.md)

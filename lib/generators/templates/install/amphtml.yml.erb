@@ -16,6 +16,7 @@ default: &default
         <% if options[:all] || options[:anim] %>anim<% else %># anim<% end %>
         <% if options[:all] || options[:ad] %>ad<% else %># ad<% end %>
         <% if options[:all] || options[:social] %>social<% else %># social<% end %>
+        <% if options[:all] || options[:javascript] %>javascript<% else %># javascript<% end %>
 
 
 
@@ -79,7 +80,25 @@ default: &default
     ## Default is ``
     fallback_format: amp xhtml
     <% end %>
+
+
+
+    # --------------------
+    # ASSETS CONFIGURATION
+    # --------------------
+
+    ## Configure your Assets
+    assets:
+        # ### Declares whether assets outside of the "assets/#{type}/amp" are precompiled or not. If `true` only assets inside the amp directory are precompiled
+        # ### Defaults to `true`. If SplitView is enabled it defaults to `false`
+        # only_amp: <% if options[:split] %>false<% else %>true<% end %>
+
+        # ### To use javascript in your AMP app, install the AMP-HTML Javascript Component by running `amphtml install javascript`
+    <% end %>
     <% if options[:all] || options[:analytics] %>
+
+
+
 
 
 

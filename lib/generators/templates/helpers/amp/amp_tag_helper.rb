@@ -23,17 +23,6 @@ module ApplicationHelper
             end
         end
 
-        def amp_js(&block)
-            if block_given?
-                content_for :js, capture(&block)
-            end
-        end
-        def amp_global_js(&block)
-            if block_given?
-                content_for :global_js, capture(&block)
-            end
-        end
-
 
         def amp_placeholder(name, options: {})
             options = options.symbolize_keys
