@@ -30,7 +30,7 @@
 
 
         <!-- schema.org definition (not required) -->
-        <%%= schema_tag(headline: ( (yield :title) if content_for? )) %>
+        <%%= schema_tag("#{headline if content_for? :title}": "#{yield :title if content_for? :title}") %>
 
 
         <!-- AMP custom styles -->
@@ -45,7 +45,9 @@
         <%% end %>
 
 
-        <!-- AMP custom javascript -->
+        <!-- AMP Javascript Component -->
+        <!-- You need to install the javascript component in order to use the following tag helpers! -->
+        
         <!-- Use <%%#= amp_js do %> function test() { ... } <%%# end %> to add specific javascript to your view -->
 
         <!-- If you want to embed external javascript, use files under "app/assets/javascripts/amp" directory -->
