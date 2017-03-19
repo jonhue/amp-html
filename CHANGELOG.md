@@ -2,6 +2,17 @@
 
 * nothing yet
 
+### 0.6.0 (Pre-release) - 2017-03-19
+
+* features
+    * introduce javascript component
+* enhancements
+    * add javascript component docs
+    * add configuration docs
+* bug fixes
+    * fix `config/initializers/amphtml.rb`
+    * fix helpers
+
 ### 0.5.4 (Pre-release) - 2017-03-19
 
 * features
