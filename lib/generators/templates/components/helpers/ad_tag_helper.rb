@@ -45,7 +45,7 @@ module ApplicationHelper
             amp_ad(network, options, capture(&block))
         end
 
-        def amp_auto_ad(network = Amphtml.auto_ads_default_network, options = {})
+        def amp_auto_ads(network = Amphtml.auto_ads_default_network, options = {})
             options = options.symbolize_keys
 
             options[:type] = network
