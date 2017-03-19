@@ -79,16 +79,22 @@ module AssetTagHelper
     # end
     <% end %>
 
-    def amp_audio(*sources, fallback: "Your browser doesn’t support HTML5 audio")
-        multiple_sources_tag_builder("amp-audio", sources, fallback)
+    def amp_audio(*sources)
+        options = sources.extract_options!.symbolize_keys
+        options[:fallback] = "Your browser doesn’t support HTML5 audio" unless options[:fallback]
+        multiple_sources_tag_builder("amp-audio", sources, options)
     end
     <% unless options[:split] %>
-    def audio_tag(*sources, fallback: "Your browser doesn’t support HTML5 audio")
-        amp_audio(*sources, fallback: "Your browser doesn’t support HTML5 audio")
+    def audio_tag(*sources)
+        options = sources.extract_options!.symbolize_keys
+        options[:fallback] = "Your browser doesn’t support HTML5 audio" unless options[:fallback]
+        amp_audio(*sources, options)
     end
     <% else %>
-    # def audio_tag(*sources, fallback: "Your browser doesn’t support HTML5 audio")
-    #     amp_audio(*sources, fallback: "Your browser doesn’t support HTML5 audio")
+    # def audio_tag(*sources)
+    #     options = sources.extract_options!.symbolize_keys
+    #     options[:fallback] = "Your browser doesn’t support HTML5 audio" unless options[:fallback]
+    #     amp_audio(*sources, options)
     # end
     <% end %>
 
