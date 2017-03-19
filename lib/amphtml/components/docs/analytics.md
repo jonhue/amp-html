@@ -22,7 +22,7 @@ No other components depend on the Analytics Component.
 
 #### [DeepIntegration](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/components/docs#deepintegration-components): Enabled
 
-#### Availability: Installable
+#### [Availability](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/components/docs#availability-of-components): Installable
 
 
 ## Installation

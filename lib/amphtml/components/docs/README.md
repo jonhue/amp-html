@@ -60,6 +60,10 @@ The vanilla version of AMP-HTML comes just with everything you need to get you a
 
 DeepIntegration components are usually larger, more complex components, that integrate more deeply into your app. They often provide options to get configured in your AMP-HTML configuration file (`config/amphtml.yml`) and / or they require to be setup in your view. You can learn more about whether a certain component has DeepIntegration or not by looking at their dedicated references.
 
+### Availability of Components
+
+The availability of components summarizes whether a component is included in the vanilla version of AMP-HTML or if it needs to be installed in order to get used.
+
 
 ## New Components
 
