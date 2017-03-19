@@ -22,6 +22,8 @@ No other components depend on the Advertisement Component.
 
 #### [DeepIntegration](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/components/docs#deepintegration-components): Enabled
 
+#### Availability: Installable
+
 
 ## Installation
 

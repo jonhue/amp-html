@@ -22,6 +22,8 @@ The [AMP-HTML Javascript Component](https://github.com/jonhue/amphtml/tree/maste
 
 #### [DeepIntegration](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/components/docs#deepintegration-components): Disabled
 
+#### Availability: Installable
+
 
 ## Installation
 
