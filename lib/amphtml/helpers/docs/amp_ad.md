@@ -22,10 +22,22 @@
 
 ### Reference
 
+[**AMP Reference**](https://www.ampproject.org/docs/reference/components/ads/amp-ad)
+
+#### Required Parameters
+
+* `network` (if not set in the AMP-HTML configuration)
+* `size` (or `width` & `height`)
+
+#### Structure
+
     <%= amp_ad(network, options) %>
     # <amp-ad type="NETWORK" layout="responsive"></amp-ad>
 
 **Note:** `layout` defaults to `responsive` if not explicitly permitted.
+
+
+## Examples
 
 Setting width & height:
 
@@ -68,8 +80,3 @@ Setting a fallback:
     # </amp-ad>
 
 **References:** [`amp_placeholder`](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_placeholder.md), [`amp_fallback`](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_fallback.md)
-
-
-## Examples
-
-Examples may be added in the future.
