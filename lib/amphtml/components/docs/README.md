@@ -10,6 +10,7 @@ All currently supported components for AMP-HTML. New are added continuously.
 
 * [Schema.org](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/schema.md)
 * [Fonts BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/fonts.md)
+* [Stylesheets](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/stylesheets.md)
 
 ### Installable
 
