@@ -1,5 +1,5 @@
 
-# [Components]((https://github.com/jonhue/amphtml/tree/master/lib/amphtml/components/docs) / Advertisements BETA
+# [Components](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/components/docs) / Advertisements BETA
 
 
 ## Information
