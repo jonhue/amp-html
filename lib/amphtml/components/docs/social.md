@@ -62,9 +62,7 @@ To use a provider that is not preconfigured by AMP, specify the default_data_sha
 
 **The AMP-HTML Social Component introduces a lot of seperate helpers. To take a look at the functionality of each of them, take a look at their references, lnked below.**
 
-### Examples
-
-#### Embed a Tweet
+### Examples: Embed a Tweet
 
 You can embed a tweet like so:
 
@@ -83,7 +81,7 @@ Learn more about the `amp_twitter` helper in the dedicated reference linked belo
 
 **References:** [`amp_placeholder`](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_placeholder.md)
 
-#### Social Share
+### Examples: Social Share
 
 It is that easy to create a social share button:
 
