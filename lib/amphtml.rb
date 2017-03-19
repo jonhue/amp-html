@@ -12,6 +12,7 @@ module Amphtml
     require 'amphtml/cli'
 
     require 'amphtml/configuration'
+    require 'amphtml/configuration/help'
 
     require 'amphtml/test'
     require 'amphtml/validate'

@@ -28,6 +28,14 @@ class Amphtml::Cli < Thor
     end
 
 
+    desc "configuration", "Learn how to configure AMP-HTML"
+    map %w[--configuration] => :configuration
+
+    def configuration
+        puts ::Amphtml::Configuration::Help.all
+    end
+
+
     desc "components", "Learn more about AMP-HTML installable components"
     map %w[--components] => :components
 
