@@ -32,7 +32,7 @@
 #### Structure
 
     <%= amp_ad(network, options) %>
-    # <amp-ad type="NETWORK" layout="responsive"></amp-ad>
+    # <amp-ad type=network layout="responsive"></amp-ad>
 
 **Note:** `layout` defaults to `responsive` if not explicitly permitted.
 
@@ -41,42 +41,42 @@
 
 Setting width & height:
 
-    <%= amp_ad(network, width: X, height: Y) %>
-    <%= amp_ad(network, size: "XxY") %>
-    # <amp-ad type="NETWORK" layout="responsive" width=X height=Y></amp-ad>
+    <%= amp_ad("a9", width: 400, height: 300) %>
+    <%= amp_ad("a9", size: "400x300") %>
+    # <amp-ad type="a9" layout="responsive" width=400 height=300></amp-ad>
 
 Creating a sticky ad at the bottom of the viewport:
 
-    <%= amp_ad(network, sticky: true) %>
+    <%= amp_ad("a9", sticky: true) %>
     # <amp-sticky-ad layout="nodisplay">
-    #     <amp-ad type="NETWORK" layout="responsive"></amp-ad>
+    #     <amp-ad type="a9" layout="responsive"></amp-ad>
     # </amp-sticky-ad>
 
 Setting a placeholder:
 
-    <%= amp_ad(network, placeholder: "path") %>
-    # <amp-ad type="NETWORK" layout="responsive">
-    #     <amp-img placeholder src="PATH"></amp-img>
+    <%= amp_ad("a9", placeholder: "my-ad-screencap.jpg") %>
+    # <amp-ad type="a9" layout="responsive">
+    #     <amp-img placeholder src="my-ad-screencap.jpg"></amp-img>
     # </amp-ad>
 
 Setting a fallback:
 
-    <%= amp_ad(network, fallback: "path") %>
-    # <amp-ad type="NETWORK" layout="responsive">
-    #     <amp-img fallback src="PATH"></amp-img>
+    <%= amp_ad("a9", fallback: "my-ad-screencap.jpg") %>
+    # <amp-ad type="a9" layout="responsive">
+    #     <amp-img fallback src="my-ad-screencap.jpg"></amp-img>
     # </amp-ad>
 
 **Note:** Currently you can only pass `sticky` **or** `placeholder` **or** `fallback` as an option.
 
 `amp_ad` also takes a block:
 
-    <%= amp_ad(network, options) do %>
-        <%= amp_placeholder("amp-img", src: "path") %>
-        <%= amp_fallback("amp-img", src: "path") %>
+    <%= amp_ad("a9", options) do %>
+        <%= amp_placeholder("amp-img", src: "my-ad-screencap.jpg") %>
+        <%= amp_fallback("amp-img", src: "my-ad-screencap.jpg") %>
     <% end %>
-    # <amp-ad type="NETWORK" layout="responsive">
-    #     <amp-img placeholder src="PATH"></amp-img>
-    #     <amp-img fallback src="PATH"></amp-img>
+    # <amp-ad type="a9" layout="responsive">
+    #     <amp-img placeholder src="my-ad-screencap.jpg"></amp-img>
+    #     <amp-img fallback src="my-ad-screencap.jpg"></amp-img>
     # </amp-ad>
 
 **References:** [`amp_placeholder`](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_placeholder.md), [`amp_fallback`](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_fallback.md)
