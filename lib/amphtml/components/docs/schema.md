@@ -45,9 +45,23 @@ In your views you can setup analytics as follows:
 
     <%= schema_tag %>
 
-By default it takes the configured values in your AMP-HTML configuration. You can override them:
+By default it takes the configured values in your AMP-HTML configuration:
 
-    <%= schema_tag(type: "NewsArticle", image: ["cover.jpg"]) %>
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "headline": "MyApp",
+        "datePublished": "2015-10-07T12:02:41Z",
+        "image": [
+            "logo.jpg"
+        ]
+    }
+    </script>
+
+You can override values:
+
+    <%= schema_tag(headline: "Open-source framework for publishing content", type: "NewsArticle", image: ["cover.jpg"]) %>
 
 You can also add new information:
 
