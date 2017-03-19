@@ -1,5 +1,5 @@
 
-# Components / Advertisements BETA
+# [Components]((https://github.com/jonhue/amphtml/tree/master/lib/amphtml/components/docs) / Advertisements BETA
 
 
 ## Information
@@ -20,7 +20,7 @@ The Advertisement Component does not depend on any other components.
 
 No other components depend on the Advertisement Component.
 
-#### DeepIntegration: Enabled
+#### [DeepIntegration](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/components/docs#deepintegration-components): Enabled
 
 
 ## Installation
