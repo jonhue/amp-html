@@ -53,6 +53,8 @@ It also takes a block. For example, you could use the built-in `amp_placeholder`
 
 Learn more about the `amp_anim` helper in the dedicated reference linked below.
 
+**References:** [`amp_placeholder`](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_placeholder.md)
+
 
 ### Helpers
 
