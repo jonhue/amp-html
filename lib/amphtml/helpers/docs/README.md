@@ -25,7 +25,7 @@ The availability of helpers summarizes whether a helper is included in the vanil
 
 ## Helpers Reference
 
-Take a look at the newest additions of components to AMP-HTML.
+Take a look at the references of the helpers of AMP-HTML.
 
 * [`amp_ad` BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_ad.md)
 * [`amp_analytics` BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_analytics.md)
