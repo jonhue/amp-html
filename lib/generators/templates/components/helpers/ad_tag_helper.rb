@@ -1,7 +1,7 @@
 module ApplicationHelper
     module Amp::Components::AdTagHelper
 
-        def amp_ad(network = Amphtml.ad_default_network, options = {})
+        def amp_ad(network = Amphtml.ad_default_network, options = {}, &block)
             options = options.symbolize_keys
 
             options[:type] = network
@@ -11,33 +11,38 @@ module ApplicationHelper
             options[:layout] = "responsive" unless options[:layout] != "responsive"
             content_tag("amp-ad", options)
 
-            if options[:sticky] == true
-                options.delete(:sticky)
-                sticky[:layout] = "nodisplay"
-                content_tag("amp-sticky-ad", sticky) do
-                    content_tag("amp-ad", options)
-                end
-            elsif options[:"placeholder-src"]
-                placeholder_src = options[:"placeholder-src"]
-                options.delete(:"placeholder-src")
-                content_tag("amp-ad", options) do
-                    options[:src] = placeholder_src
-                    amp_placeholder("amp-img", options)
-                end
-            elsif options[:"fallback-src"]
-                fallback_src = options[:"fallback-src"]
-                options.delete(:"fallback-src")
-                content_tag("amp-ad", options) do
-                    options[:src] = fallback_src
-                    amp_placeholder("amp-img", options)
-                end
+            if block_given?
+                content_tag("amp-ad", capture(&block), options)
             else
-                content_tag("amp-ad", options)
+                if options[:sticky] == true
+                    options.delete(:sticky)
+                    sticky = {}
+                    sticky[:layout] = "nodisplay"
+                    content_tag("amp-sticky-ad", sticky) do
+                        content_tag("amp-ad", options)
+                    end
+                elsif options[:placeholder]
+                    placeholder = options[:placeholder]
+                    options.delete(:placeholder)
+                    content_tag("amp-ad", options) do
+                        placeholder = options[:src] = path_to_image(source, skip_pipeline: options.delete(:skip_pipeline))
+                        amp_placeholder("amp-img", options)
+                    end
+                elsif options[:fallback]
+                    fallback = options[:fallback]
+                    options.delete(:fallback)
+                    content_tag("amp-ad", options) do
+                        fallback = options[:src] = path_to_image(source, skip_pipeline: options.delete(:skip_pipeline))
+                        amp_fallback("amp-img", options)
+                    end
+                else
+                    content_tag("amp-ad", nil, options)
+                end
             end
         end
 
-        def amp_embed(network = Amphtml.ad_default_network, options = {})
-            amp_ad(network, options)
+        def amp_embed(network = Amphtml.ad_default_network, options = {}, &block)
+            amp_ad(network, options, capture(&block))
         end
 
         def amp_auto_ad(network = Amphtml.auto_ads_default_network, options = {})
