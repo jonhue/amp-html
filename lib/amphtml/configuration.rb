@@ -102,6 +102,15 @@ module Amphtml
         end
     end
 
+    def self.auto_ads_default_network
+        config = get_config
+        if config.key(:ad) && config[:ad].key(:auto_ads) && config[:ad][:auto_ads].key(:default_network)
+            config[:ad][:auto_ads][:default_network]
+        else
+            nil
+        end
+    end
+
 
     def self.social_share_default_provider
         config = get_config

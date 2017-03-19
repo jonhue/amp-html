@@ -110,6 +110,11 @@ default: &default
         # ### Specifies the default network for all amp_ad tags. You can always override this default by passing a different network
         # ### List of all supported networks: https://www.ampproject.org/docs/reference/components/ads/amp-ad#supported-ad-networks
         # default_network: mywidget
+
+        auto_ads:
+            # ### Specifies the default network for all amp_auto_ads tags. You can always override this default by passing a different network
+            # ### List of all supported networks: https://www.ampproject.org/docs/reference/components/ads/amp-auto-ads#supported-ad-networks
+            # default_network: adsense
     <% end %>
     <% if options[:all] || options[:social] %>
 

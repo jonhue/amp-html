@@ -40,6 +40,13 @@ module ApplicationHelper
             amp_ad(network, options)
         end
 
+        def amp_auto_ad(network: Amphtml.auto_ads_default_network, options: {})
+            options = options.symbolize_keys
+
+            options[:type] = network
+            content_tag("amp-auto-ads", options)
+        end
+
         private
 
         def extract_dimensions(size)
