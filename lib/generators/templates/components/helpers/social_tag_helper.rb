@@ -63,10 +63,10 @@ module ApplicationHelper
         end
 
         # `data-share-endpoint` if provider not preconfigured!
-        def amp_social_share(type: Amphtml.social_share_default_provider, options = {})
+        def amp_social_share(type = Amphtml.social_share_default_provider, options = {})
             options = options.symbolize_keys
 
-            options[:type] = type
+            options[:type] = type if type
             options[:"data-share-endpoint"] = Amphtml.default_data_share_endpoint if Amphtml.default_data_share_endpoint
             options[:width], options[:height] = extract_dimensions(options.delete(:size)) if options[:size]
             warn "WARNING (AMP): specify width and height of amp-social-share tags." unless options[:width] && options[:height]

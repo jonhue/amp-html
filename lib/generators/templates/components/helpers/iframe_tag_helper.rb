@@ -1,7 +1,7 @@
 module ApplicationHelper
     module Amp::Components::IframeTagHelper
 
-        def amp_iframe(source, options: {})
+        def amp_iframe(source, options = {})
             options = options.symbolize_keys
 
             options[:src] = source

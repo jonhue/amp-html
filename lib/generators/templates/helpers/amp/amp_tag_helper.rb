@@ -24,13 +24,13 @@ module ApplicationHelper
         end
 
 
-        def amp_placeholder(name, options: {})
+        def amp_placeholder(name, options = {})
             options = options.symbolize_keys
             options[:placeholder] = true
             content_tag(name, options)
         end
 
-        def amp_fallback(name, options: {})
+        def amp_fallback(name, options = {})
             options = options.symbolize_keys
             options[:fallback] = true
             content_tag(name, options)
@@ -52,7 +52,7 @@ module ApplicationHelper
         end
 
 
-        def amp_head(options: {})
+        def amp_head(options = {})
             options = options.symbolize_keys
 
             render "application/amp/head", options: options

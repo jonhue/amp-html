@@ -1,7 +1,7 @@
 module ApplicationHelper
     module Amp::FontTagHelper
 
-        def amp_font(family, timeout, options: {})
+        def amp_font(family, timeout, options = {})
             options = options.symbolize_keys
 
             options[:"font-family"] = family
@@ -20,7 +20,7 @@ module ApplicationHelper
             content_tag("link", options)
         end
 
-        def amp_google_font(family, types: {})
+        def amp_google_font(family, types = {})
             options = {}
 
             href = "https://fonts.googleapis.com/css?family=" + family.gsub(" ", "+")

@@ -1,7 +1,7 @@
 module ApplicationHelper
     module Amp::Components::AdTagHelper
 
-        def amp_ad(network: Amphtml.ad_default_network, options: {})
+        def amp_ad(network = Amphtml.ad_default_network, options = {})
             options = options.symbolize_keys
 
             options[:type] = network
@@ -36,11 +36,11 @@ module ApplicationHelper
             end
         end
 
-        def amp_embed(network: Amphtml.ad_default_network, options: {})
+        def amp_embed(network = Amphtml.ad_default_network, options = {})
             amp_ad(network, options)
         end
 
-        def amp_auto_ad(network: Amphtml.auto_ads_default_network, options: {})
+        def amp_auto_ad(network = Amphtml.auto_ads_default_network, options = {})
             options = options.symbolize_keys
 
             options[:type] = network

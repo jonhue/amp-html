@@ -1,12 +1,16 @@
 module ApplicationHelper
     module Amp::Components::AnalyticsTagHelper
 
-        def amp_analytics(vendor: Amphtml.analytics_default_vendor)
+        def amp_analytics(vendor = Amphtml.analytics_default_vendor, &block)
             options = {}
             options[:type] = vendor if vendor
-            content_tag("amp-analytics", options)
+            if block_given?
+                content_tag("amp-analytics", capture(&block), options)
+            else
+                content_tag("amp-analytics", nil, options)
+            end
         end
-        def amp_google_analytics(options: {})
+        def amp_google_analytics(options = {})
             options = options.symbolize_keys
 
             options[:type] = "googleanalytics"

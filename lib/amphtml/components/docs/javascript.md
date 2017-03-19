@@ -51,7 +51,7 @@ If you set it to `true`, only assets inside the amp directory are precompiled. I
 
 By default every javascript (`.js`) file inside of your `app/assets/javascripts/amp` (depending on your AMP-HTML configuration) directory is included in your application layout.
 
-You can include some external javascript utilizing the `amp_js` helper:
+You can include some external javascript utilizing the `amp_js` helper in your `<head>` tag:
 
     <%= amp_js(source) %>
     <%= amp_js("https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js") %>
