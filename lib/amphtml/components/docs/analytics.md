@@ -119,7 +119,7 @@ You can use the `amp_pixel` helper to track user behavior on your site:
 
 ### Helpers
 
-The following helpers are usable with the Advertisement Component of AMP-HTML
+The following helpers are usable with the Analytics Component of AMP-HTML
 
 * [`amp_analytics`](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_analytics.md)
 * [`amp_google_analytics`](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_google_analytics.md)
