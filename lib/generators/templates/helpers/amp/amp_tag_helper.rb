@@ -26,13 +26,13 @@ module ApplicationHelper
 
         def amp_placeholder(name, options = {})
             options = options.symbolize_keys
-            options[:placeholder] = true
+            options[:placeholder] = ""
             content_tag(name, options)
         end
 
         def amp_fallback(name, options = {})
             options = options.symbolize_keys
-            options[:fallback] = true
+            options[:fallback] = ""
             content_tag(name, options)
         end
 

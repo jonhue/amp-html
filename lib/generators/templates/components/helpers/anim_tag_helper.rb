@@ -1,24 +1,29 @@
 module ApplicationHelper
     module Amp::Components::AnimTagHelper
 
-        def amp_anim(source, options = {})
+        def amp_anim(source, options = {}, &block)
             options = options.symbolize_keys
 
-            src = options[:src] = path_to_image(source, skip_pipeline: options.delete(:skip_pipeline))
+            source = options[:src] = path_to_image(source, skip_pipeline: options.delete(:skip_pipeline))
 
             options[:width], options[:height] = extract_dimensions(options.delete(:size)) if options[:size]
             warn "WARNING (AMP): specify width and height of amp-anim tags." unless options[:width] && options[:height]
 
             options[:layout] = "responsive" unless options[:layout] != "responsive"
 
-            if options[:placeholder]
-                options.delete(:placeholder)
-                content_tag("amp-anim", options) do
-                    options.delete(:src)
-                    amp_placeholder("amp-img", options)
-                end
+            if block_given?
+                content_tag("amp-anim", capture(&block), options)
             else
-                content_tag("amp-anim", options)
+                if options[:placeholder]
+                    placeholder = options[:placeholder]
+                    options.delete(:placeholder)
+                    content_tag("amp-anim", options) do
+                        placeholder = options[:src] = path_to_image(source, skip_pipeline: options.delete(:skip_pipeline))
+                        amp_placeholder("amp-img", options)
+                    end
+                else
+                    content_tag("amp-anim", options)
+                end
             end
         end
 
