@@ -18,6 +18,7 @@ module ApplicationHelper
             end
         end
         def amp_global_css(&block)
+            warn "AMP-HTML WARNING: `amp_global_css` is deprecated - use `amp_css` instead"
             if block_given?
                 content_for :global_css, capture(&block)
             end
@@ -38,7 +39,7 @@ module ApplicationHelper
         def amp_fallback(name, options = {}, &block)
             options = options.symbolize_keys
             options[:fallback] = ""
-            
+
             if block_given?
                 content_tag(name, capture(&block), options)
             else

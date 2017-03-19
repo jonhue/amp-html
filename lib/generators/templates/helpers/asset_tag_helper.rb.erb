@@ -11,20 +11,20 @@ module AssetTagHelper
 
     <% unless options[:split] %>
     def javascript_include_tag(*sources)
-        warn "WARNING (AMP): external and internal scripts are not allowed."
+        warn "AMP-HTML WARNING: external and internal scripts are not allowed in an AMP document"
         super
     end
     def stylesheet_link_tag(*sources)
-        warn "WARNING (AMP): external and internal stylesheets are not allowed."
+        warn "AMP-HTML WARNING: external and internal stylesheets are not allowed in an AMP document"
         super
     end
     <% else %>
     # def javascript_include_tag(*sources)
-    #     warn "WARNING (AMP): external and internal scripts are not allowed."
+    #     warn "AMP-HTML WARNING: external and internal scripts are not allowed in an AMP document"
     #     super
     # end
     # def stylesheet_link_tag(*sources)
-    #     warn "WARNING (AMP): external and internal stylesheets are not allowed."
+    #     warn "AMP-HTML WARNING: external and internal stylesheets are not allowed in an AMP document"
     #     super
     # end
     <% end %>
@@ -121,5 +121,5 @@ module AssetTagHelper
             end
         end
     end
-    
+
 end
