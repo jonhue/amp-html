@@ -1,5 +1,5 @@
 
-# [Helpers](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/helpers/docs) / `amp_ad`
+# [Helpers](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/helpers/docs#amp-html-helpers) / `amp_ad`
 
 
 ## Information
@@ -16,7 +16,7 @@
 
 #### [Availability](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/helpers/docs#availability-of-helpers): Installable with the [Advertisements Component](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/components/docs/ad.md)
 
-#### [Takes a block?](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/helpers/docs#what-are-blocks): Yes
+#### [Takes a block?](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/helpers/docs#takes-a-block): Yes
 
 ## General
 
