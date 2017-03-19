@@ -18,7 +18,7 @@ module ApplicationHelper
             end
         end
         def amp_global_css(&block)
-            warn "AMP-HTML WARNING: `amp_global_css` is deprecated - use `amp_css` instead"
+            warn "AMP-HTML WARNING: `amp_global_css` is deprecated and will be removed in amphtml 2.0 - use `amp_css` instead"
             if block_given?
                 content_for :global_css, capture(&block)
             end
