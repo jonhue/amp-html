@@ -8,6 +8,7 @@ All currently supported components for AMP-HTML. New are added continuously.
 
 ### Built-in
 
+* [Media BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/media.md)
 * [Schema.org](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/schema.md)
 * [Fonts BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/fonts.md)
 * [Stylesheets](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/stylesheets.md)
@@ -80,6 +81,7 @@ Take a look at the newest additions of components to AMP-HTML.
 
 Take a look at the newest additions of components to AMP-HTML.
 
+* [Media BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/media.md)
 * [Fonts BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/fonts.md)
 * [Advertisements BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/ad.md)
 * [Analytics BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/analytics.md)
