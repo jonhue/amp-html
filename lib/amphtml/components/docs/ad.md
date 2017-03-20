@@ -10,9 +10,9 @@ The AMP-HTML Advertisement Component allows to easily embed ads with AMP, not hu
 
 ### Quick info
 
-#### Latest component release: 0.6.1 (Pre-release) - 2017-03-19
+#### Latest component release: 0.6.2 (Pre-release) - 2017-03-20
 
-[**Changelog for version 0.6.1**](https://github.com/jonhue/amphtml/blob/master/CHANGELOG.md#061-pre-release---2017-03-19)
+[**Changelog for version 0.6.2**](https://github.com/jonhue/amphtml/blob/master/CHANGELOG.md#062-pre-release---2017-03-20)
 
 #### Requirements
 

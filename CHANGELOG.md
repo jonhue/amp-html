@@ -2,6 +2,28 @@
 
 * nothing yet
 
+### 0.6.2 (Pre-release) - 2017-03-20
+
+* removals
+    * deprecate `amp_resources` helper - will be removed in 1.0
+    * rename `amp_document_link` helper
+    * rename `canonical_document_link` helper
+* features
+    * add `amp_link` helper
+    * add `amp_custom_ad` helper
+    * add `amp_video_ad` helper
+* enhancements
+    * improve `amp_analytics` helper
+    * improve `amp_audio` helper
+    * improve `amp_auto_ads` helper
+    * improve `amp_facebook` helper
+    * add media component docs
+    * update component docs
+    * update helper docs
+    * change default app name
+* bug fixes
+    * fix tests
+
 ### 0.6.1 (Pre-release) - 2017-03-19
 
 * removals

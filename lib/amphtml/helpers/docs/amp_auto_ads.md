@@ -10,9 +10,9 @@
 
 ### Quick info
 
-#### Latest update: 0.5.4 (Pre-release) - 2017-03-19
+#### Latest update: 0.6.2 (Pre-release) - 2017-03-20
 
-[**Changelog for version 0.5.4**](https://github.com/jonhue/amphtml/blob/master/CHANGELOG.md#054-pre-release---2017-03-19)
+[**Changelog for version 0.6.2**](https://github.com/jonhue/amphtml/blob/master/CHANGELOG.md#062-pre-release---2017-03-20)
 
 #### [DeepIntegration](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/helpers/docs#deepintegration-helpers): Disabled
 
