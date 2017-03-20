@@ -8,7 +8,7 @@ module Amphtml
         end
 
         def self.markup
-            strings = ["<!doctype", "<html", "amp_html_doctype", "<head", "<body", "canonical_link", "amp_head", '<meta name="viewport" content="width=device-width,minimum-scale=1', "amp_resources"]
+            strings = ["<!doctype", "<html", "amp_html_doctype", "<head", "<body", "canonical_document_link", "amp_head", '<meta name="viewport" content="width=device-width,minimum-scale=1']
 
             results = search_files_in_dir_for(File.join('app', 'views'), strings)
             test1 = markup_test(results)
@@ -108,9 +108,8 @@ module Amphtml
                 puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "markup", "meta_viewport.md") unless results.has_value?('<meta name="viewport" content="width=device-width,minimum-scale=1')
                 puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "markup", "head_body.md") unless results.has_value?("<head") && results.include?("<body")
                 puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "markup", "amp_html_doctype.md") unless results.has_value?("amp_html_doctype")
-                puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "markup", "canonical_link.md") unless results.has_value?("canonical_link")
+                puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "markup", "canonical_document_link.md") unless results.has_value?("canonical_document_link")
                 puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "markup", "amp_head.md") unless results.has_value?("amp_head")
-                puts IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "markup", "amp_resources.md") unless results.has_value?("amp_resources")
             end
             unless results.has_value?('<meta name="viewport" content="width=device-width,minimum-scale=1') || results.has_value?("<head") || results.include?("<body") || results.has_value?("amp_html_doctype") || results.has_value?("canonical_link") || results.has_value?("amp_head") || results.has_value?("amp_resources")
                 return true
