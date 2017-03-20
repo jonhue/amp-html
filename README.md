@@ -70,7 +70,7 @@ There are a few example applications available on GitHub that demonstrate variou
 
 We hope that you will consider contributing to AMP-HTML. Please read this short overview for some information about how to get started:
 
-[https://github.com/jonhue/amphtml/blob/master/CONTRIBUTING.md](https://github.com/jonhue/amphtml/blob/master/CONTRIBUTING.md), [Code of conduct](https://github.com/jonhue/amphtml/blob/master/CODE_OF_CONDUCT.md)
+[Contributing](https://github.com/jonhue/amphtml/blob/master/CONTRIBUTING.md), [Code of conduct](https://github.com/jonhue/amphtml/blob/master/CODE_OF_CONDUCT.md)
 
 ## Concept
 
