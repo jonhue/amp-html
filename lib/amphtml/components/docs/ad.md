@@ -80,3 +80,4 @@ The following helpers are usable with the Advertisement Component of AMP-HTML
 * [`amp_ad`](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_ad.md)
 * [`amp_embed`](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_embed.md)
 * [`amp_auto_ads`](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_auto_ads.md)
+* [`amp_custom_ad`](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_custom_ad.md)
