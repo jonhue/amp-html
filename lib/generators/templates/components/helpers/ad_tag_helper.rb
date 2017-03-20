@@ -65,8 +65,7 @@ module ApplicationHelper
             options = {}
             options[:name] = name
             options[:content] = request.original_url + "/remote.html"
-            tag("meta", options, open: true)
-            # render html: '<meta name="#{name}" content="#{request.original_url}/remote.html">'.html_safe
+            tag("meta", options)
         end
 
         private
