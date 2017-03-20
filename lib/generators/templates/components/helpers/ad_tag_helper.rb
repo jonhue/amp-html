@@ -52,6 +52,23 @@ module ApplicationHelper
             content_tag("amp-auto-ads", options)
         end
 
+        # ## Removed because it depends on Iframe Component
+        # ## Propably moving into Iframe Component
+        # def amp_video_ad(source, poster, options = {})
+        #     options = options.symbolize_keys
+        #
+        #     options[:poster] = poster
+        #     amp_iframe(source, options)
+        # end
+
+        def amp_custom_ad(name)
+            options = {}
+            options[:name] = name
+            options[:content] = request.original_url + "/remote.html"
+            tag("meta", options, open: true)
+            # render html: '<meta name="#{name}" content="#{request.original_url}/remote.html">'.html_safe
+        end
+
         private
 
         def extract_dimensions(size)

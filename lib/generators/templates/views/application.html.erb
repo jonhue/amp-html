@@ -15,18 +15,14 @@
 
         <% if options[:split] %>
         <!-- Overwrite the passed parameter to specify a specific canonical url -->
-        <%%= canonical_link(url_for(format: :html, only_path: false)) %>
+        <%%= canonical_document_link(url_for(format: :html, only_path: false)) %>
         <% else %>
-        <%%= canonical_link(request.original_url) %>
+        <%%= canonical_document_link %>
         <% end %>
         <!-- IMPORTANT: The `meta[name="viewport"]` tag is required by AMP! -->
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
         <%%= csrf_meta_tags %>
-
-
-        <!-- AMP resources (required) -->
-        <%%= amp_resources %>
 
 
         <!-- schema.org definition (not required) -->

@@ -50,6 +50,10 @@ module Amphtml
                 template "assets/javascripts/application.js", "app/assets/javascripts/amp/application.js" if options[:all] || options[:javascript]
             end
 
+            def create_files
+                template "public/remote.html", "public/remote.html" if options[:all] || options[:ad]
+            end
+
             def show_readme
                 readme "README.md"
             end
