@@ -2,7 +2,8 @@ module ApplicationHelper
     module Amp::AmpTagHelper
 
         def amp_html_doctype(&block)
-            doctype = render html: "<!doctype html>".html_safe
+            doctype = tag("!doctype", html: "", open: true)
+            # doctype = render html: "<!doctype html>".html_safe
             if block_given?
                 html = content_tag("html", capture(&block), ⚡: "")
             else
@@ -48,29 +49,42 @@ module ApplicationHelper
         end
 
 
-        def amp_link(href)
+        def amp_link(href, options = {})
+            options = options.symbolize_keys
+            options[:href] = href
+            tag("link", options, open: true)
+        end
+
+
+        def amp_document_link(href = request.original_url)
             options = {}
             options[:href] = href
             options[:rel] = "amphtml"
-            tag("link", options)
+            tag("link", options, open: true)
         end
 
-        def canonical_link(href)
+        def canonical_document_link(href = request.original_url)
             options = {}
             options[:href] = href
             options[:rel] = "canonical"
-            tag("link", options)
+            tag("link", options, open: true)
         end
 
 
         def amp_head(options = {})
             options = options.symbolize_keys
 
-            render "application/amp/head", options: options
+            head = render "application/amp/head", options: options
+
+            resources = render "application/amp/resources"
+            components = render "application/amp/components"
+
+            head + resources + components
         end
 
 
         def amp_resources
+            warn "AMP-HTML WARNING: `amp_resources` is deprecated and will be removed in amphtml 1.0 - use `amp_head` instead"
             resources = render "application/amp/resources"
             components = render "application/amp/components"
             resources + components
