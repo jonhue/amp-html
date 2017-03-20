@@ -14,7 +14,7 @@ module Amphtml
 
 
             # CONFIGURATION
-            class_option :name, desc: "Set the name of your app", type: :string, default: "MyApp", aliases: '-n'
+            class_option :name, desc: "Set the name of your app", type: :string, default: "Hello AMP", aliases: '-n'
 
 
             # ASSETS
