@@ -18,6 +18,7 @@ module Amphtml
                 template "asset_tag_helper.rb.erb", "app/helpers/asset_tag_helper.rb"
 
                 directory 'amp', 'app/helpers/amp'
+                template "amp_tag_helper.rb.erb", "app/helpers/amp/amp_tag_helper.rb"
             end
 
             def show_readme
