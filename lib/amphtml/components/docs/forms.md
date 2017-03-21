@@ -60,8 +60,8 @@ For a detailed reference on the `amp_form`, `amp_input` and `amp_form_response` 
 The following helpers are usable with the Forms Component of AMP-HTML
 
 * [`amp_form`](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_form.md)
-* [`amp_input` (in development)](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_input.md)
-* [`amp_selector` (deprecated)](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_selector.md)
-* [`amp_form_response` (deprecated)](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_form_response.md)
-* [`form_tag` (deprecated)](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/form_tag.md)
-* [`input_tag` (deprecated)](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/input_tag.md)
+* [`amp_input`](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_input.md)
+* [`amp_selector`](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_selector.md)
+* [`amp_form_response`](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_form_response.md)
+* [`form_tag`](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/form_tag.md)
+* [`input_tag`](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/input_tag.md)
