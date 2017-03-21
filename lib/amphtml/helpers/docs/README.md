@@ -44,6 +44,7 @@ Take a look at the references of the helpers of AMP-HTML.
 * [`amp_placeholder` BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_placeholder.md)
 * [`amp_resources` (deprecated)](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_resources.md)
 * [`amp_video` BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_video.md)
+* [`amp?` BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp.md)
 * [`audio_tag`](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/audio_tag.md)
 * [`canonical_document_link` BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/canonical_document_link.md)
 * [`image_tag`](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/image_tag.md)

@@ -8,7 +8,11 @@ module Amphtml
 
             def self.helper(name)
                 begin
-                    puts IO.read(File.join Amphtml.root, "amphtml", "helpers", "docs", "#{name}.md")
+                    unless name = "amp?"
+                        puts IO.read(File.join Amphtml.root, "amphtml", "helpers", "docs", "#{name}.md")
+                    elsif name = "amp?"
+                        puts IO.read(File.join Amphtml.root, "amphtml", "helpers", "docs", "amp.md")
+                    end
                 rescue Exception => e
                     warn "Helper is not available"
                 end

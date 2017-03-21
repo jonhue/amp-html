@@ -91,5 +91,18 @@ module ApplicationHelper
             resources + components
         end
 
+
+        def amp?
+            unless Amphtml.split_view
+                true
+            else
+                if request.format = Amphtml.default_format
+                    true
+                else
+                    false
+                end
+            end
+        end
+
     end
 end
