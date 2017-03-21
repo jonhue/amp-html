@@ -87,6 +87,16 @@ module Amphtml
     end
 
 
+    def self.forms_selector
+        config = get_config
+        if config.key(:forms) && config[:forms].key(:amp_selector)
+            config[:forms][:amp_selector]
+        else
+            false
+        end
+    end
+
+
     def self.analytics_default_vendor
         config = get_config
         if config.key(:analytics) && config[:analytics].key(:default_vendor)

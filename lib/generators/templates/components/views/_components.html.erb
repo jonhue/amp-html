@@ -17,7 +17,7 @@
 
 <!-- Forms -->
 <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
-<script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
+<%% if Amphtml.forms_selector %><script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script><%% end %>
 
 <!-- Ads -->
 <% if options[:ad] || options[:all] %>

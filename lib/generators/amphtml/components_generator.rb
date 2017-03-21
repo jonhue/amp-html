@@ -29,7 +29,7 @@ module Amphtml
 
 
             def create_views
-                template "views/_components.html.erb", "app/views/application/amp/_components.#{pick_format}"
+                template "views/_components.html.erb", "app/views/application/amp/_components.#{pick_format}.erb"
 
                 FileUtils.rm_rf('app/views/application/amp/components')
                 template "views/_google_analytics.html.erb", "app/views/application/amp/components/_google_analytics.#{pick_format}.erb" if options[:all] || options[:analytics]

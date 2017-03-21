@@ -22,13 +22,25 @@ The Forms Component does not depend on any other components.
 
 No other components depend on the Forms Component.
 
-#### [DeepIntegration](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/components/docs#deepintegration-components): Disabled
+#### [DeepIntegration](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/components/docs#deepintegration-components): Enabled
 
 #### [Availability](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/components/docs#availability-of-components): Build-in
 
 ---
 
+## Configuration
+
+The Forms Component allows you to specify a whether you want to use [`amp_selector`](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_selector.md) or not.
+
+In your AMP-HTML configuration (`config/amphtml.yml`) search for the section of the Forms Component.
+
+There you can enable the helper like so:
+
+    amp_selector: true
+
+
 ## Usage
+
 
 **Important note:** In AMP documents you can neither use the default `font_tag` helper, nor a helper provided by `simple_form` or similar.
 
