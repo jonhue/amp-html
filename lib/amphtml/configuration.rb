@@ -148,7 +148,13 @@ module Amphtml
 
     def self.get_config
         require 'yaml'
-        YAML.load_file('config/amphtml.yml')
+
+        begin
+            YAML.load_file('config/amphtml.yml')
+        rescue Exception => e
+            warn "WARNING (AMP): You need to run `rails g amphtml:bundle` first."
+            exit
+        end
     end
 
 end
