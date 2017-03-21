@@ -2,6 +2,14 @@
 
 * nothing yet
 
+### 0.6.3 (Pre-release) - 2017-03-21
+
+* removals
+    * `amp_document_link` helper only available with SplitView
+* enhancements
+    * configuration: warn if no config file available
+    * enhance tests
+
 ### 0.6.2 (Pre-release) - 2017-03-20
 
 * removals
