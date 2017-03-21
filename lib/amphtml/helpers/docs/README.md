@@ -32,6 +32,7 @@ Take a look at the references of the helpers of AMP-HTML.
 
 * [`amp_audio` BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_audio.md)
 * [`amp_css`](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_css.md)
+* [`amp_css_link` (in development)](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_css_link.md)
 * [`amp_document_link` BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_document_link.md)
 * [`amp_fallback` BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_fallback.md)
 * [`amp_font_link` BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_font_link.md)

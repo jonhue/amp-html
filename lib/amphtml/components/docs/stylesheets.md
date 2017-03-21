@@ -46,4 +46,5 @@ For a detailed reference on the `amp_css` helper, follow the link below.
 The following helpers are usable with the Stylesheets Component of AMP-HTML
 
 * [`amp_css`](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_css.md)
+* [`amp_css_link` (in development)](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_css_link.md)
 * [`amp_global_css` (deprecated)](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_global_css.md)

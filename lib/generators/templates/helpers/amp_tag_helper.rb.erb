@@ -12,49 +12,6 @@ module ApplicationHelper
         end
 
 
-        def amp_css(&block)
-            if block_given?
-                content_for :css, capture(&block)
-            end
-        end
-        def amp_global_css(&block)
-            warn "AMP-HTML WARNING: `amp_global_css` is deprecated and will be removed in amphtml 2.0 - use `amp_css` instead"
-            if block_given?
-                content_for :global_css, capture(&block)
-            end
-        end
-
-
-        def amp_placeholder(name, options = {}, &block)
-            options = options.symbolize_keys
-            options[:placeholder] = ""
-
-            if block_given?
-                content_tag(name, capture(&block), options)
-            else
-                content_tag(name, nil, options)
-            end
-        end
-
-        def amp_fallback(name, options = {}, &block)
-            options = options.symbolize_keys
-            options[:fallback] = ""
-
-            if block_given?
-                content_tag(name, capture(&block), options)
-            else
-                content_tag(name, nil, options)
-            end
-        end
-
-
-        def amp_link(href, options = {})
-            options = options.symbolize_keys
-            options[:href] = href
-            tag("link", options)
-        end
-
-
         <% if options[:split] %>
         def amp_document_link(href = request.original_url)
             options = {}
