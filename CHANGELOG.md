@@ -2,6 +2,14 @@
 
 * nothing yet
 
+### 0.7.0 (Pre-release) - 2017-03-21
+
+* features
+    * introduce build-in forms component
+    * add `amp?` helper
+    * add `amp_css_link` helper
+    * add a bunch of new helpers to social component
+
 ### 0.6.3 (Pre-release) - 2017-03-21
 
 * removals
