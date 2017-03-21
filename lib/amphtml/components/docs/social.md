@@ -123,3 +123,8 @@ The following helpers are usable with the Social Component of AMP-HTML
 * [`amp_reddit`](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_reddit.md)
 * [`amp_social_share`](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_social_share.md)
 * [`amp_soundcloud`](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_soundcloud.md)
+* [`amp_vine`](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_vine.md)
+* [`amp_gfycat` BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_gfycat.md)
+* [`amp_pin_it` BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_pin_it.md)
+* [`amp_pin_widget` BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_pin_widget.md)
+* [`amp_pinterest_follow` BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_pinterest_follow.md)

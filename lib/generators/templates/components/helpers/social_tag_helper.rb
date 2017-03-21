@@ -42,7 +42,7 @@ module ApplicationHelper
                 options[:"data-embed-as"] = options[:type]
                 options.delete(:type)
             end
-            
+
             options[:width], options[:height] = extract_dimensions(options.delete(:size)) if options[:size]
             warn "WARNING (AMP): specify width and height of amp-facebook tags." unless options[:width] && options[:height]
 
@@ -129,6 +129,98 @@ module ApplicationHelper
                 content_tag("amp-soundcloud", capture(&block), options)
             else
                 content_tag("amp-soundcloud", nil, options)
+            end
+        end
+
+        def amp_vine(vine_id, options = {}, &block)
+            options = options.symbolize_keys
+
+            options[:"data-vineid"] = vine_id
+
+            options[:width], options[:height] = extract_dimensions(options.delete(:size)) if options[:size]
+            warn "WARNING (AMP): specify width and height of amp-vine tags." unless options[:width] && options[:height]
+
+            options[:layout] = "responsive" unless options[:layout] != "responsive"
+
+            if block_given?
+                content_tag("amp-vine", capture(&block), options)
+            else
+                content_tag("amp-vine", nil, options)
+            end
+        end
+
+        def amp_gfycat(gfy_id, autoplay, options = {}, &block)
+            options = options.symbolize_keys
+
+            options[:"data-gfyid"] = gfy_id
+            options[:noautoplay] = true if autoplay = false
+
+            options[:width], options[:height] = extract_dimensions(options.delete(:size)) if options[:size]
+            warn "WARNING (AMP): specify width and height of amp-gfycat tags." unless options[:width] && options[:height]
+
+            options[:layout] = "responsive" unless options[:layout] != "responsive"
+
+            if block_given?
+                content_tag("amp-gfycat", capture(&block), options)
+            else
+                content_tag("amp-gfycat", nil, options)
+            end
+        end
+
+        def amp_pin_it(url, media, description, options = {}, &block)
+            options = options.symbolize_keys
+
+            options[:"data-do"] = "buttonPin"
+            options[:"data-url"] = url
+            options[:"data-media"] = media
+            options[:"data-description"] = description
+
+            options[:width], options[:height] = extract_dimensions(options.delete(:size)) if options[:size]
+            warn "WARNING (AMP): specify width and height of amp-pinterest tags." unless options[:width] && options[:height]
+
+            options[:layout] = "responsive" unless options[:layout] != "responsive"
+
+            if block_given?
+                content_tag("amp-pinterest", capture(&block), options)
+            else
+                content_tag("amp-pinterest", nil, options)
+            end
+        end
+
+        def amp_pin_widget(url, options = {}, &block)
+            options = options.symbolize_keys
+
+            options[:"data-do"] = "embedPin"
+            options[:"data-url"] = url
+
+            options[:width], options[:height] = extract_dimensions(options.delete(:size)) if options[:size]
+            warn "WARNING (AMP): specify width and height of amp-pinterest tags." unless options[:width] && options[:height]
+
+            options[:layout] = "responsive" unless options[:layout] != "responsive"
+
+            if block_given?
+                content_tag("amp-pinterest", capture(&block), options)
+            else
+                content_tag("amp-pinterest", nil, options)
+            end
+        end
+
+        def amp_pinterest_follow(label, href, options = {}, &block)
+            options = options.symbolize_keys
+
+            options[:"data-do"] = "buttonFollow"
+            options[:"data-label"] = label
+            options[:"data-href"] = href
+
+            options[:width], options[:height] = extract_dimensions(options.delete(:size)) if options[:size]
+            warn "WARNING (AMP): specify width and height of amp-pinterest tags." unless options[:width] && options[:height]
+
+            options[:layout] = "responsive" unless options[:layout] != "responsive"
+
+            if block_given?
+                content_tag("amp-pinterest", capture(&block), options)
+            else
+                content_tag("amp-pinterest", nil, options)
             end
         end
 
