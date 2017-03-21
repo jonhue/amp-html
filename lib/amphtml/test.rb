@@ -8,7 +8,7 @@ module Amphtml
         end
 
         def self.markup
-            strings = ["<!doctype", "<html", "amp_html_doctype", "<head", "<body", "canonical_document_link", "amp_head", '<meta name="viewport" content="width=device-width,minimum-scale=1']
+            strings = ["<!doctype", "<html", "amp_html_doctype", "<head", "<body", "canonical_document_link", "amp_document_link", "amp_head", '<meta name="viewport" content="width=device-width,minimum-scale=1']
 
             results = search_files_in_dir_for(File.join('app', 'views'), strings)
             test1 = markup_test(results)
@@ -110,8 +110,9 @@ module Amphtml
                 puts check3 = IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "markup", "amp_html_doctype.md") unless results.has_value?("amp_html_doctype")
                 puts check4 = IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "markup", "canonical_document_link.md") unless results.has_value?("canonical_document_link")
                 puts check5 = IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "markup", "amp_head.md") unless results.has_value?("amp_head")
+                puts check6 = IO.read(File.join Amphtml.root, "amphtml", "test", "templates", "markup", "canonical_document_link.md") if Amphtml.split_view && results.has_value?("amp_document_link") == false
             end
-            unless check1 && check2 && check3 && check4 && check5
+            unless check1 && check2 && check3 && check4 && check5 && check6
                 return true
             end
 
