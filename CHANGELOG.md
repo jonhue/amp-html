@@ -2,6 +2,13 @@
 
 * nothing yet
 
+### 0.7.1 (Pre-release) - 2017-03-21
+
+* enhancements
+    * add DeepIntegration to forms component
+* bug fixes
+    * fix syntax error
+
 ### 0.7.0 (Pre-release) - 2017-03-21
 
 * features

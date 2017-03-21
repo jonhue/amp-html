@@ -10,9 +10,9 @@ The AMP-HTML Forms Component allows the use of forms and input tags in AMP docum
 
 ### Quick info
 
-#### Latest component release: 0.7.0 (Pre-release) - 2017-03-21
+#### Latest component release: 0.7.1 (Pre-release) - 2017-03-21
 
-[**Changelog for version 0.7.0**](https://github.com/jonhue/amphtml/blob/master/CHANGELOG.md#070-pre-release---2017-03-21)
+[**Changelog for version 0.7.1**](https://github.com/jonhue/amphtml/blob/master/CHANGELOG.md#071-pre-release---2017-03-21)
 
 #### Requirements
 
