@@ -3,7 +3,7 @@ module ApplicationHelper
 
         def amp_fallback(name, options = {}, &block)
             options = options.symbolize_keys
-            options[:fallback] = ""
+            options.merge(fallback: "")
 
             if block_given?
                 content_tag(name, capture(&block), options)

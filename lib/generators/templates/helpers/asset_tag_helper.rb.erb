@@ -52,10 +52,6 @@ module AssetTagHelper
     def image_tag(source, options: {})
         amp_image(source, options)
     end
-    <% else %>
-    # def image_tag(source, options: {})
-    #     amp_image(source, options)
-    # end
     <% end %>
 
     def amp_video(*sources, fallback: "Your browser doesn’t support HTML5 video")
@@ -73,10 +69,6 @@ module AssetTagHelper
     def video_tag(*sources, fallback: "Your browser doesn’t support HTML5 video")
         amp_video(*sources, fallback: "Your browser doesn’t support HTML5 video")
     end
-    <% else %>
-    # def video_tag(*sources, fallback: "Your browser doesn’t support HTML5 video")
-    #     amp_video(*sources, fallback: "Your browser doesn’t support HTML5 video")
-    # end
     <% end %>
 
     def amp_audio(*sources)
@@ -90,12 +82,6 @@ module AssetTagHelper
         options[:fallback] = "Your browser doesn’t support HTML5 audio" unless options[:fallback]
         amp_audio(*sources, options)
     end
-    <% else %>
-    # def audio_tag(*sources)
-    #     options = sources.extract_options!.symbolize_keys
-    #     options[:fallback] = "Your browser doesn’t support HTML5 audio" unless options[:fallback]
-    #     amp_audio(*sources, options)
-    # end
     <% end %>
 
     private

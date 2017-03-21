@@ -16,6 +16,7 @@ module Amphtml
 
             def create_helpers
                 template "asset_tag_helper.rb.erb", "app/helpers/asset_tag_helper.rb"
+                template "form_tag_helper.rb.erb", "app/helpers/form_tag_helper.rb"
 
                 directory 'amp', 'app/helpers/amp'
                 template "amp_tag_helper.rb.erb", "app/helpers/amp/amp_tag_helper.rb"

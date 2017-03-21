@@ -1,0 +1,82 @@
+module FormTagHelper
+
+    def amp_form(url = "", method = "post", target = "_top", submit = nil, submit_success = nil, submit_error = nil, options = {}, &block)
+        options = options.symbolize_keys
+
+        options[:method] = method
+        options[:target] = target
+
+        if method = "get"
+            if options[:ajax]
+                options[:"action-xhr"] = url
+            else
+                options[:action] = url
+            end
+        else
+            options[:"action-xhr"] = url
+        end
+
+        options.delete(:ajax)
+
+        options[:on] = "#{options[:on] + ";" if options[:on]}#{submit + ";" if submit}#{submit_success + ";" if submit_success}#{submit_error + ";" if submit_error}" if submit || submit_success || submit_error
+
+        if block_given?
+            content_tag("form", capture(&block), options)
+        else
+            content_tag("form", options)
+        end
+    end
+    <% unless options[:split] %>
+    def form_tag(url = "", method = "post", target = "_top", submit = nil, submit_success = nil, submit_error = nil, options = {}, &block)
+        if block_given?
+            amp_form(url, method, target, submit, submit_success, submit_error, options, capture(&block))
+        else
+            amp_form(url, method, target, submit, submit_success, submit_error, options)
+        end
+    end
+    <% end %>
+
+    def amp_input(type = "text", name = nil, value = nil, onchange = nil, options = {})
+        options = options.symbolize_keys
+
+        options[:type] = type
+        options[:name] = name
+        options[:value] = value
+
+        options[:on] = "#{options[:on] + ";" if options[:on]}#{onchange + ";" if onchange}"
+
+        tag("input", options)
+    end
+    <% unless options[:split] %>
+    def input_tag(type = "text", name = nil, value = nil, onchange = nil, options = {})
+        amp_input(type, name, value, onchange, options)
+    end
+    <% end %>
+
+    def amp_selector(name = nil, onchange = nil, options = {}, &block)
+        options = options.symbolize_keys
+
+        options[:layout] = "container"
+        options[:name] = name
+
+        options[:on] = "#{options[:on] + ";" if options[:on]}#{onchange + ";" if onchange}"
+
+        content_tag("amp-selector", capture(&block), options)
+    end
+
+
+    def amp_form_response(type = "success", &block)
+        raise "`amp_form_response` takes only the types `success` and `error`" unless type = "success" || type = "error"
+
+        type = "submit-" + type
+
+        options = {}
+        options[type] = ""
+
+        template_options = {}
+        template_options[:type] = "amp-mustache"
+
+        content_tag("div", content_tag("template", capture(&block), template_options), options)
+    end
+
+end
