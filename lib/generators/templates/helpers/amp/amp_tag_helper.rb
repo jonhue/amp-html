@@ -55,12 +55,14 @@ module ApplicationHelper
         end
 
 
+        <% if options[:split] %>
         def amp_document_link(href = request.original_url)
             options = {}
             options[:href] = href
             options[:rel] = "amphtml"
             tag("link", options)
         end
+        <% end %>
 
         def canonical_document_link(href = request.original_url)
             options = {}
