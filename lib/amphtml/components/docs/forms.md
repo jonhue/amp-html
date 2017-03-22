@@ -16,7 +16,7 @@ The AMP-HTML Forms Component allows the use of forms and input tags in AMP docum
 
 #### Requirements
 
-The Forms Component does not depend on any other components.
+The Forms Component depends on the [AMP-HTML Mustache.js Component](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/components/docs/mustache.md).
 
 #### Dependents
 

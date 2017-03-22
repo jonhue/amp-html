@@ -78,6 +78,7 @@ Take a look at the references of the helpers of AMP-HTML.
 * [`amp_iframe` BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_iframe.md)
 * [`amp_instagram` BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_instagram.md)
 * [`amp_js` BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_js.md)
+* [`amp_mustache` BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_mustache.md)
 * [`amp_pin_it` BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_pin_it.md)
 * [`amp_pin_widget` BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_pin_widget.md)
 * [`amp_pinterest_follow` BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/helpers/docs/amp_pinterest_follow.md)

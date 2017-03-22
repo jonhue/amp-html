@@ -13,6 +13,7 @@ All currently supported components for AMP-HTML. New are added continuously.
 * [Schema.org](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/schema.md)
 * [Fonts BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/fonts.md)
 * [Stylesheets](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/stylesheets.md)
+* [Mustache.js](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/mustache.md)
 
 ### Installable
 
@@ -74,6 +75,7 @@ The availability of components summarizes whether a component is included in the
 
 Take a look at the newest additions of components to AMP-HTML.
 
+* [Mustache.js](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/mustache.md)
 * [Service Worker BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/service_worker.md)
 * [Forms BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/forms.md)
 * [Javascript BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/javascript.md)

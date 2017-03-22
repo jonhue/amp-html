@@ -73,10 +73,7 @@ module FormTagHelper
         options = {}
         options[type] = ""
 
-        template_options = {}
-        template_options[:type] = "amp-mustache"
-
-        content_tag("div", content_tag("template", capture(&block), template_options), options)
+        content_tag("div", amp_mustache(capture(&block)), options)
     end
 
 end
