@@ -10,9 +10,9 @@ The AMP-HTML Mustache.js Component allows rendering of templates with `{{mustach
 
 ### Quick info
 
-#### Latest component release: 0.7.4 (Pre-release) - 2017-03-22
+#### Latest component release: 0.7.3 (Pre-release) - 2017-03-22
 
-[**Changelog for version 0.4.4**](https://github.com/jonhue/amphtml/blob/master/CHANGELOG.md#074-pre-release---2017-03-2)
+[**Changelog for version 0.7.3**](https://github.com/jonhue/amphtml/blob/master/CHANGELOG.md#073-pre-release---2017-03-22)
 
 #### Requirements
 

@@ -2,6 +2,12 @@
 
 * nothing yet
 
+### 0.7.3 (Pre-release) - 2017-03-22
+
+* features
+    * introduce lists component
+    * introduce Mustache.js component
+
 ### 0.7.2 (Pre-release) - 2017-03-22
 
 * features
