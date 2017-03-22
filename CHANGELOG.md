@@ -2,6 +2,11 @@
 
 * nothing yet
 
+### 0.7.4 (Pre-release) - 2017-03-22
+
+* bug fixes
+    * fix component bundler
+
 ### 0.7.3 (Pre-release) - 2017-03-22
 
 * features
