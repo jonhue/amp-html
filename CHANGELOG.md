@@ -2,6 +2,11 @@
 
 * nothing yet
 
+### 0.7.2 (Pre-release) - 2017-03-22
+
+* features
+    * introduce service worker component
+
 ### 0.7.1 (Pre-release) - 2017-03-21
 
 * enhancements

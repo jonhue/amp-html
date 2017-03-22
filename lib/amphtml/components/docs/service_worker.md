@@ -10,9 +10,9 @@ The AMP-HTML Service Worker Component allows to install [ServiceWorker](https://
 
 ### Quick info
 
-#### Latest component release: 0.7.1 (Pre-release) - 2017-03-22
+#### Latest component release: 0.7.2 (Pre-release) - 2017-03-22
 
-[**Changelog for version 0.7.1**](https://github.com/jonhue/amphtml/blob/master/CHANGELOG.md#071-pre-release---2017-03-22)
+[**Changelog for version 0.7.2**](https://github.com/jonhue/amphtml/blob/master/CHANGELOG.md#072-pre-release---2017-03-22)
 
 #### Requirements
 
