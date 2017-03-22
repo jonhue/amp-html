@@ -25,6 +25,7 @@ All currently supported components for AMP-HTML. New are added continuously.
 * [Social BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/social.md)
 * [Javascript BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/javascript.md)
 * [Service Worker BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/service_worker.md)
+* [Lists BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/lists.md)
 
 
 ## Installing Components
@@ -75,6 +76,7 @@ The availability of components summarizes whether a component is included in the
 
 Take a look at the newest additions of components to AMP-HTML.
 
+* [Lists BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/lists.md)
 * [Mustache.js](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/mustache.md)
 * [Service Worker BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/service_worker.md)
 * [Forms BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/forms.md)
@@ -96,3 +98,4 @@ Take a look at the newest additions of components to AMP-HTML.
 * [Social BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/social.md)
 * [Javascript BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/javascript.md)
 * [Service Worker BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/service_worker.md)
+* [Lists BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/lists.md)

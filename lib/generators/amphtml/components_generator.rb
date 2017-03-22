@@ -25,6 +25,7 @@ module Amphtml
             class_option :social, desc: "Install the AMP-HTML Social Component", type: :boolean, default: false
             class_option :javascript, desc: "Install the AMP-HTML Javascript Component", type: :boolean, default: false
             class_option :service_worker, desc: "Install the AMP-HTML Service Worker Component", type: :boolean, default: false
+            class_option :lists, desc: "Install the AMP-HTML Lists Component", type: :boolean, default: false
 
 
 
@@ -46,6 +47,7 @@ module Amphtml
                 template "helpers/social_tag_helper.rb", "app/helpers/amp/components/social_tag_helper.rb" if options[:all] || options[:social]
                 template "helpers/javascript_tag_helper.rb", "app/helpers/amp/components/javascript_tag_helper.rb" if options[:all] || options[:javascript]
                 template "helpers/serviceworker_tag_helper.rb", "app/helpers/amp/components/serviceworker_tag_helper.rb" if options[:all] || options[:service_worker]
+                template "helpers/lists_tag_helper.rb", "app/helpers/amp/components/lists_tag_helper.rb" if options[:all] || options[:lists]
             end
 
             def create_assets

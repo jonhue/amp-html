@@ -22,6 +22,19 @@
 <!-- Mustache.js -->
 <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
 
+<!-- Lists -->
+<% if options[:lists] || options[:all] %>
+<!-- **Note:** Uncomment the following script tag to use <amp-list> (amp_list helper). Learn more: https://www.ampproject.org/docs/reference/components/dynamic/amp-list -->
+<script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+<!-- **Note:** Uncomment the following script tag to use <amp-live-list> (amp_live_list helper). Learn more: https://www.ampproject.org/docs/reference/components/dynamic/amp-live-list -->
+<script async custom-element="amp-live-list" src="https://cdn.ampproject.org/v0/amp-live-list-0.1.js"></script>
+<% else %>
+<!-- **Note:** Uncomment the following script tag to use <amp-list> (amp_list helper). Learn more: https://www.ampproject.org/docs/reference/components/dynamic/amp-list -->
+<!-- <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script> -->
+<!-- **Note:** Uncomment the following script tag to use <amp-live-list> (amp_live_list helper). Learn more: https://www.ampproject.org/docs/reference/components/dynamic/amp-live-list -->
+<!-- <script async custom-element="amp-live-list" src="https://cdn.ampproject.org/v0/amp-live-list-0.1.js"></script> -->
+<% end %>
+
 <!-- Ads -->
 <% if options[:ad] || options[:all] %>
 <!-- **Note:** Uncomment the following script tag to use <amp-ad> (amp_ad helper). Learn more: https://www.ampproject.org/docs/reference/components/ads/amp-ad -->
