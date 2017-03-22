@@ -22,6 +22,8 @@ The Iframe Component does not depend on any other components.
 
 The [AMP-HTML Javascript Component](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/components/docs/javascript.md) depends on the Iframe Component.
 
+The [AMP-HTML Service Worker Component](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/components/docs/service_worker.md) depends on the Iframe Component.
+
 #### [DeepIntegration](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/components/docs#deepintegration-components): Disabled
 
 #### [Availability](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/components/docs#availability-of-components): Installable

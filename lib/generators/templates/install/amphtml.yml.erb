@@ -10,13 +10,14 @@ default: &default
     # Run `amphtml bundle` after adding or removing components!
     # Run `amphtml install COMPONENT` to install a specific component from the command line
     components:
-        <% if options[:all] || options[:analytics] %>analytics<% else %># analytics<% end %>
-        <% if options[:all] || options[:iframe] %>iframe<% else %># iframe<% end %>
+        <% if options[:all] || options[:analytics] || options[:notifications] %>analytics<% else %># analytics<% end %>
+        <% if options[:all] || options[:iframe] || options[:javascript] || options[:service_worker] %>iframe<% else %># iframe<% end %>
         <% if options[:all] || options[:notifications] %>notifications<% else %># notifications<% end %>
         <% if options[:all] || options[:anim] %>anim<% else %># anim<% end %>
         <% if options[:all] || options[:ad] %>ad<% else %># ad<% end %>
         <% if options[:all] || options[:social] %>social<% else %># social<% end %>
         <% if options[:all] || options[:javascript] %>javascript<% else %># javascript<% end %>
+        <% if options[:all] || options[:service_worker] %>service_worker<% else %># service_worker<% end %>
 
 
 

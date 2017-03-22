@@ -23,6 +23,7 @@ All currently supported components for AMP-HTML. New are added continuously.
 * [Notifications BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/notifications.md)
 * [Social BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/social.md)
 * [Javascript BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/javascript.md)
+* [Service Worker BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/service_worker.md)
 
 
 ## Installing Components
@@ -73,10 +74,9 @@ The availability of components summarizes whether a component is included in the
 
 Take a look at the newest additions of components to AMP-HTML.
 
+* [Service Worker BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/service_worker.md)
 * [Forms BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/forms.md)
 * [Javascript BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/javascript.md)
-* [Notifications BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/notifications.md)
-* [Social BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/social.md)
 
 
 ## Components in BETA
@@ -93,3 +93,4 @@ Take a look at the newest additions of components to AMP-HTML.
 * [Notifications BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/notifications.md)
 * [Social BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/social.md)
 * [Javascript BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/javascript.md)
+* [Service Worker BETA](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/service_worker.md)

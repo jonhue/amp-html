@@ -20,7 +20,7 @@ The Analytics Component does not depend on any other components.
 
 #### Dependents
 
-No other components depend on the Analytics Component.
+The [AMP-HTML Notifications Component](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/components/docs/notifications.md) depends on the Analytics Component.
 
 #### [DeepIntegration](https://github.com/jonhue/amphtml/tree/master/lib/amphtml/components/docs#deepintegration-components): Enabled
 

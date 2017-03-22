@@ -34,10 +34,18 @@
 
 <!-- iframe -->
 <!-- **Note:** Uncomment the following script tag to use <amp-iframe> (amp_iframe helper). Learn more: https://www.ampproject.org/docs/guides/author-develop/iframes -->
-<% if options[:iframe] || options[:all] %>
+<% if options[:iframe] || options[:javascript] || options[:service_worker] || options[:all] %>
 <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 <% else %>
 <!-- <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script> -->
+<% end %>
+
+<!-- iframe -->
+<!-- **Note:** Uncomment the following script tag to use <amp-install-serviceworker> (amp_serviceworker helper). Learn more: https://www.ampproject.org/docs/reference/components/dynamic/amp-install-serviceworker -->
+<% if options[:service_worker] || options[:all] %>
+<script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
+<% else %>
+<!-- <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script> -->
 <% end %>
 
 <!-- Analytics -->

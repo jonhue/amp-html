@@ -24,6 +24,7 @@ module Amphtml
             class_option :ad, desc: "Install the AMP-HTML Advertisements Component", type: :boolean, default: false
             class_option :social, desc: "Install the AMP-HTML Social Component", type: :boolean, default: false
             class_option :javascript, desc: "Install the AMP-HTML Javascript Component", type: :boolean, default: false
+            class_option :service_worker, desc: "Install the AMP-HTML Service Worker Component", type: :boolean, default: false
 
 
 
@@ -32,18 +33,19 @@ module Amphtml
                 template "views/_components.html.erb", "app/views/application/amp/_components.#{pick_format}.erb"
 
                 FileUtils.rm_rf('app/views/application/amp/components')
-                template "views/_google_analytics.html.erb", "app/views/application/amp/components/_google_analytics.#{pick_format}.erb" if options[:all] || options[:analytics]
+                template "views/_google_analytics.html.erb", "app/views/application/amp/components/_google_analytics.#{pick_format}.erb" if options[:all] || options[:analytics] || options[:notifications]
             end
 
             def create_helpers
                 FileUtils.rm_rf('app/helpers/amp/components')
-                template "helpers/analytics_tag_helper.rb", "app/helpers/amp/components/analytics_tag_helper.rb" if options[:all] || options[:analytics]
-                template "helpers/iframe_tag_helper.rb", "app/helpers/amp/components/iframe_tag_helper.rb" if options[:all] || options[:iframe] || options[:javascript]
+                template "helpers/analytics_tag_helper.rb", "app/helpers/amp/components/analytics_tag_helper.rb" if options[:all] || options[:analytics] || options[:notifications]
+                template "helpers/iframe_tag_helper.rb", "app/helpers/amp/components/iframe_tag_helper.rb" if options[:all] || options[:iframe] || options[:javascript] || options[:service_worker]
                 template "helpers/notification_tag_helper.rb", "app/helpers/amp/components/notification_tag_helper.rb" if options[:all] || options[:notifications]
                 template "helpers/anim_tag_helper.rb", "app/helpers/amp/components/anim_tag_helper.rb" if options[:all] || options[:anim]
                 template "helpers/ad_tag_helper.rb", "app/helpers/amp/components/ad_tag_helper.rb" if options[:all] || options[:ad]
                 template "helpers/social_tag_helper.rb", "app/helpers/amp/components/social_tag_helper.rb" if options[:all] || options[:social]
                 template "helpers/javascript_tag_helper.rb", "app/helpers/amp/components/javascript_tag_helper.rb" if options[:all] || options[:javascript]
+                template "helpers/serviceworker_tag_helper.rb", "app/helpers/amp/components/serviceworker_tag_helper.rb" if options[:all] || options[:service_worker]
             end
 
             def create_assets

@@ -30,6 +30,7 @@ module Amphtml
             class_option :ad, desc: "Install the AMP-HTML Advertisements Component", type: :boolean, default: false
             class_option :social, desc: "Install the AMP-HTML Social Component", type: :boolean, default: false
             class_option :javascript, desc: "Install the AMP-HTML Javascript Component", type: :boolean, default: false
+            class_option :service_worker, desc: "Install the AMP-HTML Service Worker Component", type: :boolean, default: false
 
 
 
