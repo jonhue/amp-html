@@ -10,9 +10,9 @@ The AMP-HTML Media Component allows to use HTML5-similar media tags in AMP docum
 
 ### Quick info
 
-#### Latest component release: 0.6.2 (Pre-release) - 2017-03-20
+#### Latest component release: 0.7.5 (Pre-release) - 2017-03-23
 
-[**Changelog for version 0.6.2**](https://github.com/jonhue/amphtml/blob/master/CHANGELOG.md#062-pre-release---2017-03-20)
+[**Changelog for version 0.7.5**](https://github.com/jonhue/amphtml/blob/master/CHANGELOG.md#075-pre-release---2017-03-23)
 
 #### Requirements
 

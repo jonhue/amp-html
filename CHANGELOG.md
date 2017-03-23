@@ -2,6 +2,12 @@
 
 * nothing yet
 
+### 0.7.5 (Pre-release) - 2017-03-23
+
+* bug fixes
+    * fix assets pipeline
+    * fix assets helpers
+
 ### 0.7.4 (Pre-release) - 2017-03-22
 
 * bug fixes

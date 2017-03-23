@@ -37,7 +37,7 @@ Use the powerful features of AMP to make your Rails app consistently fast, beaut
 
 ### Quick info
 
-#### Latest release: 0.7.4 (Pre-release)
+#### Latest release: 0.7.5 (Pre-release)
 
 [**Changelog**](https://github.com/jonhue/amphtml/blob/master/CHANGELOG.md), [Grab it from Rubygems](https://rubygems.org/gems/amphtml)
 
