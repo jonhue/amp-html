@@ -30,7 +30,7 @@ module AssetTagHelper
     <% end %>
 
 
-    def amp_image(source, options: {})
+    def amp_image(source, options = {})
         options = options.symbolize_keys
         check_for_image_tag_errors(options)
 
@@ -49,12 +49,12 @@ module AssetTagHelper
         end
     end
     <% unless options[:split] %>
-    def image_tag(source, options: {})
+    def image_tag(source, options = {})
         amp_image(source, options)
     end
     <% end %>
 
-    def amp_video(*sources, fallback: "Your browser doesn’t support HTML5 video")
+    def amp_video(*sources, fallback = "Your browser doesn’t support HTML5 video")
         options = sources.extract_options!.symbolize_keys
         public_poster_folder = options.delete(:poster_skip_pipeline)
         sources << options
@@ -66,8 +66,8 @@ module AssetTagHelper
         end
     end
     <% unless options[:split] %>
-    def video_tag(*sources, fallback: "Your browser doesn’t support HTML5 video")
-        amp_video(*sources, fallback: "Your browser doesn’t support HTML5 video")
+    def video_tag(*sources, fallback = "Your browser doesn’t support HTML5 video")
+        amp_video(*sources, fallback)
     end
     <% end %>
 
