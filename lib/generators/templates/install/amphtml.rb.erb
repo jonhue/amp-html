@@ -2,18 +2,18 @@ require 'amphtml'
 
 <% if options[:javascript] %>
 Rails.application.configure do
-	# if Amphtml.assets_only_amp
-	# 	config.assets.precompile = ['amp/*.js', 'amp/*.scss']
-	# else
-	config.assets.precompile += ['amp/*.js', 'amp/*.scss']
-	# end
+	if Amphtml.assets_only_amp
+		config.assets.precompile += ['amp/**/*.js', 'amp/**/*.scss']
+	else
+		config.assets.precompile += ['amp/**/*.js', 'amp/**/*.scss']
+	end
 end
 <% else %>
 Rails.application.configure do
-	# if Amphtml.assets_only_amp
-	# 	config.assets.precompile = ['amp/*.scss']
-	# else
-	config.assets.precompile += ['amp/*.scss']
-	# end
+	if Amphtml.assets_only_amp
+		config.assets.precompile += ['amp/**/*.scss']
+	else
+		config.assets.precompile += ['amp/**/*.scss']
+	end
 end
 <% end %>

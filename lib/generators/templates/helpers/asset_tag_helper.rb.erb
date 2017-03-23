@@ -54,8 +54,9 @@ module AssetTagHelper
     end
     <% end %>
 
-    def amp_video(*sources, fallback = "Your browser doesn’t support HTML5 video")
+    def amp_video(*sources)
         options = sources.extract_options!.symbolize_keys
+        options[:fallback] = "Your browser doesn’t support HTML5 video" unless options[:fallback]
         public_poster_folder = options.delete(:poster_skip_pipeline)
         sources << options
         multiple_sources_tag_builder("amp-video", sources, fallback) do |tag_options|
@@ -66,7 +67,8 @@ module AssetTagHelper
         end
     end
     <% unless options[:split] %>
-    def video_tag(*sources, fallback = "Your browser doesn’t support HTML5 video")
+    def video_tag(*sources)
+        options[:fallback] = "Your browser doesn’t support HTML5 video" unless options[:fallback]
         amp_video(*sources, fallback)
     end
     <% end %>
