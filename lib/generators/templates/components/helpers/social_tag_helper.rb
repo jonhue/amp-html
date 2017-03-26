@@ -153,7 +153,7 @@ module ApplicationHelper
             options = options.symbolize_keys
 
             options[:"data-gfyid"] = gfy_id
-            options[:noautoplay] = true if autoplay = false
+            options[:noautoplay] = true if autoplay == false
 
             options[:width], options[:height] = extract_dimensions(options.delete(:size)) if options[:size]
             warn "WARNING (AMP): specify width and height of amp-gfycat tags." unless options[:width] && options[:height]
