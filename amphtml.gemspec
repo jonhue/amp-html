@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
     gem.description           = "[BETA] Amphtml is a universal solution to integrate the AMP Project (Accelerated Mobile Pages Project) into your Rails app with ease. It enables you to quickly spin-up, build and test your app with AMP, while fulfilling the app's unique requirements. It comes with a bunch of superpowers like user authentication, notifications, blogs, animations and support for assets in AMP. Make your app consistently fast, beautiful and high-performing across devices and distribution platforms."
     gem.authors               = ["Jonas Hübotter"]
     gem.email                 = "jonas@slooob.com"
-    gem.homepage              = "https://github.com/jonhue/amphtml" # https://railsamp.com
+    gem.homepage              = "https://github.com/slooob/amphtml" # https://railsamp.com
     gem.license               = "MIT"
 
     gem.files                 = `git ls-files`.split("\n")
