@@ -6,7 +6,7 @@ Amphtml is a universal solution to integrate the AMP Project (Accelerated Mobile
 
 Use the powerful features of AMP to make your Rails app consistently fast, beautiful and high-performing across devices and distribution platforms.
 
-[**Follow the Getting Started Guide**](https://github.com/jonhue/amphtml/wiki/Getting-started)
+[**Follow the Getting Started Guide**](https://github.com/slooob/amphtml/wiki/Getting-started)
 
 ---
 
@@ -37,9 +37,9 @@ Use the powerful features of AMP to make your Rails app consistently fast, beaut
 
 ### Quick info
 
-#### Latest release: 0.7.5 (Pre-release)
+#### Latest release: 0.7.6 (Pre-release)
 
-[**Changelog**](https://github.com/jonhue/amphtml/blob/master/CHANGELOG.md), [Grab it from Rubygems](https://rubygems.org/gems/amphtml)
+[**Changelog**](https://github.com/slooob/amphtml/blob/master/CHANGELOG.md), [Grab it from Rubygems](https://rubygems.org/gems/amphtml)
 
 #### Supported versions
 
@@ -50,13 +50,13 @@ Use the powerful features of AMP to make your Rails app consistently fast, beaut
 
 The AMP-HTML Wiki has lots of additional information about AMP-HTML including many "how-to" articles and answers to the most frequently asked questions. Please browse the Wiki after finishing this README:
 
-[https://github.com/jonhue/amphtml/wiki](https://github.com/jonhue/amphtml/wiki)
+[https://github.com/slooob/amphtml/wiki](https://github.com/slooob/amphtml/wiki)
 
 ### Bug reports
 
 If you discover a problem with AMP-HTML, we would like to know about it. However, we ask that you please review these guidelines before submitting a bug report:
 
-[https://github.com/jonhue/amphtml/wiki/Bug-reports](https://github.com/jonhue/amphtml/wiki/Bug-reports)
+[https://github.com/slooob/amphtml/wiki/Bug-reports](https://github.com/slooob/amphtml/wiki/Bug-reports)
 
 If you have discovered a security related bug, please do *NOT* use the GitHub issue tracker. Send an email to [jonas@slooob.com](mailto:jonas@slooob.com).
 
@@ -64,13 +64,13 @@ If you have discovered a security related bug, please do *NOT* use the GitHub is
 
 There are a few example applications available on GitHub that demonstrate various features of AMP-HTML. You can view them here:
 
-[https://github.com/jonhue/amphtml/wiki/Example-Applications](https://github.com/jonhue/amphtml/wiki/Example-Applications)
+[https://github.com/slooob/amphtml/wiki/Example-Applications](https://github.com/slooob/amphtml/wiki/Example-Applications)
 
 ### Contributing
 
 We hope that you will consider contributing to AMP-HTML. Please read this short overview for some information about how to get started:
 
-[Contributing](https://github.com/jonhue/amphtml/blob/master/CONTRIBUTING.md), [Code of conduct](https://github.com/jonhue/amphtml/blob/master/CODE_OF_CONDUCT.md)
+[Contributing](https://github.com/slooob/amphtml/blob/master/CONTRIBUTING.md), [Code of conduct](https://github.com/slooob/amphtml/blob/master/CODE_OF_CONDUCT.md)
 
 ## Concept
 
@@ -78,7 +78,7 @@ We hope that you will consider contributing to AMP-HTML. Please read this short 
 
 ## Installation
 
-You can also follow the [**Getting Started Guide**](https://github.com/jonhue/amphtml/wiki/Getting-started).
+You can also follow the [**Getting Started Guide**](https://github.com/slooob/amphtml/wiki/Getting-started).
 
 AMP-HTML works with Rails 4.0 onwards. You can add it to your `Gemfile` with:
 
@@ -97,7 +97,7 @@ Or install it yourself as:
 If you always want to be up to date fetch the latest from GitHub in your `Gemfile`:
 
 ```ruby
-gem 'amphtml', :git => 'https://github.com/jonhue/amphtml.git'
+gem 'amphtml', :git => 'https://github.com/slooob/amphtml.git'
 ```
 
 ### Generators
@@ -108,11 +108,11 @@ Amphtml comes with three different generators. If you want to bundle them execut
 
 That will generate all the files you need to create a universal AMP app (recommended).
 
-If you want to use [SplitView](https://github.com/jonhue/amphtml/wiki/Docs:-SplitView) to create views with and without AMP simultaneously, execute instead:
+If you want to use [SplitView](https://github.com/slooob/amphtml/wiki/Docs:-SplitView) to create views with and without AMP simultaneously, execute instead:
 
     $ rails g amphtml:bundle --split
 
-To add components ([List of components](https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/README.md)) to the generator simply include the component as an option:
+To add components ([List of components](https://github.com/slooob/amphtml/blob/master/lib/amphtml/components/docs/README.md)) to the generator simply include the component as an option:
 
     $ rails g amphtml:bundle --analytics --notifications
 
@@ -137,7 +137,7 @@ Pass `--split` as an option if you are using SplitView:
 
 `test all` runs multiple tests to check if your code is valid. You can also run each test specifically.
 
-To get a list of all tests and learn how to run them, go to [how to test and validate](https://github.com/jonhue/amphtml/wiki/Guides:-Test-and-validate)
+To get a list of all tests and learn how to run them, go to [how to test and validate](https://github.com/slooob/amphtml/wiki/Guides:-Test-and-validate)
 
 To all tests (even `test all`) you can pass the option `--fix || -f` and Amphtml will suggest changes you could make. You can accept or reject them.
 If you want to automatically fix the code, pass `--autofix || -af` as option. Be careful, you will not be asked to approve changes to the documents!
@@ -165,7 +165,7 @@ AMP has a validator built in. To validate:
 
 Give the people some :heart: who are working on this project. Check them all at:
 
-[https://github.com/jonhue/amphtml/graphs/contributors](https://github.com/jonhue/amphtml/graphs/contributors)
+[https://github.com/slooob/amphtml/graphs/contributors](https://github.com/slooob/amphtml/graphs/contributors)
 
 ## License
 

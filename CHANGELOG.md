@@ -2,6 +2,11 @@
 
 * nothing yet
 
+### 0.7.6 (Pre-release) - 2017-04-11
+
+* enhancements
+    * improve gemspec
+
 ### 0.7.5 (Pre-release) - 2017-03-23
 
 * bug fixes
