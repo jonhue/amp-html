@@ -123,7 +123,7 @@ You can also run the three generators independently:
     $ rails g amphtml:views
 
 *Each* of them supports the `--split || -s` option to use **both** regular views and AMP views.
-To add components, you need to pass them as option to the each generator.
+To add components, you need to pass them as option to each generator.
 
 ### Test and validate AMP
 
