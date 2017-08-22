@@ -70,7 +70,7 @@ There are a few example applications available on GitHub that demonstrate variou
 
 We hope that you will consider contributing to AMP-HTML. Please read this short overview for some information about how to get started:
 
-[Contributing](https://github.com/slooob/amphtml/blob/master/CONTRIBUTING.md), [Code of conduct](https://github.com/slooob/amphtml/blob/master/CODE_OF_CONDUCT.md)
+[Contributing](https://github.com/slooob/amphtml/blob/master/CONTRIBUTING.md), [Code of Conduct](https://github.com/slooob/amphtml/blob/master/CODE_OF_CONDUCT.md)
 
 ## Concept
 
@@ -123,7 +123,7 @@ You can also run the three generators independently:
     $ rails g amphtml:views
 
 *Each* of them supports the `--split || -s` option to use **both** regular views and AMP views.
-To add components, you need to pass them as option to the each generator.
+To add components, you need to pass them as option to each generator.
 
 ### Test and validate AMP
 
