@@ -1,3 +1,5 @@
+# Deprecations
+
 ### 2.0
 
 * deprecate `amp_global_css` helper - will be removed in 2.0

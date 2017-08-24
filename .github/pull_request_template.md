@@ -16,6 +16,6 @@ CHANGELOG files by reviewers, please add the CHANGELOG entry at the top of the f
 
 Finally, if your pull request affects documentation or any non-code
 changes, guidelines for those changes are [available
-here](https://github.com/jonhue/amphtml/wiki/Contributing)
+here](https://github.com/slooob/amp-html/blob/master/CONTRIBUTING.md)
 
-Thanks for contributing to AMP-HTML!
+Thanks for contributing to `amp-html`!

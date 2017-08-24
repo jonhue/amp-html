@@ -5,13 +5,13 @@
 
         <!-- AMP-HTML head tags -->
         <!-- IMPORTANT: Keep this at the top of the head section!  -->
-        <!-- Learn more about allowed parameters by running `amphtml helper amp_head` -->
+        <!-- Learn more about allowed parameters by running `amp-html helper amp_head` -->
         <!-- Example: <%%#= amp_head(description: "Description", favicon: "favicon.ico", language: I18n.locale, keywords: ["keyword1", "keyword2"]) %> -->
         <%%= amp_head %>
 
 
         <!-- Use <%%#= content_for :title do %>App Name<%%# end %> to add a title to your view -->
-        <title><%% if content_for? :title %><%%= yield :title %><%% else %><%%= Amphtml.application_name %><%% end %></title>
+        <title><%% if content_for? :title %><%%= yield :title %><%% else %><%%= amp-html.application_name %><%% end %></title>
 
         <% if options[:split] %>
         <!-- Overwrite the passed parameter to specify a specific canonical url -->
@@ -43,8 +43,8 @@
 
         <!-- AMP Javascript Component -->
         <!-- DO NOT include any external JS via a link tag -->
-        <!-- To include javascript in your application, install the AMP-HTML Javascript Component. Run `amphtml install javascript` -->
-        <!-- Learn more about the Javascript Component: https://github.com/jonhue/amphtml/blob/master/lib/amphtml/components/docs/javascript.md -->
+        <!-- To include javascript in your application, install the AMP-HTML Javascript Component. Run `amp-html install javascript` -->
+        <!-- Learn more about the Javascript Component: https://github.com/slooob/amp-html/blob/master/lib/amp-html/components/docs/javascript.md -->
 
 
     </head>
@@ -57,10 +57,10 @@
 
         <!-- <%%#= amp_analytics(vendor) %> -->
 
-        <!-- IMPORTANT: To be able to use the amp_google_analytics tag helper, configure your Google Analytics account in "config/amphtml.yml"! -->
+        <!-- IMPORTANT: To be able to use the amp_google_analytics tag helper, configure your Google Analytics account in "config/amp-html.yml"! -->
         <!-- <%%#= amp_google_analytics %> -->
 
-        <!-- Guide: https://github.com/jonhue/amphtml/wiki/Guides:-Analytics -->
+        <!-- Guide: https://github.com/slooob/amp-html/wiki/Guides:-Analytics -->
 
 
         <%%= yield %>

@@ -1,12 +1,12 @@
 # [BETA] AMP-HTML - Reliable and high-:zap: apps with AMP & Rails
 
-<img src="https://travis-ci.org/slooob/amphtml.svg?branch=master" /> [![Gem Version](https://badge.fury.io/rb/amphtml.svg)](https://badge.fury.io/rb/amphtml) [![Code Climate](https://codeclimate.com/github/jonhue/amphtml/badges/gpa.svg)](https://codeclimate.com/github/jonhue/amphtml)
+<img src="https://travis-ci.org/slooob/amp-html.svg?branch=master" /> [![Gem Version](https://badge.fury.io/rb/amp-html.svg)](https://badge.fury.io/rb/amp-html) [![Code Climate](https://codeclimate.com/github/jonhue/amp-html/badges/gpa.svg)](https://codeclimate.com/github/jonhue/amp-html)
 
-Amphtml is a universal solution to integrate the AMP Project (Accelerated Mobile Pages Project) into your Rails app with ease. It enables you to quickly spin-up, build and test your app with AMP, while fulfilling the app's unique requirements. It comes with a bunch of superpowers like user authentication, notifications, blogs, animations and support for assets in AMP.
+AmpHtml is a universal solution to integrate the AMP Project (Accelerated Mobile Pages Project) into your Rails app with ease. It enables you to quickly spin-up, build and test your app with AMP, while fulfilling the app's unique requirements. It comes with a bunch of superpowers like user authentication, notifications, blogs, animations and support for assets in AMP.
 
 Use the powerful features of AMP to make your Rails app consistently fast, beautiful and high-performing across devices and distribution platforms.
 
-[**Follow the Getting Started Guide**](https://github.com/slooob/amphtml/wiki/Getting-started)
+[**Follow the Getting Started Guide**](https://github.com/slooob/amp-html/wiki/Getting-started)
 
 ---
 
@@ -37,40 +37,40 @@ Use the powerful features of AMP to make your Rails app consistently fast, beaut
 
 ### Quick info
 
-#### Latest release: 0.7.6 (Pre-release)
+#### Latest release: 0.7.15 (Pre-release)
 
-[**Changelog**](https://github.com/slooob/amphtml/blob/master/CHANGELOG.md), [Grab it from Rubygems](https://rubygems.org/gems/amphtml)
+[**Changelog**](https://github.com/slooob/amp-html/blob/master/CHANGELOG.md), [Grab it from Rubygems](https://rubygems.org/gems/amp-html)
 
 #### Supported versions
 
     Rails >= 4.0.0
     Ruby >= 2.0
 
-### The AMP-HTML wiki
+### The AMP-HTML wiki & documentation
 
 The AMP-HTML Wiki has lots of additional information about AMP-HTML including many "how-to" articles and answers to the most frequently asked questions. Please browse the Wiki after finishing this README:
 
-[https://github.com/slooob/amphtml/wiki](https://github.com/slooob/amphtml/wiki)
+[https://github.com/slooob/amp-html/wiki](https://github.com/slooob/amp-html/wiki)
 
 ### Bug reports
 
 If you discover a problem with AMP-HTML, we would like to know about it. However, we ask that you please review these guidelines before submitting a bug report:
 
-[https://github.com/slooob/amphtml/wiki/Bug-reports](https://github.com/slooob/amphtml/wiki/Bug-reports)
+[https://github.com/slooob/amp-html/wiki/Bug-reports](https://github.com/slooob/amp-html/wiki/Bug-reports)
 
-If you have discovered a security related bug, please do *NOT* use the GitHub issue tracker. Send an email to [jonas@slooob.com](mailto:jonas@slooob.com).
+If you have discovered a security related bug, please do *NOT* use the GitHub issue tracker. Send an email to [developer@slooob.com](mailto:developer@slooob.com).
 
 ### Example applications
 
 There are a few example applications available on GitHub that demonstrate various features of AMP-HTML. You can view them here:
 
-[https://github.com/slooob/amphtml/wiki/Example-Applications](https://github.com/slooob/amphtml/wiki/Example-Applications)
+[https://github.com/slooob/amp-html/wiki/Example-Applications](https://github.com/slooob/amp-html/wiki/Example-Applications)
 
 ### Contributing
 
 We hope that you will consider contributing to AMP-HTML. Please read this short overview for some information about how to get started:
 
-[Contributing](https://github.com/slooob/amphtml/blob/master/CONTRIBUTING.md), [Code of Conduct](https://github.com/slooob/amphtml/blob/master/CODE_OF_CONDUCT.md)
+[Contributing](https://github.com/slooob/amp-html/blob/master/CONTRIBUTING.md), [Code of Conduct](https://github.com/slooob/amp-html/blob/master/CODE_OF_CONDUCT.md)
 
 ## Concept
 
@@ -78,12 +78,12 @@ We hope that you will consider contributing to AMP-HTML. Please read this short 
 
 ## Installation
 
-You can also follow the [**Getting Started Guide**](https://github.com/slooob/amphtml/wiki/Getting-started).
+You can also follow the [**Getting Started Guide**](https://github.com/slooob/amp-html/wiki/Getting-started).
 
 AMP-HTML works with Rails 4.0 onwards. You can add it to your `Gemfile` with:
 
 ```ruby
-gem 'amphtml'
+gem 'amp-html'
 ```
 
 And then execute:
@@ -92,60 +92,60 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install amphtml
+    $ gem install amp-html
 
 If you always want to be up to date fetch the latest from GitHub in your `Gemfile`:
 
 ```ruby
-gem 'amphtml', :git => 'https://github.com/slooob/amphtml.git'
+gem 'amp-html', github: 'https://github.com/slooob/amp-html.git'
 ```
 
 ### Generators
 
-Amphtml comes with three different generators. If you want to bundle them execute:
+AmpHtml comes with three different generators. If you want to bundle them execute:
 
-    $ rails g amphtml:bundle
+    $ rails g amp_html:bundle
 
 That will generate all the files you need to create a universal AMP app (recommended).
 
-If you want to use [SplitView](https://github.com/slooob/amphtml/wiki/Docs:-SplitView) to create views with and without AMP simultaneously, execute instead:
+If you want to use [SplitView](https://github.com/slooob/amp-html/wiki/Docs:-SplitView) to create views with and without AMP simultaneously, execute instead:
 
-    $ rails g amphtml:bundle --split
+    $ rails g amp_html:bundle --split
 
-To add components ([List of components](https://github.com/slooob/amphtml/blob/master/lib/amphtml/components/docs/README.md)) to the generator simply include the component as an option:
+To add components ([List of components](https://github.com/slooob/amp-html/blob/master/lib/amp-html/components/docs/README.md)) to the generator simply include the component as an option:
 
-    $ rails g amphtml:bundle --analytics --notifications
+    $ rails g amp_html:bundle --analytics --notifications
 
 You can also run the three generators independently:
 
-    $ rails g amphtml:install
-    $ rails g amphtml:helpers
-    $ rails g amphtml:views
+    $ rails g amp_html:install
+    $ rails g amp_html:helpers
+    $ rails g amp_html:views
 
 *Each* of them supports the `--split || -s` option to use **both** regular views and AMP views.
 To add components, you need to pass them as option to each generator.
 
 ### Test and validate AMP
 
-Amphtml allows you to test and validate your views out of the box:
+AmpHtml allows you to test and validate your views out of the box:
 
-    $ amphtml test all
+    $ amp-html test all
 
 Pass `--split` as an option if you are using SplitView:
 
-    $ amphtml test all --split
+    $ amp-html test all --split
 
 `test all` runs multiple tests to check if your code is valid. You can also run each test specifically.
 
-To get a list of all tests and learn how to run them, go to [how to test and validate](https://github.com/slooob/amphtml/wiki/Guides:-Test-and-validate)
+To get a list of all tests and learn how to run them, go to [how to test and validate](https://github.com/slooob/amp-html/wiki/Guides:-Test-and-validate)
 
-To all tests (even `test all`) you can pass the option `--fix || -f` and Amphtml will suggest changes you could make. You can accept or reject them.
+To all tests (even `test all`) you can pass the option `--fix || -f` and AmpHtml will suggest changes you could make. You can accept or reject them.
 If you want to automatically fix the code, pass `--autofix || -af` as option. Be careful, you will not be asked to approve changes to the documents!
 
 AMP has a validator built in. To validate:
 
-    $ amphtml validate root # validates "http://localhost:3000"
-    $ amphtml validate https://slooob.com # validates "https://slooob.com"
+    $ amp-html validate root # validates "http://localhost:3000"
+    $ amp-html validate https://slooob.com # validates "https://slooob.com"
 
 **Note:** `root` is only available as a parameter in development environment..
 
@@ -165,7 +165,7 @@ AMP has a validator built in. To validate:
 
 Give the people some :heart: who are working on this project. Check them all at:
 
-[https://github.com/slooob/amphtml/graphs/contributors](https://github.com/slooob/amphtml/graphs/contributors)
+[https://github.com/slooob/amp-html/graphs/contributors](https://github.com/slooob/amp-html/graphs/contributors)
 
 ## License
 

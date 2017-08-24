@@ -1,55 +1,55 @@
 module ApplicationHelper
     module Amp::Components::AdTagHelper
 
-        def amp_ad(network = Amphtml.ad_default_network, options = {}, &block)
+        def amp_ad network = AmpHtml.ad_default_network, options = {}, &block
             options = options.symbolize_keys
 
             options[:type] = network
             options[:width], options[:height] = extract_dimensions(options.delete(:size)) if options[:size]
-            warn "WARNING (AMP): specify width and height of amp-ad tags." unless options[:width] && options[:height]
+            warn 'WARNING (AMP): specify width and height of amp-ad tags.' unless options[:width] && options[:height]
 
-            options[:layout] = "responsive" unless options[:layout] != "responsive"
-            content_tag("amp-ad", options)
+            options[:layout] = 'responsive' unless options[:layout] != 'responsive'
+            content_tag('amp-ad', options)
 
             if block_given?
-                content_tag("amp-ad", capture(&block), options)
+                content_tag 'amp-ad', capture(&block), options
             else
                 if options[:sticky] == true
-                    options.delete(:sticky)
+                    options.delete :sticky
                     sticky = {}
-                    sticky[:layout] = "nodisplay"
-                    content_tag("amp-sticky-ad", sticky) do
-                        content_tag("amp-ad", options)
+                    sticky[:layout] = 'nodisplay'
+                    content_tag('amp-sticky-ad', sticky) do
+                        content_tag 'amp-ad', options
                     end
                 elsif options[:placeholder]
                     placeholder = options[:placeholder]
-                    options.delete(:placeholder)
-                    content_tag("amp-ad", options) do
-                        placeholder = options[:src] = path_to_image(source, skip_pipeline: options.delete(:skip_pipeline))
-                        amp_placeholder("amp-img", options)
+                    options.delete :placeholder
+                    content_tag('amp-ad', options) do
+                        placeholder = options[:src] = path_to_image source, skip_pipeline: options.delete(:skip_pipeline)
+                        amp_placeholder 'amp-img', options
                     end
                 elsif options[:fallback]
                     fallback = options[:fallback]
-                    options.delete(:fallback)
-                    content_tag("amp-ad", options) do
-                        fallback = options[:src] = path_to_image(source, skip_pipeline: options.delete(:skip_pipeline))
-                        amp_fallback("amp-img", options)
+                    options.delete :fallback
+                    content_tag('amp-ad', options) do
+                        fallback = options[:src] = path_to_image source, skip_pipeline: options.delete(:skip_pipeline)
+                        amp_fallback 'amp-img', options
                     end
                 else
-                    content_tag("amp-ad", nil, options)
+                    content_tag 'amp-ad', nil, options
                 end
             end
         end
 
-        def amp_embed(network = Amphtml.ad_default_network, options = {}, &block)
-            amp_ad(network, options, capture(&block))
+        def amp_embed network = AmpHtml.ad_default_network, options = {}, &block
+            amp_ad network, options, capture(&block)
         end
 
-        def amp_auto_ads(network = Amphtml.auto_ads_default_network, options = {})
+        def amp_auto_ads network = AmpHtml.auto_ads_default_network, options = {}
             options = options.symbolize_keys
 
             options[:type] = network
-            content_tag("amp-auto-ads", options)
+            content_tag 'amp-auto-ads', options
         end
 
         # ## Removed because it depends on Iframe Component
@@ -61,20 +61,20 @@ module ApplicationHelper
         #     amp_iframe(source, options)
         # end
 
-        def amp_custom_ad(name)
+        def amp_custom_ad name
             options = {}
             options[:name] = name
-            options[:content] = request.original_url + "/remote.html"
-            tag("meta", options)
+            options[:content] = request.original_url + '/remote.html'
+            tag 'meta', options
         end
 
         private
 
-        def extract_dimensions(size)
+        def extract_dimensions size
             size = size.to_s
-            if /\A\d+x\d+\z/.match?(size)
+            if /\A\d+x\d+\z/.match? size
                 size.split("x")
-            elsif /\A\d+\z/.match?(size)
+            elsif /\A\d+\z/.match? size
                 [size, size]
             end
         end

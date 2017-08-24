@@ -1,0 +1,189 @@
+default: &default
+
+
+
+    # ----------
+    # COMPONENTS
+    # ----------
+
+    # Learn more about amp-html components: https://github.com/slooob/amp-html/wiki/Docs
+    # Run `amp-html bundle` after adding or removing components!
+    # Run `amp-html install COMPONENT` to install a specific component from the command line
+    components:
+        <% if options[:all] || options[:analytics] || options[:notifications] %>analytics<% else %># analytics<% end %>
+        <% if options[:all] || options[:iframe] || options[:javascript] || options[:service_worker] %>iframe<% else %># iframe<% end %>
+        <% if options[:all] || options[:notifications] %>notifications<% else %># notifications<% end %>
+        <% if options[:all] || options[:anim] %>anim<% else %># anim<% end %>
+        <% if options[:all] || options[:ad] %>ad<% else %># ad<% end %>
+        <% if options[:all] || options[:social] %>social<% else %># social<% end %>
+        <% if options[:all] || options[:javascript] %>javascript<% else %># javascript<% end %>
+        <% if options[:all] || options[:service_worker] %>service_worker<% else %># service_worker<% end %>
+        <% if options[:all] || options[:lists] %>lists<% else %># lists<% end %>
+
+
+
+    # ------------
+    # SPLIT VIEW
+    # ------------
+
+    <% if options[:split] %>
+    ## To remove SplitView run `rails g amp_html:bundle`
+    ## Defaults to `false`
+    split_view: true
+    <% else %>
+    # ## To enable SplitView run `rails g amp_html:bundle -s`
+    # ## Defaults to `false`
+    # split_view: true
+    <% end %>
+
+
+
+    # -----------------
+    # APP CUSTOMIZATION
+    # -----------------
+
+    ## Customize your application's information
+    application:
+        ### Set the name of your app. This value is being used to set the default title of your views as well as populating meta information
+        name: "<%= options[:name] %>"
+
+        # ### Specify the type of your site. Some example values are "Organization", "NewsArticle", "BlogPosting". You can name it whatever feels appropriate
+        # ### This is being used for the schema_tag and can be overridden by passing a different type
+        # type: "Organization"
+
+        # ### Specify the date you published your site. This is being used for the schema_tag and can be overridden by passing a different datetime
+        # ### Defaults to `DateTime.now`
+        # date_published: "<%= DateTime.now %>"
+
+        # ### Specify the image used as logo for the schema_tag
+        # image: ["my/image/path"]
+
+
+
+    # ------------
+    # VIEWS FORMAT
+    # ------------
+
+    <% if options[:split] %>
+    # ## Change the default format used for views.
+    # ## Defaults to `amp`
+    <% unless options[:format] == nil || options[:format] != "amp" %>default_format: <%= options[:format] %><% else %># default_format: html<% end %>
+    <% else %>
+    ## Change the default format used for views.
+    ## Defaults to `html`
+    <% unless options[:format] == nil || options[:format] != "html" %>default_format: <%= options[:format] %><% else %># default_format: amp<% end %>
+    <% end %>
+
+    <% if options[:split] %>
+    # ## Formats used to find a view if the default format does not exist.
+    # ## Default is ``
+    fallback_format: html xhtml
+    <% else %>
+    ## Formats used to find a view if the default format does not exist.
+    ## Default is ``
+    fallback_format: amp xhtml
+    <% end %>
+
+
+
+    # --------------------
+    # ASSETS CONFIGURATION
+    # --------------------
+
+    ## Configure your Assets
+    assets:
+        # ### Declares whether assets outside of the "assets/#{type}/amp" are precompiled or not. If `true` only assets inside the amp directory are precompiled
+        # ### Defaults to `true`. If SplitView is enabled it defaults to `false`
+        # only_amp: <% if options[:split] %>false<% else %>true<% end %>
+
+        # ### To use javascript in your AMP app, install the AMP-HTML Javascript Component by running `amp-html install javascript`
+
+
+
+
+
+
+    # ---------------
+    # FORMS COMPONENT
+    # ---------------
+
+    ## Set up the AMP Forms Component
+    forms:
+        # ### Uncomment to use `amp_selector` helper in forms. Learn more by running `amp-html helper amp_selector`
+        # ### Defaults to `false`
+        # amp_selector: true
+    <% if options[:all] || options[:analytics] %>
+
+
+
+
+
+
+    # -------------------
+    # ANALYTICS COMPONENT
+    # -------------------
+
+    ## Set up the AMP Analytics Component
+    analytics:
+        # ### Specifies the default vendor for all amp_analytics tags. You can always override this default by passing a different vendor
+        # ### List of all supported vendors: https://www.ampproject.org/docs/reference/components/ads/amp-analytics#analytics-vendors
+        # default_vendor: parsely
+
+        google_analytics:
+            # ### Set your Google Analytics account to enable the amp_google_analytics tag helper
+            # account: UA-*****-*
+    <% end %>
+    <% if options[:all] || options[:ad] %>
+
+
+
+    # ------------------------
+    # ADVERTISEMENTS COMPONENT
+    # ------------------------
+
+    ## Set up the AMP Advertisements Component
+    ad:
+        # ### Specifies the default network for all amp_ad tags. You can always override this default by passing a different network
+        # ### List of all supported networks: https://www.ampproject.org/docs/reference/components/ads/amp-ad#supported-ad-networks
+        # default_network: mywidget
+
+        auto_ads:
+            # ### Specifies the default network for all amp_auto_ads tags. You can always override this default by passing a different network
+            # ### List of all supported networks: https://www.ampproject.org/docs/reference/components/ads/amp-auto-ads#supported-ad-networks
+            # default_network: adsense
+    <% end %>
+    <% if options[:all] || options[:social] %>
+
+
+
+    # -------------------
+    # SOCIAL COMPONENT
+    # -------------------
+
+    ## Set up the AMP Social Component
+    social:
+        share:
+            # ### Specifies the default provider for all amp_social_share tags. You can always override this default by passing a different provider
+            # ### List of all supported providers: https://www.ampproject.org/docs/reference/components/social/amp-social-share
+            # default_provider: twitter
+
+            # ### You can define an unsupported provider as your default but then you need to set the data-share-endpoint
+            # default_data_share_endpoint: whatsapp://send
+    <% end %>
+
+
+
+
+# -----------------------------------
+# ENVIRONMENT SENSITIVE CONFIGURATION
+# -----------------------------------
+
+
+production:
+    <<: *default
+
+development:
+    <<: *default
+
+test:
+    <<: *default

@@ -1,6 +1,45 @@
-### unreleased
+# Changelog
+
+### master
 
 * nothing yet
+
+### 0.7.15 (Pre-release) - 2017-08-24
+
+* minor bugfixes
+
+### 0.7.14 (Pre-release) - 2017-08-24
+
+* minor bugfixes
+
+### 0.7.13 (Pre-release) - 2017-08-24
+
+* minor bugfixes
+
+### 0.7.12 (Pre-release) - 2017-08-24
+
+* minor bugfixes
+
+### 0.7.11 (Pre-release) - 2017-08-24
+
+* minor bugfixes
+
+### 0.7.10 (Pre-release) - 2017-08-24
+
+* minor bugfixes
+
+### 0.7.9 (Pre-release) - 2017-08-24
+
+* minor bugfixes
+
+### 0.7.8 (Pre-release) - 2017-08-24
+
+* minor bugfixes
+
+### 0.7.7 (Pre-release) - 2017-08-24
+
+* notes
+    * gem renamed from `amphtml` to `amp-html`
 
 ### 0.7.6 (Pre-release) - 2017-04-11
 
