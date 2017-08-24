@@ -4,6 +4,14 @@
 
 * nothing yet
 
+### 0.7.17 (Pre-release) - 2017-08-24
+
+* minor bugfixes
+
+### 0.7.16 (Pre-release) - 2017-08-24
+
+* minor bugfixes
+
 ### 0.7.15 (Pre-release) - 2017-08-24
 
 * minor bugfixes

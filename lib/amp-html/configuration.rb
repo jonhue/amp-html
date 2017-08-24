@@ -2,7 +2,7 @@ module AmpHtml
 
     def self.default_format
         config = get_config
-        if config.key :default_format
+        if config.key(:default_format)
             config[:default_format]
         else
             'amp'
@@ -21,7 +21,7 @@ module AmpHtml
 
     def self.components
         config = get_config
-        if config.key :components
+        if config.key(:components)
             config[:components]
         else
             nil
@@ -31,7 +31,7 @@ module AmpHtml
 
     def self.split_view
         config = get_config
-        if config.key :split_view
+        if config.key(:split_view)
             config[:split_view]
         else
             false
@@ -161,9 +161,9 @@ module AmpHtml
 
         begin
             YAML.load_file 'config/amp-html.yml'
-        rescue Exception
+        rescue Exception => e
             warn 'WARNING (AMP): You need to run `rails g amp_html:bundle` first.'
-            exit
+            # exit
         end
     end
 

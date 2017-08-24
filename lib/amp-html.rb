@@ -1,6 +1,6 @@
 begin
     require 'rails'
-rescue Exception
+rescue Exception => e
     warn 'Ensure you are in a Ruby on Rails environment'
 end
 

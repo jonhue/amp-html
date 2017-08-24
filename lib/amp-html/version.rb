@@ -1,6 +1,6 @@
 module AmpHtml
 
-    VERSION = '0.7.15'
+    VERSION = '0.7.17'
 
     class Version
 
