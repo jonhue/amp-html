@@ -163,7 +163,7 @@ module AmpHtml
             YAML.load_file 'config/amp-html.yml'
         rescue Exception => e
             warn 'WARNING (AMP): You need to run `rails g amp_html:bundle` first.'
-            # exit
+            exit
         end
     end
 

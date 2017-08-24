@@ -24,7 +24,7 @@ module ApplicationHelper
         def amp_google_font family, types = {}
             options = {}
 
-            href = 'https://fonts.googleapis.com/css?family=' + family.gsub ' ', '+'
+            href = 'https://fonts.googleapis.com/css?family=' + family.gsub(' ', '+')
             href = href + ':' + types.map(&:to_s).join(',') if types.size > 0
 
             options[:href] = href

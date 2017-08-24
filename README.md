@@ -18,6 +18,7 @@ Use the powerful features of AMP to make your Rails app consistently fast, beaut
     * [Bug reports](#bug-reports)
     * [Example applications](#example-applications)
     * [Contributing](#contributing)
+    * [Versioning](#versioning)
 * [Concept](#concept)
 * [Features](#features)
 * [Installation](#installation)
@@ -29,6 +30,7 @@ Use the powerful features of AMP to make your Rails app consistently fast, beaut
 * [Guides](#guides)
 * [Components](#components)
 * [Contributors](#contributors)
+* [References](#references)
 * [License](#license)
 
 ---
@@ -71,6 +73,10 @@ There are a few example applications available on GitHub that demonstrate variou
 We hope that you will consider contributing to AMP-HTML. Please read this short overview for some information about how to get started:
 
 [Contributing](https://github.com/slooob/amp-html/blob/master/CONTRIBUTING.md), [Code of Conduct](https://github.com/slooob/amp-html/blob/master/CODE_OF_CONDUCT.md)
+
+### Versioning
+
+AmpHtml follows Semantic Versioning 2.0 as defined at http://semver.org.
 
 ## Concept
 
@@ -166,6 +172,10 @@ AMP has a validator built in. To validate:
 Give the people some :heart: who are working on this project. Check them all at:
 
 [https://github.com/slooob/amp-html/graphs/contributors](https://github.com/slooob/amp-html/graphs/contributors)
+
+## References
+
+[Accelerated Mobile Pages](https://www.ampproject.org/)
 
 ## License
 
