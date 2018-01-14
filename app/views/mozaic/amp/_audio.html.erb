@@ -1,0 +1,11 @@
+<% sources = options.delete(:sources) %>
+<% fallback = options.delete(:fallback) %>
+
+<%= content_tag 'amp-audio', options do %>
+<% if sources %>
+<% sources.each do |source| %>
+<source src="<%= source[:src] %>" type="<%= source[:type] %>" />
+<% end %>
+<% end %>
+<% if fallback %><div fallback><p><%= fallback %></p></div><% end %>
+<% end %>

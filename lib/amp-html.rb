@@ -7,4 +7,7 @@ module AmpHtml
 
     require 'amp-html/validate'
 
+    require 'amp-html/railtie'
+    require 'amp-html/engine'
+
 end

@@ -9,9 +9,12 @@ module AmpHtml
             source_root File.expand_path '../../templates/install', __FILE__
             desc 'Install amp-html'
 
+            def create_layout
+                template 'layout.html.erb', 'app/views/layouts/amp.html.erb'
+            end
 
             def create_initializer
-                template 'amp-html.rb', 'config/initializers/amp-html.rb'
+                template 'initializer.rb', 'config/initializers/amp-html.rb'
             end
 
         end

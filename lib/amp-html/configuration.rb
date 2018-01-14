@@ -11,10 +11,12 @@ module AmpHtml
 
     class Configuration
 
-        attr_accessor :default_format
+        attr_accessor :split_view
+        attr_accessor :split_view_default
 
         def initialize
-            @default_format = 'amp'
+            @split_view = false
+            @split_view_default = 'amp'
         end
 
     end
