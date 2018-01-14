@@ -1,0 +1,141 @@
+<!-- ************************** -->
+<!-- DO NOT ALTER THIS FILE! -->
+<!-- ************************** -->
+
+
+<!-- Assets -->
+
+<!-- **Note:** Uncomment the following script tag to use <amp-anim> (amp_anim helper) for animated images. Learn more: https://www.ampproject.org/docs/guides/author-develop/amp_replacements -->
+<% if options[:anim] || options[:all] %>
+<script async custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js"></script>
+<% else %>
+<!-- <script async custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js"></script> -->
+<% end %>
+
+
+<!-- Components -->
+
+<!-- Forms -->
+<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+<%% if AmpHtml.forms_selector %><script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script><%% end %>
+
+<!-- Mustache.js -->
+<script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
+
+<!-- Lists -->
+<% if options[:lists] || options[:all] %>
+<!-- **Note:** Uncomment the following script tag to use <amp-list> (amp_list helper). Learn more: https://www.ampproject.org/docs/reference/components/dynamic/amp-list -->
+<script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+<!-- **Note:** Uncomment the following script tag to use <amp-live-list> (amp_live_list helper). Learn more: https://www.ampproject.org/docs/reference/components/dynamic/amp-live-list -->
+<script async custom-element="amp-live-list" src="https://cdn.ampproject.org/v0/amp-live-list-0.1.js"></script>
+<% else %>
+<!-- **Note:** Uncomment the following script tag to use <amp-list> (amp_list helper). Learn more: https://www.ampproject.org/docs/reference/components/dynamic/amp-list -->
+<!-- <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script> -->
+<!-- **Note:** Uncomment the following script tag to use <amp-live-list> (amp_live_list helper). Learn more: https://www.ampproject.org/docs/reference/components/dynamic/amp-live-list -->
+<!-- <script async custom-element="amp-live-list" src="https://cdn.ampproject.org/v0/amp-live-list-0.1.js"></script> -->
+<% end %>
+
+<!-- Ads -->
+<% if options[:ad] || options[:all] %>
+<!-- **Note:** Uncomment the following script tag to use <amp-ad> (amp_ad helper). Learn more: https://www.ampproject.org/docs/reference/components/ads/amp-ad -->
+<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+<!-- **Note:** Uncomment the following script tag to use <amp-sticky-ad> (amp_ad(sticky: true) helper). Learn more: https://www.ampproject.org/docs/reference/components/ads/amp-sticky-ad -->
+<script async custom-element="amp-sticky-ad" src="https://cdn.ampproject.org/v0/amp-sticky-ad-1.0.js"></script>
+<% else %>
+<!-- **Note:** Uncomment the following script tag to use <amp-ad> (amp_ad helper). Learn more: https://www.ampproject.org/docs/reference/components/ads/amp-ad -->
+<!-- <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script> -->
+<!-- **Note:** Uncomment the following script tag to use <amp-sticky-ad> (amp_ad(sticky: true) helper). Learn more: https://www.ampproject.org/docs/reference/components/ads/amp-sticky-ad -->
+<!-- <script async custom-element="amp-sticky-ad" src="https://cdn.ampproject.org/v0/amp-sticky-ad-1.0.js"></script> -->
+<% end %>
+
+<!-- iframe -->
+<!-- **Note:** Uncomment the following script tag to use <amp-iframe> (amp_iframe helper). Learn more: https://www.ampproject.org/docs/guides/author-develop/iframes -->
+<% if options[:iframe] || options[:javascript] || options[:service_worker] || options[:all] %>
+<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+<% else %>
+<!-- <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script> -->
+<% end %>
+
+<!-- iframe -->
+<!-- **Note:** Uncomment the following script tag to use <amp-install-serviceworker> (amp_serviceworker helper). Learn more: https://www.ampproject.org/docs/reference/components/dynamic/amp-install-serviceworker -->
+<% if options[:service_worker] || options[:all] %>
+<script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
+<% else %>
+<!-- <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script> -->
+<% end %>
+
+<!-- Analytics -->
+<!-- **Note:** Uncomment the following script tag to use <amp-analytics> (amp_analytics helper). Learn more: https://www.ampproject.org/docs/reference/components/ads/amp-analytics -->
+<% if options[:analytics] || options[:notifications] || options[:all] %>
+<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+<% else %>
+<!-- <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script> -->
+<% end %>
+
+<!-- Notifications -->
+<!-- **Note:** Uncomment the following script tag to use <amp-user-notification> (amp_user_notification helper). Learn more: https://www.ampproject.org/docs/reference/components/dynamic/amp-user-notification -->
+<% if options[:notifications] || options[:all] %>
+<script async custom-element="amp-user-notification" src="https://cdn.ampproject.org/v0/amp-user-notification-0.1.js"></script>
+<% else %>
+<!-- <script async custom-element="amp-user-notification" src="https://cdn.ampproject.org/v0/amp-user-notification-0.1.js"></script> -->
+<% end %>
+
+
+<!-- Social -->
+
+<% if options[:social] || options[:all] %>
+
+<!-- **Note:** Uncomment the following script tag to use <amp-twitter> (amp_twitter helper) for embedding Twitter Tweets. Learn more: https://www.ampproject.org/docs/guides/author-develop/third_party_components -->
+<script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
+
+<!-- **Note:** Uncomment the following script tag to use <amp-instagram> (amp_instagram helper) for embedding Instagrams. Learn more: https://www.ampproject.org/docs/guides/author-develop/third_party_components -->
+<script async custom-element="amp-instagram" src="https://cdn.ampproject.org/v0/amp-instagram-0.1.js"></script>
+
+<!-- **Note:** Uncomment the following script tag to use <amp-facebook> (amp_facebook helper) for embedding a Facebook post or video. Learn more: https://www.ampproject.org/docs/guides/author-develop/third_party_components -->
+<script async custom-element="amp-facebook" src="https://cdn.ampproject.org/v0/amp-facebook-0.1.js"></script>
+
+<!-- **Note:** Uncomment the following script tag to use <amp-youtube> (amp_youtube helper) for embedding a YouTube video. Learn more: https://www.ampproject.org/docs/guides/author-develop/third_party_components -->
+<script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+
+<!-- **Note:** Uncomment the following script tag to use <amp-reddit> (amp_reddit helper) for embedding a Reddit post or comment. Learn more: https://www.ampproject.org/docs/reference/components/social/amp-reddit -->
+<script async custom-element="amp-reddit" src="https://cdn.ampproject.org/v0/amp-reddit-0.1.js"></script>
+
+<!-- **Note:** Uncomment the following script tag to use <amp-social-share> (amp_social_share helper) for displaying a social share button. Learn more: https://www.ampproject.org/docs/reference/components/social/amp-social-share -->
+<script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+
+<!-- **Note:** Uncomment the following script tag to use <amp-soundcloud> (amp_soundcloud helper) for embedding a SoundCloud track. Learn more: https://www.ampproject.org/docs/reference/components/media/amp-soundcloud -->
+<script async custom-element="amp-soundcloud" src="https://cdn.ampproject.org/v0/amp-soundcloud-0.1.js"></script>
+
+<!-- **Note:** Uncomment the following script tag to use <amp-vine> (amp_vine helper) for embedding a Vine. Learn more: https://www.ampproject.org/docs/reference/components/social/amp-vine -->
+<script async custom-element="amp-vine" src="https://cdn.ampproject.org/v0/amp-vine-0.1.js"></script>
+
+<!-- **Note:** Uncomment the following script tag to use <amp-gfycat> (amp_gfycat helper) for embedding a Pin it button, Pin widget or follow button. Learn more: https://www.ampproject.org/docs/reference/components/social/amp-pinterest -->
+<script async custom-element="amp-pinterest" src="https://cdn.ampproject.org/v0/amp-pinterest-0.1.js"></script>
+
+<!-- **Note:** Uncomment the following script tag to use <amp-gfycat> (amp_gfycat helper) for embedding a Gfycat. Learn more: https://www.ampproject.org/docs/reference/components/social/amp-gfycat -->
+<script async custom-element="amp-gfycat" src="https://cdn.ampproject.org/v0/amp-gfycat-0.1.js"></script>
+
+<% else %>
+
+<!-- **Note:** Uncomment the following script tag to use <amp-twitter> (twitter_tag || amp_twitter_tag helper) for embedding Twitter Tweets. Learn more: https://www.ampproject.org/docs/guides/author-develop/third_party_components -->
+<!-- <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script> -->
+
+<!-- **Note:** Uncomment the following script tag to use <amp-instagram> (instagram_tag || amp_instagram_tag helper) for embedding Instagrams. Learn more: https://www.ampproject.org/docs/guides/author-develop/third_party_components -->
+<!-- <script async custom-element="amp-instagram" src="https://cdn.ampproject.org/v0/amp-instagram-0.1.js"></script> -->
+
+<!-- **Note:** Uncomment the following script tag to use <amp-facebook> (facebook_tag || amp_facebook_tag helper) for embedding Facebook post or video. Learn more: https://www.ampproject.org/docs/guides/author-develop/third_party_components -->
+<!-- <script async custom-element="amp-facebook" src="https://cdn.ampproject.org/v0/amp-facebook-0.1.js"></script> -->
+
+<!-- **Note:** Uncomment the following script tag to use <amp-youtube> (youtube_tag || amp_youtube_tag helper) for embedding YouTube video. Learn more: https://www.ampproject.org/docs/guides/author-develop/third_party_components -->
+<!-- <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script> -->
+
+<!-- **Note:** Uncomment the following script tag to use <amp-reddit> (amp_reddit helper) for embedding a Reddit post or comment. Learn more: https://www.ampproject.org/docs/reference/components/social/amp-reddit -->
+<!-- <script async custom-element="amp-reddit" src="https://cdn.ampproject.org/v0/amp-reddit-0.1.js"></script> -->
+
+<!-- **Note:** Uncomment the following script tag to use <amp-social-share> (amp_social_share helper) for displaying a social share button. Learn more: https://www.ampproject.org/docs/reference/components/social/amp-social-share -->
+<!-- <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script> -->
+
+<!-- **Note:** Uncomment the following script tag to use <amp-soundcloud> (amp_soundcloud helper) for embedding a SoundCloud track. Learn more: https://www.ampproject.org/docs/reference/components/media/amp-soundcloud -->
+<!-- <script async custom-element="amp-soundcloud" src="https://cdn.ampproject.org/v0/amp-soundcloud-0.1.js"></script> -->
+
+<% end %>
