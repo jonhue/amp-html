@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
     gem.version               = AmpHtml::VERSION
     gem.platform              = Gem::Platform::RUBY
     gem.summary               = 'Reliable high-performance apps with AMP & Rails. Formerly `amphtml`.'
-    gem.description           = "[BETA] AmpHtml is a universal solution to integrate the AMP Project (Accelerated Mobile Pages Project) into your Rails app with ease. It enables you to quickly spin-up, build and test your app with AMP, while fulfilling the app's unique requirements. It comes with a bunch of superpowers like user authentication, notifications, blogs, animations and support for assets in AMP. Make your app consistently fast, beautiful and high-performing across devices and distribution platforms."
+    gem.description           = "amp-html is a universal solution to integrate the AMP Project (Accelerated Mobile Pages Project) into your Rails app with ease. It enables you to quickly spin-up, build and test your app with AMP, while fulfilling the app's unique requirements. It comes with a bunch of superpowers like user authentication, notifications, blogs, animations and support for assets in AMP. Make your app consistently fast, beautiful and high-performing across devices and distribution platforms."
     gem.authors               = ['Jonas Hübotter']
     gem.email                 = 'me@jonhue.me'
     gem.homepage              = 'https://github.com/jonhue/amp-html'

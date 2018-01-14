@@ -1,12 +1,14 @@
-# [BETA] AMP-HTML - Reliable high-:zap: apps with AMP & Rails
+# amp-html
 
-<img src="https://travis-ci.org/slooob/amp-html.svg?branch=master" /> [![Gem Version](https://badge.fury.io/rb/amp-html.svg)](https://badge.fury.io/rb/amp-html)
+[![Gem Version](https://badge.fury.io/rb/amp-html.svg)](https://badge.fury.io/rb/amp-html) <img src="https://travis-ci.org/jonhue/amp-html.svg?branch=master" />
 
-AmpHtml is a universal solution to integrate the AMP Project (Accelerated Mobile Pages Project) into your Rails app with ease. It enables you to quickly spin-up, build and test your app with AMP, while fulfilling the app's unique requirements. It comes with a bunch of superpowers like user authentication, notifications, blogs, animations and support for assets in AMP.
+Reliable high-:zap: apps with AMP & Rails.
+
+amp-html is a universal solution to integrate the AMP Project (Accelerated Mobile Pages Project) into your Rails app with ease. It enables you to quickly spin-up, build and test your app with AMP, while fulfilling the app's unique requirements. It comes with a bunch of superpowers like user authentication, notifications, blogs, animations and support for assets in AMP.
 
 Use the powerful features of AMP to make your Rails app consistently fast, beautiful and high-performing across devices and distribution platforms.
 
-[**Follow the Getting Started Guide**](https://github.com/slooob/amp-html/wiki/Getting-started)
+[**Follow the Getting Started Guide**](https://github.com/jonhue/amp-html/wiki/Getting-started)
 
 ---
 
@@ -14,7 +16,7 @@ Use the powerful features of AMP to make your Rails app consistently fast, beaut
 
 * [Information](#information)
     * [Quick info (Latest release, Dependencies)](#quick-info)
-    * [The AMP-HTML wiki](#the-amp-html-wiki)
+    * [The amp-html wiki](#the-amp-html-wiki)
     * [Bug reports](#bug-reports)
     * [Example applications](#example-applications)
     * [Contributing](#contributing)
@@ -40,48 +42,46 @@ Use the powerful features of AMP to make your Rails app consistently fast, beaut
 
 ### Quick info
 
-#### Latest release: 0.7.18 (Pre-release)
+#### Latest release: 1.0.0
 
-[**Changelog**](https://github.com/slooob/amp-html/blob/master/CHANGELOG.md), [Grab it from Rubygems](https://rubygems.org/gems/amp-html)
+[**Changelog**](CHANGELOG.md), [Grab it from Rubygems](https://rubygems.org/gems/amp-html)
 
 #### Supported versions
 
-    Rails >= 4.0.0
-    Ruby >= 2.0
+    Rails >= 5.0
+    Ruby >= 2.3
 
-### The AMP-HTML wiki & documentation
+### The amp-html wiki & documentation
 
-The AMP-HTML Wiki has lots of additional information about AMP-HTML including many "how-to" articles and answers to the most frequently asked questions. Please browse the Wiki after finishing this README:
+The amp-html Wiki has lots of additional information about amp-html including many "how-to" articles and answers to the most frequently asked questions. Please browse the Wiki after finishing this README:
 
-[https://github.com/slooob/amp-html/wiki](https://github.com/slooob/amp-html/wiki)
+https://github.com/jonhue/amp-html/wiki
 
 ### Bug reports
 
-If you discover a problem with AMP-HTML, we would like to know about it. However, we ask that you please review these guidelines before submitting a bug report:
+If you discover a problem with amp-html, we would like to know about it. However, we ask that you please review these guidelines before submitting a bug report:
 
-[https://github.com/slooob/amp-html/wiki/Bug-reports](https://github.com/slooob/amp-html/wiki/Bug-reports)
-
-If you have discovered a security related bug, please do *NOT* use the GitHub issue tracker. Send an email to [developer@slooob.com](mailto:developer@slooob.com).
+https://github.com/jonhue/amp-html/wiki/Bug-reports
 
 ### Example applications
 
-There are a few example applications available on GitHub that demonstrate various features of AMP-HTML. You can view them here:
+There are a few example applications available on GitHub that demonstrate various features of amp-html. You can view them here:
 
-[https://github.com/slooob/amp-html/wiki/Example-Applications](https://github.com/slooob/amp-html/wiki/Example-Applications)
+https://github.com/jonhue/amp-html/wiki/Example-Applications
 
 ### Contributing
 
-We hope that you will consider contributing to AMP-HTML. Please read this short overview for some information about how to get started:
+We hope that you will consider contributing to amp-html. Please read this short overview for some information about how to get started:
 
-[Contributing](https://github.com/slooob/amp-html/blob/master/CONTRIBUTING.md), [Code of Conduct](https://github.com/slooob/amp-html/blob/master/CODE_OF_CONDUCT.md)
+[Contributing](CONTRIBUTING.md), [Code of Conduct](CODE_OF_CONDUCT.md)
 
 ### Versioning
 
-AmpHtml follows Semantic Versioning 2.0 as defined at http://semver.org.
+amp-html follows Semantic Versioning 2.0 as defined at http://semver.org.
 
 ### Deprecations
 
-Deprecations are combined with new major releases of AmpHtml. You can see a full list of past and future deprecations [here](https://github.com/slooob/amp-html/blob/master/DEPRECATIONS.md).
+Deprecations are combined with new major releases of amp-html. You can see a full list of past and future deprecations [here](DEPRECATIONS.md).
 
 ## Concept
 
