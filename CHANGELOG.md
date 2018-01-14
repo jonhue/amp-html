@@ -4,6 +4,13 @@
 
 * nothing yet
 
+### 1.0.1 - 2018/01/14
+
+* enhancements
+    * updated dependencies
+* bugfixes
+    * fixed assets reference in production environment
+
 ### 1.0.0 - 2018/01/14
 
 * features
