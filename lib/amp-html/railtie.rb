@@ -26,6 +26,7 @@ module AmpHtml
                     end
                 end
                 config.define_component 'amp/head'
+                config.define_component 'amp/components'
 
 
 
@@ -98,6 +99,16 @@ module AmpHtml
                     options[:type] = 'amp-mustache'
                 end
 
+            end
+        end
+
+        initializer 'amp-html.assets' do
+            Rails.application.assets.precompile += ['amp/application.css']
+        end
+
+        initializer 'amp-html.action_controller' do
+            ActiveSupport.on_load :action_controller do
+                include AmpHtml::BaseHelper
             end
         end
 

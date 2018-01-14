@@ -10,11 +10,5 @@ module AmpHtml
             end
         end
 
-        def amp_css &block
-            if block_given?
-                content_for :css, capture(&block)
-            end
-        end
-
     end
 end

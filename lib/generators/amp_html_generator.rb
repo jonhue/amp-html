@@ -4,13 +4,17 @@ require 'thor'
 module AmpHtml
     module Generators
 
-        class InstallGenerator < Rails::Generators::Base
+        class AmpHtmlGenerator < Rails::Generators::Base
 
-            source_root File.expand_path '../../templates/install', __FILE__
+            source_root File.join File.dirname(__FILE__), 'templates'
             desc 'Install amp-html'
 
             def create_layout
                 template 'layout.html.erb', 'app/views/layouts/amp.html.erb'
+            end
+
+            def create_assets
+                template 'application.css', 'app/assets/stylesheets/amp/application.css'
             end
 
             def create_initializer

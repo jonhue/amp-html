@@ -1,0 +1,13 @@
+<%%= component 'amp/doctype' do %>
+    <head>
+        <%%= component 'amp/head' %>
+        <title>Hello AMP world</title>
+        <%% if AmpHtml.configuration.split_view %><%%= component 'amp/canonical-link', href: request.original_url %><% end %>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <%%= csrf_meta_tags %>
+    </head>
+    <body>
+        <h1>Hello AMP World!</h1>
+        <%%= mozaic_area %>
+    </body>
+<% end %>
