@@ -15,7 +15,7 @@ Use the powerful features of AMP to make your Rails app consistently fast, beaut
 ## Navigation
 
 * [Information](#information)
-    * [Quick info (Latest release, Dependencies)](#quick-info)
+    * [Quick info](#quick-info)
     * [The amp-html wiki](#the-amp-html-wiki)
     * [Bug reports](#bug-reports)
     * [Example applications](#example-applications)
@@ -40,7 +40,7 @@ Use the powerful features of AMP to make your Rails app consistently fast, beaut
 
 ### Quick info
 
-#### Latest release: 1.0.0
+#### Latest release: 1.0.1
 
 [**Changelog**](CHANGELOG.md), [Grab it from Rubygems](https://rubygems.org/gems/amp-html)
 
