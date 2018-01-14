@@ -1,3 +1,4 @@
+require 'mozaic'
 require 'amp-html/version'
 
 module AmpHtml

@@ -1,7 +1,7 @@
 require 'rails/railtie'
 
 module AmpHtml
-    class Railtie < Rails::Railtie
+    class Railtie < ::Rails::Railtie
 
         initializer 'amp-html.mozaic' do
             Mozaic.configure do |config|
@@ -96,7 +96,7 @@ module AmpHtml
         end
 
         initializer 'amp-html.assets' do
-            Rails.application.assets.precompile += ['amp/application.css']
+            Rails.application.config.assets.precompile += ['amp/application.css']
         end
 
         initializer 'amp-html.action_controller' do
