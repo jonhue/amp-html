@@ -4,6 +4,11 @@
 
 * nothing yet
 
+### 1.0.0 - 2018/01/14
+
+* features
+    * use Mozaic for components and SplitView layouts
+
 ### 0.7.18 (Pre-release) - 2017/08/24
 
 * bugfixes
