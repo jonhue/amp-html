@@ -12,10 +12,8 @@ Gem::Specification.new do |gem|
     gem.homepage              = 'https://github.com/jonhue/amp-html'
     gem.license               = 'MIT'
 
-    gem.files                 = Dir['README.md', 'CHANGELOG.md', 'LICENSE', 'lib/**/*', 'bin/**/*', 'app/**/*']
+    gem.files                 = Dir['README.md', 'CHANGELOG.md', 'LICENSE', 'lib/**/*', 'app/**/*']
     gem.require_paths         = ['lib']
-    gem.bindir                = 'bin'
-    gem.executables           = ['amp-html']
 
     gem.required_ruby_version = '>= 2.3'
 
@@ -24,7 +22,4 @@ Gem::Specification.new do |gem|
 
     gem.add_development_dependency 'rspec', '~> 3.7'
     gem.add_development_dependency 'rubocop', '~> 0.52'
-    gem.add_development_dependency 'thor', '~> 0.20'
-    gem.add_development_dependency 'launchy', '~> 2.4'
-    gem.add_development_dependency 'highline', '~> 1.7'
 end
