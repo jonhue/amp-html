@@ -8,6 +8,8 @@
     </head>
     <body>
         <h1>Hello AMP World!</h1>
-        <%%= mozaic_area %>
+        <%%= mozaic_area do %>
+            <%%= yield %>
+        <%% end %>
     </body>
 <%% end %>

@@ -4,7 +4,7 @@
 
 Reliable high-:zap: apps with AMP & Rails.
 
-amp-html is a universal solution to integrate the AMP Project (Accelerated Mobile Pages Project) into your Rails app with ease. It enables you to quickly spin-up, build and test your app with AMP, while fulfilling the app's unique requirements. It comes with a bunch of superpowers like user authentication, notifications, blogs, animations and support for assets in AMP.
+amp-html is a universal solution to integrate the [AMP Project](https://www.ampproject.org/) into your Rails app with ease. It enables you to quickly spin-up, build and test your app with AMP, while fulfilling the app's unique requirements. It comes with a bunch of superpowers like user authentication, notifications, blogs, animations and support for assets in AMP.
 
 Use the powerful features of AMP to make your Rails app consistently fast, beautiful and high-performing across devices and distribution platforms.
 
@@ -22,18 +22,16 @@ Use the powerful features of AMP to make your Rails app consistently fast, beaut
     * [Contributing](#contributing)
     * [Versioning](#versioning)
     * [Deprecations](#deprecations)
-* [Concept](#concept)
-* [Features](#features)
 * [Installation](#installation)
     * [Generators](#generators)
     * [Test and validate AMP](#test-and-validate-amp)
 * [Usage](#usage)
-    * [Helpers](#helpers)
     * [SplitView](#splitview)
 * [Guides](#guides)
 * [Components](#components)
+* [Configuration](#configuration)
+* [To Do](#to-do)
 * [Contributors](#contributors)
-* [References](#references)
 * [License](#license)
 
 ---
@@ -83,15 +81,11 @@ amp-html follows Semantic Versioning 2.0 as defined at http://semver.org.
 
 Deprecations are combined with new major releases of amp-html. You can see a full list of past and future deprecations [here](DEPRECATIONS.md).
 
-## Concept
-
-## Features
-
 ## Installation
 
-You can also follow the [**Getting Started Guide**](https://github.com/slooob/amp-html/wiki/Getting-started).
+You can also follow the [**Getting Started Guide**](https://github.com/jonhue/amp-html/wiki/Getting-started).
 
-AMP-HTML works with Rails 4.0 onwards. You can add it to your `Gemfile` with:
+amp-html works with Rails 5 onwards. You can add it to your `Gemfile` with:
 
 ```ruby
 gem 'amp-html'
@@ -108,79 +102,66 @@ Or install it yourself as:
 If you always want to be up to date fetch the latest from GitHub in your `Gemfile`:
 
 ```ruby
-gem 'amp-html', github: 'https://github.com/slooob/amp-html.git'
+gem 'amp-html', github: 'jonhue/amp-html'
 ```
 
-### Generators
+Now generate the files necessary:
 
-AmpHtml comes with three different generators. If you want to bundle them execute:
+    $ rails g mozaic:install
+    $ rails g amp_html
 
-    $ rails g amp_html:bundle
+Replace the contents of your `app/views/layouts/application.html.erb` file with:
 
-That will generate all the files you need to create a universal AMP app (recommended).
+```haml
+= amp_mozaic do
+    = yield
+```
 
-If you want to use [SplitView](https://github.com/slooob/amp-html/wiki/Docs:-SplitView) to create views with and without AMP simultaneously, execute instead:
-
-    $ rails g amp_html:bundle --split
-
-To add components ([List of components](https://github.com/slooob/amp-html/blob/master/lib/amp-html/components/docs/README.md)) to the generator simply include the component as an option:
-
-    $ rails g amp_html:bundle --analytics --notifications
-
-You can also run the three generators independently:
-
-    $ rails g amp_html:install
-    $ rails g amp_html:helpers
-    $ rails g amp_html:views
-
-*Each* of them supports the `--split || -s` option to use **both** regular views and AMP views.
-To add components, you need to pass them as option to each generator.
-
-### Test and validate AMP
-
-AmpHtml allows you to test and validate your views out of the box:
-
-    $ amp-html test all
-
-Pass `--split` as an option if you are using SplitView:
-
-    $ amp-html test all --split
-
-`test all` runs multiple tests to check if your code is valid. You can also run each test specifically.
-
-To get a list of all tests and learn how to run them, go to [how to test and validate](https://github.com/slooob/amp-html/wiki/Guides:-Test-and-validate)
-
-To all tests (even `test all`) you can pass the option `--fix || -f` and AmpHtml will suggest changes you could make. You can accept or reject them.
-If you want to automatically fix the code, pass `--autofix || -af` as option. Be careful, you will not be asked to approve changes to the documents!
-
-AMP has a validator built in. To validate:
-
-    $ amp-html validate root # validates "http://localhost:3000"
-    $ amp-html validate https://slooob.com # validates "https://slooob.com"
-
-**Note:** `root` is only available as a parameter in development environment..
+Lastly, make sure to remove Turbolinks from your apps asset pipeline (`app/assets/javascripts/application.js`) as it does not work well with AMP.
 
 ## Usage
 
-### Helpers
-
 ### SplitView
 
+---
+
 ## Guides
+
+---
 
 ## Components
 
 ---
 
+## Configuration
+
+You can configure amp-html by passing a block to `configure`. This can be done in `config/initializers/amp-html.rb`:
+
+```ruby
+AmpHtml.configure do |config|
+    config.inherit_stylesheets = false
+end
+```
+
+* `inherit_stylesheets` Use your regular stylesheets bundled with `app/assets/stylesheets/application.css` in your AMP views. Takes a boolean. Defaults to `false`.
+* `split_view` Enable SplitView to allow for AMP enabled and AMP disabled versions of your views. Takes a boolean. Defaults to `false`.
+* `split_view_default` The default view version if no `amp` param is present in the request. Must be either `'amp'` or `'html'`. Defaults to `'amp'`.
+
+---
+
+## To Do
+
+[Here](https://github.com/jonhue/amp-html/projects/1) is the full list of current projects.
+
+To propose your ideas, initiate the discussion by adding a [new issue](https://github.com/jonhue/amp-html/issues/new).
+
+---
+
 ## Contributors
 
-Give the people some :heart: who are working on this project. Check them all at:
+Give the people some :heart: who are working on this project. See them all at:
 
-[https://github.com/slooob/amp-html/graphs/contributors](https://github.com/slooob/amp-html/graphs/contributors)
-
-## References
-
-[Accelerated Mobile Pages](https://www.ampproject.org/)
+https://github.com/jonhue/amp-html/graphs/contributors
 
 ## License
 
