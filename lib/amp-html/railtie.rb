@@ -7,7 +7,6 @@ module AmpHtml
             Mozaic.configure do |config|
 
 
-
                 ### Base
 
                 config.define_component 'amp/doctype'
@@ -64,16 +63,9 @@ module AmpHtml
                 ### Dynamic content
 
                 config.define_component 'amp/form', method: :post, target: '_top' do
-                    if options[:method].to_sym = :get
-                        if options[:ajax]
-                            options[:"action-xhr"] = options[:action]
-                        else
-                            options[:action] = options[:action]
-                        end
-                    else
+                    unless options[:method].to_sym == :get
                         options[:"action-xhr"] = options[:action]
                     end
-                    options.delete(:ajax)
                     options[:on] = "#{options[:on] + ';' if options[:on]}
                                     #{'submit:' + options[:submit] + ';' if options[:submit]}
                                     #{'submit-success:' + options[:success] + ';' if options[:success]}
@@ -98,6 +90,7 @@ module AmpHtml
                 config.define_component 'amp/mustache' do
                     options[:type] = 'amp-mustache'
                 end
+
 
             end
         end
