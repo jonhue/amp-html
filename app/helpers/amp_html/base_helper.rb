@@ -26,7 +26,7 @@ module AmpHtml
         end
 
         def amp_path scope = 'amp'
-            amp = true if request.fullpath.include?("/#{scope}")
+            params[:amp] = true if request.fullpath.include?("/#{scope}")
         end
 
     end

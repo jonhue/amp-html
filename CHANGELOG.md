@@ -4,6 +4,11 @@
 
 * nothing yet
 
+### 1.1.0 - 2018/01/17
+
+* features
+    * new controller methods (`amp=`, `amp_path`)
+
 ### 1.0.1 - 2018/01/14
 
 * enhancements
