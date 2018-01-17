@@ -1,6 +1,8 @@
 # Forms
 
-**[Original documentation](https://www.ampproject.org/docs/reference/components/amp-form)**, **[Example](https://ampbyexample.com/components/amp-form/)**
+**[Original documentation](https://www.ampproject.org/docs/reference/components/amp-form)**, **[Example](https://ampbyexample.com/components/amp-form)**
+
+**Important:** In order to you use this component, you need to pass `:form` to the `amp/head` or the `amp/components` component.
 
 ### Usage
 

@@ -12,16 +12,20 @@ module AmpHtml
                 config.define_component 'amp/doctype'
                 config.define_component 'amp/amp-link', rel: 'amphtml' do |options|
                     return false unless AmpHtml.configuration.split_view
-                    options[:href] = options[:href].split('?').first
+                    href = options[:href].split('?').first
                     unless AmpHtml.configuration.split_view_default == 'amp'
-                        options[:href] = "#{options[:href]}?#{{ amp: true }.to_query}"
+                        options[:href] ||= "#{href}?#{{ amp: true }.to_query}"
+                    else
+                        options[:href] ||= href
                     end
                 end
                 config.define_component 'amp/canonical-link', rel: 'canonical' do |options|
                     return false unless AmpHtml.configuration.split_view
-                    options[:href] = options[:href].split('?').first
+                    href = options[:href].split('?').first
                     if AmpHtml.configuration.split_view_default == 'amp'
-                        options[:href] = "#{options[:href]}?#{{ amp: false }.to_query}"
+                        options[:href] ||= "#{href}?#{{ amp: false }.to_query}"
+                    else
+                        options[:href] ||= href
                     end
                 end
                 config.define_component 'amp/head'

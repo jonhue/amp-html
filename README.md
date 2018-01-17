@@ -8,7 +8,7 @@ amp-html is a universal solution to integrate the [AMP Project](https://www.ampp
 
 Use the powerful features of AMP to make your Rails app consistently fast, beautiful and high-performing across devices and distribution platforms.
 
-[**Follow the Getting Started Guide**](https://github.com/jonhue/amp-html/wiki/Getting-started)
+[**Follow the Getting Started Guide**](https://github.com/jonhue/amp-html/wiki/Getting-started), [Demo](https://hello-amp.herokuapp.com)
 
 ---
 
@@ -26,8 +26,15 @@ Use the powerful features of AMP to make your Rails app consistently fast, beaut
     * [Generators](#generators)
     * [Test and validate AMP](#test-and-validate-amp)
 * [Usage](#usage)
+    * [Views](#views)
+    * [Controllers](#controllers)
     * [SplitView](#splitview)
 * [Guides](#guides)
+    * [Getting started](#getting-started)
+    * [Utilizing features](#utilizing-features)
+        * [Essentials](#essentials)
+        * [Powerful features](#powerful-features)
+    * [Testing](#testing)
 * [Components](#components)
 * [Configuration](#configuration)
 * [To Do](#to-do)
@@ -121,15 +128,76 @@ Lastly, make sure to remove Turbolinks from your apps asset pipeline (`app/asset
 
 ## Usage
 
+### Views
+
+You can check whether your document is using AMP or not by using the `amp?` method:
+
+```haml
+- if amp?
+    = component 'amp/mustache' do
+        -# ...
+```
+
+**Note:** This method is also available at controller level.
+
+When you are using [SplitView](#splitview) along with media/form/etc. elements, you don't have to use `amp?` to render the appropriate element. amp-html automatically overrides the default Rails helpers if your document is using AMP.
+
+### Controllers
+
+If you are using [SplitView](#splitview), you are able to override the default format (`html`/`amp`) by passing the `amp` parameter. However in a lot of cases you want to specify the format from within the path of the URL:
+
+```ruby
+class PostsController < ApplicationController
+
+    def index
+        amp_path # to use `'amp'` as path
+        amp_path 'custom-path' # to use `'custom-path'` as path
+    end
+
+end
+```
+
+You are also able to manually enable or disable AMP for a specific controller action:
+
+```ruby
+class PostsController < ApplicationController
+
+    def index
+        amp # to enable AMP
+        amp = false # to disable AMP
+    end
+
+end
+```
+
 ### SplitView
+
+SplitView allows you to serve `html` and `amp` versions of your views. To get started, enable and configure SplitView:
+
+```ruby
+AmpHtml.configure do |config|
+    config.split_view = true
+    config.split_view_default = 'amp'
+end
+```
+
+Now you can use amp-html's [view](#views) and [controller](#controllers) methods to determine whether a document uses `html` or `amp` as format.
 
 ---
 
 ## Guides
 
+Whether you are just getting started or you are looking to implement some of the powerful features of amp-html, the guides in the amp-html wiki are here to your rescue.
+
+https://github.com/jonhue/amp-html/wiki/Guides
+
 ---
 
 ## Components
+
+amp-html is component based. You can learn more about components and find the full reference in the amp-html wiki.
+
+https://github.com/jonhue/amp-html/wiki/Docs
 
 ---
 

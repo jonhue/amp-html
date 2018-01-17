@@ -1,6 +1,6 @@
-<% if options[:components]&.include? :form %><script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+<% if options[:components]&.include? :audio %><script async custom-element="amp-audio" src="https://cdn.ampproject.org/v0/amp-audio-0.1.js"></script>
+<% elsif options[:components]&.include? :font %><script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
+<% elsif options[:components]&.include? :form %><script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
 <% elsif options[:components]&.include? :mustache %><script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
 <% elsif options[:components]&.include? :selector %><script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
-<% elsif options[:components]&.include? :audio %><script async custom-element="amp-audio" src="https://cdn.ampproject.org/v0/amp-audio-0.1.js"></script>
-<% elsif options[:components]&.include? :video %><script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
-<% elsif options[:components]&.include? :font %><script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script><% end %>
+<% elsif options[:components]&.include? :video %><script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script><% end %>

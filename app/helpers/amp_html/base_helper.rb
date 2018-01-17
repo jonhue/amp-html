@@ -21,5 +21,13 @@ module AmpHtml
             return File.binread(File.join(Rails.application.assets_manifest.dir, asset))
         end
 
+        def amp= value = true
+            params[:amp] = value
+        end
+
+        def amp_path scope = 'amp'
+            amp = true if request.fullpath.include?("/#{scope}")
+        end
+
     end
 end
