@@ -202,11 +202,10 @@ You can configure amp-html by passing a block to `configure`. This can be done i
 
 ```ruby
 AmpHtml.configure do |config|
-    config.inherit_stylesheets = false
+    config.split_view = false
 end
 ```
 
-* `inherit_stylesheets` Use your regular stylesheets bundled with `app/assets/stylesheets/application.css` in your AMP views. Takes a boolean. Defaults to `false`.
 * `split_view` Enable SplitView to allow for AMP enabled and AMP disabled versions of your views. Takes a boolean. Defaults to `false`.
 * `split_view_default` The default view version if no `amp` param is present in the request. Must be either `'amp'` or `'html'`. Defaults to `'amp'`.
 

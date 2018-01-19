@@ -2,7 +2,12 @@
 
 ### master
 
-* nothing yet
+* features
+    * automatically load controller action specific stylesheets
+* enhancements
+    * allow options to be passed to the `amp/doctype` component
+* bugfixes
+    * fix `amp/canonical-link` component for apps without SplitView
 
 ### 1.1.0 - 2018/01/17
 

@@ -14,7 +14,8 @@ module AmpHtml
             end
 
             def create_assets
-                template 'application.css', 'app/assets/stylesheets/amp/application.css'
+                template 'application.sass', 'app/assets/stylesheets/amp/application.sass'
+                template '.keep-file', 'app/assets/stylesheets/amp/packages/.keep'
             end
 
             def create_initializer

@@ -9,7 +9,7 @@ module AmpHtml
 
                 ### Base
 
-                config.define_component 'amp/doctype'
+                config.define_component 'amp/doctype', '⚡': ''
                 config.define_component 'amp/amp-link', rel: 'amphtml' do |options|
                     return false unless AmpHtml.configuration.split_view
                     href = options[:href].split('?').first
@@ -20,12 +20,13 @@ module AmpHtml
                     end
                 end
                 config.define_component 'amp/canonical-link', rel: 'canonical' do |options|
-                    return false unless AmpHtml.configuration.split_view
-                    href = options[:href].split('?').first
-                    if AmpHtml.configuration.split_view_default == 'amp'
-                        options[:href] ||= "#{href}?#{{ amp: false }.to_query}"
-                    else
-                        options[:href] ||= href
+                    if AmpHtml.configuration.split_view
+                        href = options[:href].split('?').first
+                        if AmpHtml.configuration.split_view_default == 'amp'
+                            options[:href] ||= "#{href}?#{{ amp: false }.to_query}"
+                        else
+                            options[:href] ||= href
+                        end
                     end
                 end
                 config.define_component 'amp/head'
@@ -101,6 +102,12 @@ module AmpHtml
 
         initializer 'amp-html.assets' do
             Rails.application.config.assets.precompile += ['amp/application.css']
+            Dir.glob Rails.root.join('app', 'assets', 'stylesheets', 'amp', 'packages', '**', '*') do |path|
+                next if File.directory? path
+                path = path.split('stylesheets').last
+                path.slice! 0
+                Rails.application.config.assets.precompile += [path]
+            end
         end
 
         initializer 'amp-html.action_controller' do
