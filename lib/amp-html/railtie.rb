@@ -13,13 +13,16 @@ module AmpHtml
 
                 config.define_component 'amp/doctype', '⚡': ''
                 config.define_component 'amp/amp-link', rel: 'amphtml' do |options|
-                    href = options[:href].split('?').first
-                    unless AmpHtml.configuration.split_view_default == 'amp'
-                        options[:href] ||= "#{href}?#{{ amp: true }.to_query}"
+                    if AmpHtml.configuration.split_view
+                        href = options[:href].split('?').first
+                        unless AmpHtml.configuration.split_view_default == 'amp'
+                            options[:href] ||= "#{href}?#{{ amp: true }.to_query}"
+                        else
+                            options[:href] ||= href
+                        end
                     else
-                        options[:href] ||= href
+                        false
                     end
-                    false unless AmpHtml.configuration.split_view
                 end
                 config.define_component 'amp/canonical-link', rel: 'canonical' do |options|
                     if AmpHtml.configuration.split_view
