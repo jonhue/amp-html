@@ -20,6 +20,7 @@ module AmpHtml
                         else
                             options[:href] ||= href
                         end
+                        options
                     else
                         false
                     end
@@ -32,6 +33,7 @@ module AmpHtml
                         else
                             options[:href] ||= href
                         end
+                        options
                     end
                 end
                 config.define_component 'amp/head'
@@ -43,6 +45,7 @@ module AmpHtml
 
                 config.define_component 'amp/img', layout: 'responsive' do |options|
                     options[:src] = image_url options[:src]
+                    options
                 end
                 config.define_component 'amp/video', layout: 'responsive' do |options|
                     options[:poster] = image_url(options[:poster]) if options.has_key?(:poster)
@@ -52,6 +55,7 @@ module AmpHtml
                             source[:src] = asset_url options[:src]
                         end
                     end
+                    options
                 end
                 config.define_component 'amp/audio' do |options|
                     options[:src] = asset_url(options[:src]) if options.has_key?(:src)
@@ -60,6 +64,7 @@ module AmpHtml
                             source[:src] = asset_url options[:src]
                         end
                     end
+                    options
                 end
 
 
@@ -83,22 +88,27 @@ module AmpHtml
                                     #{'valid:' + options[:valid] + ';' if options[:valid]}
                                     #{'invalid:' + options[:invalid] + ';' if options[:invalid]}"
                     options = options.except(:submit, :success, :error, :valid, :invalid)
+                    options
                 end
                 config.define_component 'amp/form-response', type: :success do |options|
                     options[:"submit-#{options.delete(:type)}"] = true
+                    options
                 end
                 config.define_component 'amp/input' do |options|
                     options[:on] = "#{options[:on] + ';' if options[:on]}
                                     #{'onchange:' + options[:onchange] + ';' if options[:onchange]}"
                     options = options.except(:onchange)
+                    options
                 end
                 config.define_component 'amp/selector', layout: 'container' do |options|
                     options[:on] = "#{options[:on] + ';' if options[:on]}
                                     #{'onchange:' + options[:onchange] + ';' if options[:onchange]}"
                     options = options.except(:onchange)
+                    options
                 end
                 config.define_component 'amp/mustache' do |options|
                     options[:type] = 'amp-mustache'
+                    options
                 end
 
 

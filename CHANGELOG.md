@@ -4,6 +4,11 @@
 
 * nothing yet
 
+### 1.2.1 - 2018/02/17
+
+* bugfixes
+    * fix updating `options` of Mozaic components
+
 ### 1.2.0 - 2018/01/30
 
 * features
